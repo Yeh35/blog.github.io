@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hugo Blog 구축기  | sango.h</title>
+  <meta name="description" content="sango.h는 블로그장의 이름인 snagoh와 c언어의 stdio.h의 합성어이다. 'Hugo Blog 구축기'을 한 번 살펴보세요.">
+  <meta property="og:title" content="Hugo Blog 구축기">
+  
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2020-03-11">
+  
+  <meta property="og:description" content="sango.h는 블로그장의 이름인 snagoh와 c언어의 stdio.h의 합성어이다. 'Hugo Blog 구축기'을 한 번 살펴보세요.">
+  <meta property="og:url" content="https://yeh35.github.io/blog.github.io/post/hugo/hugo-blog-builder/">
+  <meta property="og:site_name" content="sango.h">
+  
+  <meta property="og:image" content="https://yeh35.github.io/blog.github.io/images/thumbnail.png">
+  
+  
+  <meta property="og:tags" content="">
+  
+  <meta property="og:tags" content="">
+  
+  <meta property="og:tags" content="">
+  
+  <link rel="icon" href="/blog.github.io/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://yeh35.github.io/blog.github.io/post/hugo/hugo-blog-builder/">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/agate.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
+  <link rel="stylesheet" href="/blog.github.io/css/styles.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  
+  
+  <script type="text/javascript">
+  function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.className === 'menu')
+      e.className = 'menu hidden';
+    else
+      e.className = 'menu';
+  }
+  </script>
+</head>
+<body>
+  <div class="navbar">    
+    <div class="logo">
+      <a href="/blog.github.io/">
+        <img src="/blog.github.io/images/logo.png" height="34px" />
+      </a>
+    </div>
+    <div class="burger">
+      <button onclick="toggle_visibility('menu')">
+        <i class="fa fa-bars" aria-hidden="true"></i> 메뉴
+      </button>
+    </div>
+    <div id="menu" class="menu hidden">
+      <ul>
+        <li><a href="/blog.github.io/">#sango.h</a></li>
+        <li><a href="/blog.github.io/categories">#카테고리</a></li>
+        <li><a href="/blog.github.io/tags">#태그</a></li>
+        <li><a href="/blog.github.io/projects">#프로젝트</a></li>        
+      </ul>
+      <input class="search" id="search-input" type="search" placeholder="검색어" value="">
+    </div>
+  </div>
+  <div class="container">    
+
+<div class="post">
+  <div class="post-title">
+    <a href="https://yeh35.github.io/blog.github.io/post/hugo/hugo-blog-builder/">
+      <img src="/blog.github.io/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>2020년 03월 11일 20시 36분</time>
+        <h1>Hugo Blog 구축기</h1>
+      </div>
+    </a>
+  </div>
+  <div class="post-toc">
+    <span class="title">차례</span>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#기술-블로그를-시작한-이유">기술 블로그를 시작한 이유</a></li>
+    <li><a href="#hugo를-선택한-이유">Hugo를 선택한 이유</a></li>
+    <li><a href="#이름은-왜">이름은 왜?</a></li>
+    <li><a href="#삽질-삽질-삽을-들고서">삽질.. 삽질 삽을 들고서..</a>
+      <ul>
+        <li><a href="#가이드가-어디-없나-뒤적-뒤적">가이드가 어디 없나? 뒤적 뒤적</a></li>
+        <li><a href="#테마-이쁘다">테마 이쁘다.</a></li>
+        <li><a href="#아니-마크업파일이-뭐지">아니!! 마크업파일이 뭐지.?</a></li>
+      </ul>
+    </li>
+    <li><a href="#앞으로-할일">앞으로 할일</a></li>
+  </ul>
+</nav>
+  </div>
+  <section class="post-content">
+    <h2 id="기술-블로그를-시작한-이유">기술 블로그를 시작한 이유</h2>
+<p>멋진 기술 블로그들을 가보면 다들 글을 왜이렇게 잘 쓰는지&hellip;<br>
+뭔가 멋있기도 하고 내가 뒤쳐저 있는 것 같기도 하고&hellip;<br>
+그냥 그런 블로그를 가지고 싶었고 시작했다.</p>
+<h2 id="hugo를-선택한-이유">Hugo를 선택한 이유</h2>
+<p>처음에는 Tstory에 한 두개 정도 글을 썻다.
+매우 편한 환경이였고 글을 맛갈나게 쓰는 것만 신경쓰면 되는 환경이였다.
+하지만 한편에 아쉬움이 계속 남았다. 그래도 뭔가 더 이쁜 나만의 블로그를 가지고 싶다는 욕구가 해결되지 않았다.<br>
+친구랑 빵맥(빵에 맥주)을 하던 중 &ldquo;깃 블로그 해봐&quot;라는 말에 다음날 부랴부랴 찾게 되었다.</p>
+<p><img src="./google-search-jekyll.png" alt="Image" title="icon"><br>
+github blog라고 검색 아래에 있는 hugo&hellip;</p>
+<p>그럼에도</p>
+<ul>
+<li>Go를 나중에 공부해 싶고</li>
+<li>빌드 시간이 세상에서 제일 빠르다길레</li>
+</ul>
+<p>큰 고민 없이 선택하였다.</p>
+<h2 id="이름은-왜">이름은 왜?</h2>
+<p><strong>sango.h</strong>는 C 표준 라이브러리 <strong>&lt;stdio.h&gt;</strong> + 내 이름 <strong>sangoh</strong>의 합성어다.<br>
+쓸머있는 것들이 담겨 있다는 의미를 내포하고 있다.</p>
+<p><img src="kakao-name.png" alt="Image" title="(사실 그냥여자친구가 정해줬다.)"></p>
+<h2 id="삽질-삽질-삽을-들고서">삽질.. 삽질 삽을 들고서..</h2>
+<h3 id="가이드가-어디-없나-뒤적-뒤적">가이드가 어디 없나? 뒤적 뒤적</h3>
+<ul>
+<li><a href="https://github.com/Integerous/Integerous.github.io">https://github.com/Integerous/Integerous.github.io</a></li>
+<li><a href="https://ialy1595.github.io/post/blog-construct-1/">https://ialy1595.github.io/post/blog-construct-1/</a></li>
+</ul>
+<h3 id="테마-이쁘다">테마 이쁘다.</h3>
+<ul>
+<li><a href="https://blog.lulab.net/projects/2016-11-hugo-hello-programmer-theme/">https://blog.lulab.net/projects/2016-11-hugo-hello-programmer-theme/</a></li>
+</ul>
+<h3 id="아니-마크업파일이-뭐지">아니!! 마크업파일이 뭐지.?</h3>
+<ul>
+<li><a href="https://heropy.blog/2017/09/30/markdown/">https://heropy.blog/2017/09/30/markdown/</a></li>
+<li><a href="https://gist.github.com/ihoneymon/652be052a0727ad59601">https://gist.github.com/ihoneymon/652be052a0727ad59601</a></li>
+<li><a href="https://sergeswin.com/1013">https://sergeswin.com/1013</a></li>
+</ul>
+<h2 id="앞으로-할일">앞으로 할일</h2>
+<ol>
+<li>나만의 커스텀 마이징이 남았다.!</li>
+<li>어떤식으로 운영 할 것인가?</li>
+</ol>
+
+  </section>
+  <div class="share">    
+    <a
+      href="//www.facebook.com/sharer.php?src=bm&u=https%3a%2f%2fyeh35.github.io%2fblog.github.io%2fpost%2fhugo%2fhugo-blog-builder%2f&t=Hugo%20Blog%20%ea%b5%ac%ec%b6%95%ea%b8%b0"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-facebook"></i
+    ></a>
+    <a
+      href="//twitter.com/intent/tweet?url=https%3a%2f%2fyeh35.github.io%2fblog.github.io%2fpost%2fhugo%2fhugo-blog-builder%2f&text=Hugo%20Blog%20%ea%b5%ac%ec%b6%95%ea%b8%b0&tw_p=tweetbutton"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-twitter"></i
+    ></a>
+    <a
+      href="//getpocket.com/edit?url=https%3a%2f%2fyeh35.github.io%2fblog.github.io%2fpost%2fhugo%2fhugo-blog-builder%2f&title=Hugo%20Blog%20%ea%b5%ac%ec%b6%95%ea%b8%b0"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-get-pocket"></i
+    ></a>
+    <a
+      href="//plus.google.com/share?url=https%3a%2f%2fyeh35.github.io%2fblog.github.io%2fpost%2fhugo%2fhugo-blog-builder%2f"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-google-plus"></i
+    ></a>
+  </div>
+  <div class="post-meta-code">
+    <div class="desc">
+      친절한
+      
+      <a href="mailto:jaws0910@gmail.com">sango</a>
+      
+      님이
+      <span class="highlight">2020년 03월 11일 20시 36분</span> 
+      에 작성한 글입니다.
+    </div>
+    <div class="desc">
+      
+      <div class="desc">
+        <span class="fixed-desc">_태그</span>
+        
+        
+        <a href="https://yeh35.github.io/blog.github.io/tags/">#</a>
+        
+        <a href="https://yeh35.github.io/blog.github.io/tags/">#</a>
+        
+        <a href="https://yeh35.github.io/blog.github.io/tags/">#</a>
+        
+        
+      </div>
+    </div>
+  </div>  
+  
+  <div class="post-comment">    
+        
+  </div>
+  
+  <div class="recommend-articles">
+    다음으로 읽을만한 글입니다.
+    <ul>
+      
+      
+    </ul>
+  </div>
+</div>
+
+<div class="go-top">
+  <a href="#" class="go-top-button">
+    <i class="fa fa-angle-double-up"></i>
+    <span>위로</span>
+  </a>
+</div>
+<footer class="footer">
+  COPYRIGHT (C) <a href="https://blog.lulab.net">DONGGEUN,BANG (LUBANG).</a><br />
+  ALL RIGHTS RESERVED.
+</footer>
+</body>
+</html>
+
