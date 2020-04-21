@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>스프링 부트와 AWS로 혼자 구현하는 웹 서비스 :: sango.h — Development blog</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Beginning 회사에서 Spring &#43; Tomcat로 구축된 WAS에 신규 도메인을 추가할 일이 생겼다.
+Java를 사용할 줄 알았기에 쉽게 할 줄 알았지만.. 현실은 코드 복붙을 하고 있는 나를 발견했다&amp;hellip; Spring에 대해서 공부를 해야겠다고 검색을 해보니 디자인부터 이쁜(?) 책이 있어서 사게 되었다.
+ summary 책 제목처럼 서비스를 구현부터 서비스를 운영하는 과정을 간략하게 체험해 볼 수 있었다.
+하지만 Intellij, Spring, Gradle을 잘 모른다면 삽질을 많이 해야한다.
+이동욱작가님의 Github를 보고 환경 구축을 철저하게 하자.
+ https://github."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
+
+<link rel="canonical" href="https://yeh35.github.io/blog.github.io/posts/spring/jojoldu-spring-boot-alone-building-book/" />
+
+
+
+
+
+<link rel="stylesheet" href="https://yeh35.github.io/blog.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://yeh35.github.io/blog.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://yeh35.github.io/blog.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://yeh35.github.io/blog.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="스프링 부트와 AWS로 혼자 구현하는 웹 서비스"/>
+<meta name="twitter:description" content="Beginning 회사에서 Spring &#43; Tomcat로 구축된 WAS에 신규 도메인을 추가할 일이 생겼다.
+Java를 사용할 줄 알았기에 쉽게 할 줄 알았지만.. 현실은 코드 복붙을 하고 있는 나를 발견했다&hellip; Spring에 대해서 공부를 해야겠다고 검색을 해보니 디자인부터 이쁜(?) 책이 있어서 사게 되었다.
+ summary 책 제목처럼 서비스를 구현부터 서비스를 운영하는 과정을 간략하게 체험해 볼 수 있었다.
+하지만 Intellij, Spring, Gradle을 잘 모른다면 삽질을 많이 해야한다.
+이동욱작가님의 Github를 보고 환경 구축을 철저하게 하자.
+ https://github."/>
+
+
+
+<meta property="og:title" content="스프링 부트와 AWS로 혼자 구현하는 웹 서비스" />
+<meta property="og:description" content="Beginning 회사에서 Spring &#43; Tomcat로 구축된 WAS에 신규 도메인을 추가할 일이 생겼다.
+Java를 사용할 줄 알았기에 쉽게 할 줄 알았지만.. 현실은 코드 복붙을 하고 있는 나를 발견했다&hellip; Spring에 대해서 공부를 해야겠다고 검색을 해보니 디자인부터 이쁜(?) 책이 있어서 사게 되었다.
+ summary 책 제목처럼 서비스를 구현부터 서비스를 운영하는 과정을 간략하게 체험해 볼 수 있었다.
+하지만 Intellij, Spring, Gradle을 잘 모른다면 삽질을 많이 해야한다.
+이동욱작가님의 Github를 보고 환경 구축을 철저하게 하자.
+ https://github." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yeh35.github.io/blog.github.io/posts/spring/jojoldu-spring-boot-alone-building-book/" />
+<meta property="article:published_time" content="2020-04-21T06:00:00+09:00" />
+<meta property="article:modified_time" content="2020-04-21T06:00:00+09:00" /><meta property="og:site_name" content="sango.h" />
+
+
+
+
+
+
+
+
+
+
+  </head>
+  <body class="">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://yeh35.github.io/blog.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">sango.h</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/blog.github.io/about">About</a></li>
+        
+      
+        
+          <li><a href="/blog.github.io/blog">Blog</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/blog.github.io/about">About</a></li>
+      
+    
+      
+        <li><a href="/blog.github.io/blog">Blog</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h2 class="post-title"><a href="https://yeh35.github.io/blog.github.io/posts/spring/jojoldu-spring-boot-alone-building-book/">스프링 부트와 AWS로 혼자 구현하는 웹 서비스</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-04-21
+        </span>
+
+        
+          
+        
+      
+
+      
+      
+        <span class="post-read-time">— 1 min read</span>
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://yeh35.github.io/blog.github.io/tags/spring-boot/">spring-boot</a>&nbsp;
+        
+          #<a href="https://yeh35.github.io/blog.github.io/tags/book/">book</a>&nbsp;
+        
+          #<a href="https://yeh35.github.io/blog.github.io/tags/review/">review</a>&nbsp;
+        
+      </span>
+    
+
+    
+      
+        <img src="https://yeh35.github.io/blog.github.io/spring/book-spring-boot-jojoldu.jpg" class="post-cover" />
+      
+    
+
+    <div class="post-content">
+      <h2 id="beginning">Beginning</h2>
+<p>회사에서 Spring + Tomcat로 구축된 WAS에 신규 도메인을 추가할 일이 생겼다.<br>
+Java를 사용할 줄 알았기에 쉽게 할 줄 알았지만.. 현실은 코드 복붙을 하고 있는 나를 발견했다&hellip; <br>
+Spring에 대해서 공부를 해야겠다고 검색을 해보니 디자인부터 이쁜(?) 책이 있어서 사게 되었다.</p>
+<hr>
+<h2 id="summary">summary</h2>
+<p>책 제목처럼 서비스를 구현부터 서비스를 운영하는 과정을 간략하게 체험해 볼 수 있었다.<br>
+하지만 Intellij, Spring, Gradle을 잘 모른다면 삽질을 많이 해야한다.<br>
+<code>이동욱작가님의 Github를 보고 환경 구축을 철저하게 하자.</code></p>
+<ul>
+<li><a href="https://github.com/jojoldu/freelec-springboot2-webservice">https://github.com/jojoldu/freelec-springboot2-webservice</a></li>
+</ul>
+<hr>
+<h2 id="review">review</h2>
+<p>2주일간 책일 보면서 실습을 진행하였지만 책의 끝까지 작성하지는 못하였다.<br>
+11개의 챕터중 9번 챕터까지만 진행을 하고 나머지 챕터들은 읽고 실습을 진행하지 않기로 했다.</p>
+<p>물론 끝까지 할 수만 있다면 좋겠지만 나는 summary에서 언급하였듯 Intellij, Spring, Gradle, Linux, AWS 등 여기서 사용하는 다양한 기술들을 거의 처음 접했고 책에서는 간략하게 설명은 해주지만 코드의 한줄 한줄이 어떻게 돌아가는지 정확하게 이해하지 못하고 실습을 계속 진행하였다.</p>
+<p>이 책에 대해서는 만족스럽다 비록 실습을 끝까지 진행하지는 못 하였지만 저 많은 기술들에 대해서 맛 보기도 하고 앞으로 무엇을 공부해야할지 비전(?)을 주었다. <br>
+책을 보면서 OneNote에 정리한 내용을 아래에 붙어 넣겠다.</p>
+<hr>
+<h2 id="theorem">theorem</h2>
+<p><img src="https://yeh35.github.io/blog.github.io/spring/book-spring-boot-jojoldu-theorem.png" alt="theorem"></p>
+
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+            
+              <span class="button next">
+                <a href="https://yeh35.github.io/blog.github.io/posts/hugo/hugo-blog-builder/">
+                  <span class="button__text">Hugo Blog 구축기</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+      
+        
+
+      
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="https://yeh35.github.io/blog.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">sango.h</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2020 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://yeh35.github.io/blog.github.io/assets/main.js"></script>
+<script src="https://yeh35.github.io/blog.github.io/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>
