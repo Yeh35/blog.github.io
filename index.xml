@@ -6,10 +6,19 @@
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr</language>
-    <lastBuildDate>Sun, 10 May 2020 12:19:01 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2020 12:40:07 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>다이나믹 프록시</title>
+      <link>https://yeh35.github.io/blog.github.io/posts/documents/java/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9_%ED%94%84%EB%A1%9D%EC%8B%9C/</link>
+      <pubDate>Sun, 10 May 2020 12:40:07 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/posts/documents/java/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9_%ED%94%84%EB%A1%9D%EC%8B%9C/</guid>
+      <description>사전 지식  java Class loading (실행과정) java 리플렉션  프록시 패턴  프록시와 리얼 서브젝트가 같은 인터페이스를 상속받고 클라이언트는 인터페이스를 프록시 타입으로 선언해서 사용한다. 프록시에서는 앞뒤로 부가 가능을 추가하고 리얼 서브젝트를 호출 한다.   결과적으로 리얼 서브젝트는 제공하는 핵심기능을 유지하며 코드 변경 없이 부가적인 기능(트렌젝션, 접근 제어, 로깅)을 제공할 수 있다.  다이나믹 프록시  테스트 코드 실행을 위해서 junit4를 사용할 것이다.    프록시 패턴 인터페이스가 필요하듯 인터페이스를 추가한다</description>
+    </item>
     
     <item>
       <title>문장 성분과 문장 형식</title>
@@ -27,7 +36,7 @@
       <pubDate>Sat, 09 May 2020 23:10:06 +0900</pubDate>
       
       <guid>https://yeh35.github.io/blog.github.io/posts/tir/tir-2020-05-09/</guid>
-      <description>오늘 한 일  TIL(Today I learned)에 대한 블로그 글을 작성  https://yeh35.github.io/img/blog.github.io/posts/tir/tir-start/   영어과외 복습 (Grammar Zone)  문장 성분과 문장 형식 &amp;lt;&amp;ndash; document 기록    느낀점  공부를 하는 것이 생각보다 오래걸린다. (11시에 시작했는데 지금 1시다. 2시간&amp;hellip;)  물론 양에 따라 다르겠지만 한번에 정리하려고 하지말고 공부 틈틈히 정리하고 TIL은 마지막에 합치는 작업으로 해야겠다.   영어 공부는 규칙 이해 -&amp;gt; 문장 읽기 -&amp;gt; 단어 암기 -&amp;gt; 문장 읽기 -&amp;gt; 단어 암기&amp;hellip;.</description>
+      <description>오늘 한 일  TIL(Today I learned)에 대한 블로그 글을 작성  https://yeh35.github.io/blog.github.io/img/posts/tir/tir-start/   영어과외 복습 (Grammar Zone)  문장 성분과 문장 형식 &amp;lt;&amp;ndash; document 기록    느낀점  공부를 하는 것이 생각보다 오래걸린다. (11시에 시작했는데 지금 1시다. 2시간&amp;hellip;)  물론 양에 따라 다르겠지만 한번에 정리하려고 하지말고 공부 틈틈히 정리하고 TIL은 마지막에 합치는 작업으로 해야겠다.   영어 공부는 규칙 이해 -&amp;gt; 문장 읽기 -&amp;gt; 단어 암기 -&amp;gt; 문장 읽기 -&amp;gt; 단어 암기&amp;hellip;.</description>
     </item>
     
     <item>
