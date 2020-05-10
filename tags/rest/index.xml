@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>REST on sango.h</title>
+    <link>https://yeh35.github.io/blog.github.io/tags/rest/</link>
+    <description>Recent content in REST on sango.h</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr</language>
+    <lastBuildDate>Sun, 10 May 2020 15:45:22 +0900</lastBuildDate>
+    
+	<atom:link href="https://yeh35.github.io/blog.github.io/tags/rest/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is REST API(그런 REST API로 괜찮은가)</title>
+      <link>https://yeh35.github.io/blog.github.io/posts/documents/web/what_is_rest_api/</link>
+      <pubDate>Sun, 10 May 2020 15:45:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/posts/documents/web/what_is_rest_api/</guid>
+      <description>이응준님의 &amp;ldquo;그런 REST API로 괜찮은가&amp;rdquo; 발표를 보고 정리한 내용이다.
+REST API란?  REpresentational State Transfer REST 아키텍처를 따르는 API 인터넷 상의 시스템 간의 상호 운용성(interoperabiliy)을 제공하는 방법중 하나 시스템 제각각의 독립적인 진화를 보장하기 위한 방법  REST 아키택처 스타일란?  client-server stateless cache uniform interface layered system code-on-demand (optional)  (아키택처 스타일이란 제약조건의 집합) 나머지는 잘 지켜지지만 uniform interface는 쉽게 지켜지지 않는다..
+Uniform Interface의 제약 조건  Identification or resource : 리소스가 URL로 식별되면 된다.</description>
+    </item>
+    
+  </channel>
+</rss>
