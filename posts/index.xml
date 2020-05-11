@@ -6,10 +6,19 @@
     <description>Recent content in Posts on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr</language>
-    <lastBuildDate>Sun, 10 May 2020 15:45:22 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2020 23:33:09 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 05 11</title>
+      <link>https://yeh35.github.io/blog.github.io/posts/tir/tir-2020-05-11/</link>
+      <pubDate>Mon, 11 May 2020 23:33:09 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/posts/tir/tir-2020-05-11/</guid>
+      <description>오늘 한 일 영어  GRAMMER ZONE Chapter 1, 2 모르는 단어 정리  영어 단어를 옮겨적는 일이 왜이리 오래 걸리는지 모르겠다. 고작 57개 단어를 엑셀에 정리하는데 40분이 걸렸다.  단어 입력 -&amp;gt; naver 사전 검색 -&amp;gt; 복붙 -&amp;gt; 다음단어 찾기     GRAMMER ZONE Chapter 1, 2 문제 풀기  영어문제는 풀기도 너우 오래걸린다..(1장 푸는데 1시간&amp;hellip;)   빅보카 52단어 시험, 18단어 암기  Slack Webhook  Webhook을 이용한 서버 모니터링 제작중 outgoint을 이용해서 모니터링 해야하는 서버를 추가 삭제하고 주기적으로 서버에 응답을 보내고 응답이 없으면 incoming을 이용해 Slack방에 알림  미용  오랜만에 미용실을 갔는데 (거의 3달.</description>
+    </item>
     
     <item>
       <title>What is REST API(그런 REST API로 괜찮은가)</title>
