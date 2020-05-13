@@ -6,10 +6,20 @@
     <description>Recent content in TIL on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr</language>
-    <lastBuildDate>Tue, 12 May 2020 23:13:45 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 23:38:45 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 05 13</title>
+      <link>https://yeh35.github.io/blog.github.io/posts/tir/tir-2020-05-13/</link>
+      <pubDate>Wed, 13 May 2020 23:38:45 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/posts/tir/tir-2020-05-13/</guid>
+      <description>오늘 한 일 반성..  퇴근하고 집에와서 인터넷 서핑을 3시간동안 했다..  영어  Anki를 다시 설치했다. (사용법이 귀찮고 안이뻐서 다른 대안을 찾아봤는데 기능이 이게 가장 훌륭했다..) 출퇴근 시간 총 90개 단어를 복습했다. 잠들기전까지 틈틈히..  Slack  WebHook을 이용한 Web서버 모니터링 대몬의 핵심기능은 완성했다.
+(10초마다 서버 상태 확인하는&amp;hellip;) 내일 테스트 서버에 적용해봐야겠다.  </description>
+    </item>
     
     <item>
       <title>TIL 2020 05 12 (화)</title>
