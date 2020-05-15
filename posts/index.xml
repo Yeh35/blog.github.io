@@ -6,10 +6,23 @@
     <description>Recent content in Posts on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr</language>
-    <lastBuildDate>Thu, 14 May 2020 23:25:27 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 23:26:03 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 05 15 (금)</title>
+      <link>https://yeh35.github.io/blog.github.io/posts/tir/til-2020-05-15/</link>
+      <pubDate>Fri, 15 May 2020 23:26:03 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/posts/tir/til-2020-05-15/</guid>
+      <description>오늘 한 일 영어  50개의 단어를 복습하였다. 버스에서 많이 외워야 하는데 버스만 타면 잠을 잔다.  WebHooks Slack에 WebHooks에 관한 사용법과 예제 소스를 만들었다. 아직 github에 올리지 못했는데 TIL쓰고 마저 작업해야겠다.
+재난 지원금 이사온지는 6개월이 넘었는데 세대주 분리를 깜박하고 4월 2일에 하였다.
+그런데 정부에서 이번에 코로나19 재난 지원금이라는 것을 가구별로 지급하는데 기준일이 3월 28일인 것이다..
+결국 지원금 40만원을 못받게 되었다.
+서류처리, 문서작업등 당장 중요해보이지 않고 조금 뭉그적하기 쉬운 것들이 사실 엄청 중요하다는 걸 40만원짜리 수업으로 배웠다.</description>
+    </item>
     
     <item>
       <title>TIL 2020 05 14 (목)</title>
