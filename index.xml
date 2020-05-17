@@ -6,10 +6,24 @@
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr</language>
-    <lastBuildDate>Sat, 16 May 2020 23:27:20 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2020 02:12:37 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 05 17 (일)</title>
+      <link>https://yeh35.github.io/blog.github.io/posts/tir/til-2020-05-17/</link>
+      <pubDate>Sun, 17 May 2020 02:12:37 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/posts/tir/til-2020-05-17/</guid>
+      <description>오늘 한 일 Spring JPA강의를 보다가 백기선 강사님이 도커로 Mysql을 실행하시는 것을 보고 도커 알아보다 샛길로 빠졌다.
+우분트 도커를 학습하기 위해서는 Linux가 필요할거 같아서 Linux용 Windows 하위시스템을 오픈하고 우분트를 설치했다.
+하지만 도커를 학습하고나서 쓸모 없다는 걸 알았다.
+ https://m.blog.naver.com/6116949/221244246623  도커 &amp;lsquo;초보를 위한 도커 안내서&amp;rsquo;라는 블로그 글을 보고 도커에 대한 기초 학습을 하였다.
+정말 유익한 내용을 따라하고 읽기 쉽게 정리하시다니 글쓰는 능력이 대단하신거 같다.
+회사에서 Spring Boot를 서버에서 실행하려는데 환경 설정등의 문제로 애를 먹었었다.</description>
+    </item>
     
     <item>
       <title>Spring Boot를 이용한 Slack Webhooks 사용하기</title>
