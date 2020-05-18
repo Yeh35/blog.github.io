@@ -2,17 +2,17 @@
 <html lang="en">
   <head>
     
-      <title>Spring Boot를 이용한 Slack Webhooks 사용하기 :: sango.h — Development blog</title>
+      <title>TIL 2020 05 18 :: sango.h — Development blog</title>
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Slack README에 예제 소스와 사용법은 아래 Github에 적어놓았다.
-GitHub https://github.com/Yeh35/spring-boot-webhook-example"/>
+<meta name="description" content="오늘 한 일 Gradle 정독도서관에서 빌린 Gradle 철저 입문이 반납일이 다가와서 마져 읽기 시작했다. 이런 인프라 기술들을 읽고 있으면 이런 시스템을 구축하는 사람들이 대단하게 느껴진다.
+Gradle에서 자주 사용되는 Groovy 문법을 정리했고 Gradle에 관한 내용을 정리해야겠다. 기회가 된다면 입문서도 작성해보고 싶고&amp;hellip;"/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
 
-<link rel="canonical" href="https://yeh35.github.io/blog.github.io/posts/spring/spring-slack-webhooks/" />
+<link rel="canonical" href="https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-18/" />
 
 
 
@@ -29,19 +29,19 @@ GitHub https://github.com/Yeh35/spring-boot-webhook-example"/>
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Spring Boot를 이용한 Slack Webhooks 사용하기"/>
-<meta name="twitter:description" content="Slack README에 예제 소스와 사용법은 아래 Github에 적어놓았다.
-GitHub https://github.com/Yeh35/spring-boot-webhook-example"/>
+<meta name="twitter:title" content="TIL 2020 05 18"/>
+<meta name="twitter:description" content="오늘 한 일 Gradle 정독도서관에서 빌린 Gradle 철저 입문이 반납일이 다가와서 마져 읽기 시작했다. 이런 인프라 기술들을 읽고 있으면 이런 시스템을 구축하는 사람들이 대단하게 느껴진다.
+Gradle에서 자주 사용되는 Groovy 문법을 정리했고 Gradle에 관한 내용을 정리해야겠다. 기회가 된다면 입문서도 작성해보고 싶고&hellip;"/>
 
 
 
-<meta property="og:title" content="Spring Boot를 이용한 Slack Webhooks 사용하기" />
-<meta property="og:description" content="Slack README에 예제 소스와 사용법은 아래 Github에 적어놓았다.
-GitHub https://github.com/Yeh35/spring-boot-webhook-example" />
+<meta property="og:title" content="TIL 2020 05 18" />
+<meta property="og:description" content="오늘 한 일 Gradle 정독도서관에서 빌린 Gradle 철저 입문이 반납일이 다가와서 마져 읽기 시작했다. 이런 인프라 기술들을 읽고 있으면 이런 시스템을 구축하는 사람들이 대단하게 느껴진다.
+Gradle에서 자주 사용되는 Groovy 문법을 정리했고 Gradle에 관한 내용을 정리해야겠다. 기회가 된다면 입문서도 작성해보고 싶고&hellip;" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yeh35.github.io/blog.github.io/posts/spring/spring-slack-webhooks/" />
-<meta property="article:published_time" content="2020-05-16T23:27:20+09:00" />
-<meta property="article:modified_time" content="2020-05-16T23:27:20+09:00" /><meta property="og:site_name" content="sango.h" />
+<meta property="og:url" content="https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-18/" />
+<meta property="article:published_time" content="2020-05-18T23:26:21+09:00" />
+<meta property="article:modified_time" content="2020-05-18T23:26:21+09:00" /><meta property="og:site_name" content="sango.h" />
 
 
 
@@ -125,11 +125,11 @@ GitHub https://github.com/Yeh35/spring-boot-webhook-example" />
   
 
   <div class="post">
-    <h2 class="post-title"><a href="https://yeh35.github.io/blog.github.io/posts/spring/spring-slack-webhooks/">Spring Boot를 이용한 Slack Webhooks 사용하기</a></h2>
+    <h2 class="post-title"><a href="https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-18/">TIL 2020 05 18</a></h2>
     <div class="post-meta">
       
         <span class="post-date">
-          2020-05-16
+          2020-05-18
         </span>
 
         
@@ -146,11 +146,7 @@ GitHub https://github.com/Yeh35/spring-boot-webhook-example" />
     
       <span class="post-tags">
         
-          #<a href="https://yeh35.github.io/blog.github.io/tags/slack/">Slack</a>&nbsp;
-        
-          #<a href="https://yeh35.github.io/blog.github.io/tags/spring/">Spring</a>&nbsp;
-        
-          #<a href="https://yeh35.github.io/blog.github.io/tags/webhooks/">WebHooks</a>&nbsp;
+          #<a href="https://yeh35.github.io/blog.github.io/tags/til/">TIL</a>&nbsp;
         
       </span>
     
@@ -158,9 +154,12 @@ GitHub https://github.com/Yeh35/spring-boot-webhook-example" />
     
 
     <div class="post-content">
-      <p>Slack README에 예제 소스와 사용법은 아래 Github에 적어놓았다.</p>
-<h2 id="github">GitHub</h2>
-<p><a href="https://github.com/Yeh35/spring-boot-webhook-example">https://github.com/Yeh35/spring-boot-webhook-example</a></p>
+      <h2 id="오늘-한-일">오늘 한 일</h2>
+<h3 id="gradle">Gradle</h3>
+<p>정독도서관에서 빌린 <code>Gradle 철저 입문</code>이 반납일이 다가와서 마져 읽기 시작했다.
+이런 인프라 기술들을 읽고 있으면 이런 시스템을 구축하는 사람들이 대단하게 느껴진다.<br>
+Gradle에서 자주 사용되는 Groovy 문법을 정리했고 Gradle에 관한 내용을 정리해야겠다. <br>
+기회가 된다면 입문서도 작성해보고 싶고&hellip;</p>
 
     </div>
     
@@ -172,17 +171,10 @@ GitHub https://github.com/Yeh35/spring-boot-webhook-example" />
           </div>
           <div class="pagination__buttons">
             
-              <span class="button previous">
-                <a href="https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-17/">
-                  <span class="button__icon">←</span>
-                  <span class="button__text">TIL 2020 05 17 (일)</span>
-                </a>
-              </span>
-            
             
               <span class="button next">
-                <a href="https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-16/">
-                  <span class="button__text">TIL 2020 05 16 (토)</span>
+                <a href="https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-17/">
+                  <span class="button__text">TIL 2020 05 17 (일)</span>
                   <span class="button__icon">→</span>
                 </a>
               </span>
