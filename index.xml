@@ -5,7 +5,7 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 19 May 2020 23:26:21 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2020 23:26:21 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,27 +18,6 @@
       <guid>https://yeh35.github.io/blog.github.io/about-me/</guid>
       <description>안녕하세요, 예상오입니다 현제 소프트원에서 패션 ERP를 유지보수 업무를 하고 있으며, 2018년 9월부터 2021년 7월까지 병역특례를 하고 있습니다.
 주로 백엔드 개발을 전문으로하며 최근에는 Spring, Gradle에 관심을 많습니다.</description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://yeh35.github.io/blog.github.io/til/test/</link>
-      <pubDate>Tue, 19 May 2020 23:26:21 +0900</pubDate>
-      
-      <guid>https://yeh35.github.io/blog.github.io/til/test/</guid>
-      <description>글을 써봤어요~
-Heading Sub-heading sss Paragraphs are separated by a blank line.
-Two spaces at the end of a line
-produces a line break.
-Text attributes italic, bold, monospace.
-Horizontal rule:
- Strikethrough: strikethrough
-Bullet list:
- apples oranges pears  Numbered list:
- lather rinse repeat  An example.
- Markdown uses email-style &amp;gt; characters for blockquoting.
- Inline HTMLis supported.
-Block: \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\]</description>
     </item>
     
     <item>
