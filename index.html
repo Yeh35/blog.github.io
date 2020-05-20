@@ -1,385 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-	<meta name="generator" content="Hugo 0.66.0" />
-    
-      <title>sango.h — Development blog</title>
-    
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Development blog"/>
-<meta name="keywords" content=""/>
-<meta name="robots" content="noodp"/>
-<meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
+<html lang='kr'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='sango.h는 snagoh와 c언어의 stdio.h의 합성어이다.'>
+<meta name='theme-color' content='#ffcd00'>
 
-<link rel="canonical" href="https://yeh35.github.io/blog.github.io/" />
+<meta property='og:title' content='sango.h'>
+<meta property='og:description' content='sango.h는 snagoh와 c언어의 stdio.h의 합성어이다.'>
+<meta property='og:url' content='https://yeh35.github.io/blog.github.io/'>
+<meta property='og:site_name' content='sango.h'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content='2020-05-18T23:26:21&#43;09:00'/><meta name='twitter:card' content='summary'>
 
+<meta name="generator" content="Hugo 0.66.0" />
 
-
-
-
-<link rel="stylesheet" href="https://yeh35.github.io/blog.github.io/assets/style.css">
-
-
-<link rel="stylesheet" href="https://yeh35.github.io/blog.github.io/style.css">
-
-
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://yeh35.github.io/blog.github.io/img/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="https://yeh35.github.io/blog.github.io/img/favicon.png">
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="sango.h"/>
-<meta name="twitter:description" content=""/>
-
-
-
-<meta property="og:title" content="sango.h" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://yeh35.github.io/blog.github.io/" />
-<meta property="og:updated_time" content="2020-05-18T23:26:21+09:00" /><meta property="og:site_name" content="sango.h" />
-
-
-
-<link rel="alternate" type="application/rss+xml" href="/blog.github.io/index.xml" title="sango.h" />
-
-
-
-
-
-
-
-  </head>
-  <body class="">
-    <div class="container">
-      <header class="header">
-  <span class="header__inner">
-    <a href="https://yeh35.github.io/blog.github.io/" class="logo" style="text-decoration: none;">
+  <title>sango.h</title>
+  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/'>
   
-    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
-  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
-</svg>
-</span>
-    <span class="logo__text">sango.h</span>
-    <span class="logo__cursor"></span>
+    <link href="https://yeh35.github.io/blog.github.io/index.xml" rel="alternate" type="application/rss+xml" title="sango.h" />
   
-</a>
+  <link rel='alternate' hreflang='kr' href='https://yeh35.github.io/blog.github.io/'><link rel='alternate' hreflang='x-default' href='https://yeh35.github.io/blog.github.io/'><link rel='alternate' hreflang='en' href='https://yeh35.github.io/blog.github.io/en/'>
+  <link rel='icon' href='/blog.github.io/favicon.ico'>
+<link rel='stylesheet' href='/blog.github.io/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/blog.github.io/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
 
-    <span class="header__right">
-      
-        <nav class="menu">
-  <ul class="menu__inner menu__inner--desktop">
-    
-      
-        
-          <li><a href="/blog.github.io/about">About</a></li>
-        
-      
-        
-          <li><a href="/blog.github.io/blog">Blog</a></li>
-        
-      
-      
-    
-  </ul>
-
-  <ul class="menu__inner menu__inner--mobile">
-    
-      
-        <li><a href="/blog.github.io/about">About</a></li>
-      
-    
-      
-        <li><a href="/blog.github.io/blog">Blog</a></li>
-      
-    
-  </ul>
-</nav>
-
-        <span class="menu-trigger">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-          </svg>
-        </span>
-      
-      <span class="theme-toggle">
-        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
-  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
-  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
-</svg>
-
-      </span>
-    </span>
-  </span>
-</header>
-
-
-      <div class="content">
-        
-  
   
 
-  
-  
+</head>
+<body class='home type-page has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'></a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
     
-  
-  
-
-  <div class="posts">
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-18/">TIL 2020 05 18</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-05-18
-          </span>
-
-          
-        
-        <span class="post-author">— Written by sangoh sangoh</span>
-        
-          <span class="post-read-time">— 1 min read</span>
-        
-      </div>
-
-      
-        <span class="post-tags">
-          
-            #<a href="https://yeh35.github.io/blog.github.io/tags/til/">TIL</a>&nbsp;
-          
-        </span>
-      
-
-      
-
-      <div class="post-content">
-        
-          
-        
-      </div>
-      
-        <div><a class="read-more button" href="/blog.github.io/posts/til/til-2020-05-18/">Read more →</a></div>
-      
+    <div class='logo'>
+      <a href='/blog.github.io/'>
+        <img src='https://avatars2.githubusercontent.com/u/46643699?s=460&amp;u=374c79ade497bda3a230e7ccc8693af69b94e766&amp;v=4'>
+      </a>
     </div>
     
-    <div class="post on-list">
-      <h1 class="post-title"><a href="https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-17/">TIL 2020 05 17 (일)</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-05-17
-          </span>
-
-          
-        
-        <span class="post-author">— Written by sangoh sangoh</span>
-        
-          <span class="post-read-time">— 1 min read</span>
-        
-      </div>
-
-      
-        <span class="post-tags">
-          
-            #<a href="https://yeh35.github.io/blog.github.io/tags/til/">TIL</a>&nbsp;
-          
-        </span>
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            오늘 한 일 Spring JPA강의를 보다가 백기선 강사님이 도커로 Mysql을 실행하시는 것을 보고 도커 알아보다 샛길로 빠졌다.
-우분트 도커를 학습하기 위해서는 Linux가 필요할거 같아서 Linux용 Windows 하위시스템을 오픈하고 우분트를 설치했다.
-하지만 도커를 학습하고나서 쓸모 없다는 걸 알았다.
-<a href="https://m.blog.naver.com/6116949/221244246623">https://m.blog.naver.com/6116949/221244246623</a>  도커 ‘초보를 위한 도커 안내서’라는 블로그 글을 보고 도커에 대한 기초 학습을 하였다.
-정말 유익한 내용을 따라하고 읽기 쉽게 정리하시다니 글쓰는 능력이 대단하신거 같다.
-회사에서 Spring Boot를 서버에서 실행하려는데 환경 설정등의 문제로 애를 먹었었다.
-          
-        
-      </div>
-      
-        <div><a class="read-more button" href="/blog.github.io/posts/til/til-2020-05-17/">Read more →</a></div>
-      
+    <h2 class='title site-title '>
+      <a href='/blog.github.io/'>
+      sango.h
+      </a>
+    </h2>
+    <div class='desc'>
+    백엔드 개발에 관심이 많습니다.
     </div>
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="https://yeh35.github.io/blog.github.io/posts/spring/spring-slack-webhooks/">Spring Boot를 이용한 Slack Webhooks 사용하기</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-05-16
-          </span>
+  </header>
 
-          
-        
-        <span class="post-author">— Written by sangoh sangoh</span>
-        
-          <span class="post-read-time">— 1 min read</span>
-        
-      </div>
-
-      
-        <span class="post-tags">
-          
-            #<a href="https://yeh35.github.io/blog.github.io/tags/slack/">Slack</a>&nbsp;
-          
-            #<a href="https://yeh35.github.io/blog.github.io/tags/spring/">Spring</a>&nbsp;
-          
-            #<a href="https://yeh35.github.io/blog.github.io/tags/webhooks/">WebHooks</a>&nbsp;
-          
-        </span>
-      
-
-      
-
-      <div class="post-content">
-        
-          
-        
-      </div>
-      
-        <div><a class="read-more button" href="/blog.github.io/posts/spring/spring-slack-webhooks/">Read more →</a></div>
-      
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label=''>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/blog.github.io/documents/'>document</a></li><li class='item'>
+  <a href='/blog.github.io/til/'>TIL</a></li></ul>
     </div>
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-16/">TIL 2020 05 16 (토)</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-05-16
-          </span>
+  </nav>
 
-          
-        
-        <span class="post-author">— Written by sangoh sangoh</span>
-        
-          <span class="post-read-time">— 1 min read</span>
-        
-      </div>
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'></h4>
+  </header>
 
-      
-        <span class="post-tags">
-          
-            #<a href="https://yeh35.github.io/blog.github.io/tags/til/">TIL</a>&nbsp;
-          
-        </span>
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            오늘 한 일 Spring  인프런에서 백기선님의 Spring jpa를 결제하였다. JPA가 뭔지 처음 알았을 떄 너무 놀라웠다.
-더이상 귀찮은 쿼리를 안짜도 된다니 빨리 배우고 싶다.  영어  72개의 단어를 복습하였다.  잠  거의 하루종일 잠을 잤다. &lt;수면의 모든 것-니시노 세이즈&gt;에서 수면의 부채라는 이야기가 나오는데
-이거 인거 같다. 일어나도 계속 멍한 상태가 되니…  Youtube 핸드폰에서는 유트브를 삭제해야겠다. 평균 시청시간이 4시간을 넘기다니..
-많이 안본다고 생각했는데 데이터는 “너 많이 봐&quot;를 말해주고 있었다.
-          
-        
-      </div>
-      
-        <div><a class="read-more button" href="/blog.github.io/posts/til/til-2020-05-16/">Read more →</a></div>
-      
-    </div>
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-15/">TIL 2020 05 15 (금)</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-05-15
-          </span>
-
-          
-        
-        <span class="post-author">— Written by sangoh sangoh</span>
-        
-          <span class="post-read-time">— 1 min read</span>
-        
-      </div>
-
-      
-        <span class="post-tags">
-          
-            #<a href="https://yeh35.github.io/blog.github.io/tags/til/">TIL</a>&nbsp;
-          
-        </span>
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            오늘 한 일 영어  50개의 단어를 복습하였다. 버스에서 많이 외워야 하는데 버스만 타면 잠을 잔다.  WebHooks Slack에 WebHooks에 관한 사용법과 예제 소스를 만들었다.
-github 예제소스  재난 지원금 이사온지는 6개월이 넘었는데 세대주 분리를 깜박하고 4월 2일에 하였다.
-그런데 정부에서 이번에 코로나19 재난 지원금이라는 것을 가구별로 지급하는데 기준일이 3월 28일인 것이다..
-결국 지원금 40만원을 못받게 되었다.
-서류처리, 문서작업등 당장 중요해보이지 않고 조금 뭉그적하기 쉬운 것들이 사실 엄청 중요하다는 걸 40만원짜리 수업으로 배웠다.
-          
-        
-      </div>
-      
-        <div><a class="read-more button" href="/blog.github.io/posts/til/til-2020-05-15/">Read more →</a></div>
-      
-    </div>
-    
-    <div class="pagination">
-  <div class="pagination__buttons">
-    
-    
-      <span class="button next">
-        <a href="/blog.github.io/page/2/">
-          <span class="button__text">Older posts</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-    
-  </div>
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/blog.github.io/tags/api/' style='font-size:1em'>API</a>
+      </li><li>
+        <a href='/blog.github.io/tags/blog/' style='font-size:1em'>blog</a>
+      </li><li>
+        <a href='/blog.github.io/tags/book/' style='font-size:1em'>book</a>
+      </li><li>
+        <a href='/blog.github.io/tags/english/' style='font-size:1em'>english</a>
+      </li><li>
+        <a href='/blog.github.io/tags/http/' style='font-size:1em'>HTTP</a>
+      </li><li>
+        <a href='/blog.github.io/tags/hugo/' style='font-size:1em'>hugo</a>
+      </li><li>
+        <a href='/blog.github.io/tags/rest/' style='font-size:1em'>REST</a>
+      </li><li>
+        <a href='/blog.github.io/tags/review/' style='font-size:1em'>review</a>
+      </li><li>
+        <a href='/blog.github.io/tags/slack/' style='font-size:1em'>Slack</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring/' style='font-size:1em'>Spring</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring-boot/' style='font-size:1em'>spring-boot</a>
+      </li><li>
+        <a href='/blog.github.io/tags/start/' style='font-size:1em'>start</a>
+      </li><li>
+        <a href='/blog.github.io/tags/til/' style='font-size:2em'>TIL</a>
+      </li><li>
+        <a href='/blog.github.io/tags/web/' style='font-size:1em'>web</a>
+      </li><li>
+        <a href='/blog.github.io/tags/webhooks/' style='font-size:1em'>WebHooks</a>
+      </li></ul>
 </div>
 
-  </div>
 
-      </div>
+</section>
+</div>
 
-      
-        <footer class="footer">
-  <div class="footer__inner">
-    
-      <a href="https://yeh35.github.io/blog.github.io/" class="logo" style="text-decoration: none;">
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label=''>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'></a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'></span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
-    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
-  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
 </svg>
 </span>
-    <span class="logo__text">sango.h</span>
-    <span class="logo__cursor"></span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
-</a>
-
-      <div class="copyright">
-        <span>© 2020 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
-        <span>Theme created by <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span>
-      </div>
-    
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/blog.github.io/about-me/'>About Me</a>
+      </li><li class='item'>
+        <a href='/blog.github.io/documents/'>document</a>
+      </li><li class='item'>
+        <a href='/blog.github.io/til/'>TIL</a>
+      </li></ul>
   </div>
-</footer>
+</nav><div class='header-widgets'>
+        <div class='container'><style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><span>sango.h</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
 
-<script src="https://yeh35.github.io/blog.github.io/assets/main.js"></script>
-<script src="https://yeh35.github.io/blog.github.io/assets/prism.js"></script>
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><h1 class='site-title title'>sango.h</h1><p class='desc site-desc'>sango.h는 snagoh와 c언어의 stdio.h의 합성어이다.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
 
 
-      
+<div class='home-widgets'>
+  <div class='container sep-before'><section class='widget widget-recent_posts sep-after'>
+  <header>
+    <h4 class='title widget-title'></h4>
+  </header>
+
+  <ul class='list'>
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'> </span>
+  <time datetime='2020-05-18T23:26:21&#43;09:00'>2020-05-18</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/blog.github.io/til/til-2020-05-18/'>TIL 2020 05 18 (월)</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'> </span>
+  <time datetime='2020-05-17T02:12:37&#43;09:00'>2020-05-17</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/blog.github.io/til/til-2020-05-17/'>TIL 2020 05 17 (일)</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'> </span>
+  <time datetime='2020-05-16T23:27:20&#43;09:00'>2020-05-16</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/blog.github.io/documents/spring/spring-slack-webhooks/'>Spring Boot를 이용한 Slack Webhooks 사용하기</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'> </span>
+  <time datetime='2020-05-16T23:13:25&#43;09:00'>2020-05-16</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/blog.github.io/til/til-2020-05-16/'>TIL 2020 05 16 (토)</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'> </span>
+  <time datetime='2020-05-15T23:26:03&#43;09:00'>2020-05-15</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/blog.github.io/til/til-2020-05-15/'>TIL 2020 05 15 (금)</a>
+    </h3>
+  </header>
+</li>
+
+  
+  </ul>
+</section>
+</div>
+</div>      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label=''>
+    <ul><li>
+        <a href='https://github.com/Yeh35' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:jaws0910@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019-2020 MunifTanjim </p>
+</div>
+
+        </div>
+      </footer>
+
     </div>
+  </div><script>window.__assets_js_src="/blog.github.io/assets/js/"</script>
 
-    
-  </body>
+<script src='/blog.github.io/assets/js/main.c3bcf2df.js'></script><script src='/blog.github.io/js/custom.js'></script>
+
+</body>
+
 </html>
+

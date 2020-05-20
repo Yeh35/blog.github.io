@@ -5,7 +5,6 @@
     <link>https://yeh35.github.io/blog.github.io/tags/start/</link>
     <description>Recent content in start on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>kr</language>
     <lastBuildDate>Wed, 11 Mar 2020 20:36:25 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/start/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +12,10 @@
     
     <item>
       <title>Hugo Blog 구축기</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/hugo/hugo-blog-builder/</link>
+      <link>https://yeh35.github.io/blog.github.io/documents/hugo/hugo-blog-builder/</link>
       <pubDate>Wed, 11 Mar 2020 20:36:25 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/hugo/hugo-blog-builder/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/documents/hugo/hugo-blog-builder/</guid>
       <description>기술 블로그를 시작한 이유 멋진 기술 블로그들을 가보면 다들 글을 왜이렇게 잘 쓰는지&amp;hellip;
 뭔가 멋있기도 하고 내가 뒤쳐저 있는 것 같기도 하고&amp;hellip;
 그냥 그런 블로그를 가지고 싶었고 시작했다.

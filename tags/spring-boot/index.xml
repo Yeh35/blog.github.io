@@ -5,7 +5,6 @@
     <link>https://yeh35.github.io/blog.github.io/tags/spring-boot/</link>
     <description>Recent content in spring-boot on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>kr</language>
     <lastBuildDate>Tue, 21 Apr 2020 06:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +12,10 @@
     
     <item>
       <title>스프링 부트와 AWS로 혼자 구현하는 웹 서비스</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/spring/jojoldu-spring-boot-alone-building-book/</link>
+      <link>https://yeh35.github.io/blog.github.io/documents/spring/jojoldu-spring-boot-alone-building-book/</link>
       <pubDate>Tue, 21 Apr 2020 06:00:00 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/spring/jojoldu-spring-boot-alone-building-book/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/documents/spring/jojoldu-spring-boot-alone-building-book/</guid>
       <description>Beginning 회사에서 Spring + Tomcat로 구축된 WAS에 신규 도메인을 추가할 일이 생겼다.
 Java를 사용할 줄 알았기에 쉽게 할 줄 알았지만.. 현실은 코드 복붙을 하고 있는 나를 발견했다&amp;hellip; Spring에 대해서 공부를 해야겠다고 검색을 해보니 디자인부터 이쁜(?) 책이 있어서 사게 되었다.
  summary 책 제목처럼 서비스를 구현부터 서비스를 운영하는 과정을 간략하게 체험해 볼 수 있었다.

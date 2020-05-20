@@ -5,7 +5,6 @@
     <link>https://yeh35.github.io/blog.github.io/tags/webhooks/</link>
     <description>Recent content in WebHooks on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>kr</language>
     <lastBuildDate>Sat, 16 May 2020 23:27:20 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/webhooks/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +12,10 @@
     
     <item>
       <title>Spring Boot를 이용한 Slack Webhooks 사용하기</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/spring/spring-slack-webhooks/</link>
+      <link>https://yeh35.github.io/blog.github.io/documents/spring/spring-slack-webhooks/</link>
       <pubDate>Sat, 16 May 2020 23:27:20 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/spring/spring-slack-webhooks/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/documents/spring/spring-slack-webhooks/</guid>
       <description>Slack README에 예제 소스와 사용법은 아래 Github에 적어놓았다.
 GitHub https://github.com/Yeh35/spring-boot-webhook-example</description>
     </item>

@@ -5,28 +5,37 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>kr</language>
     <lastBuildDate>Mon, 18 May 2020 23:26:21 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>TIL 2020 05 18</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-18/</link>
+      <title>About Me</title>
+      <link>https://yeh35.github.io/blog.github.io/about-me/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/about-me/</guid>
+      <description>안녕하세요, 예상오입니다 현제 소프트원에서 패션 ERP를 유지보수 업무를 하고 있으며, 2018년 9월부터 2021년 7월까지 병역특례를 하고 있습니다.
+주로 백엔드 개발을 전문으로하며 최근에는 Spring, Gradle에 관심을 많습니다.</description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 05 18 (월)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-18/</link>
       <pubDate>Mon, 18 May 2020 23:26:21 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-18/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-18/</guid>
       <description>오늘 한 일 Gradle 정독도서관에서 빌린 Gradle 철저 입문이 반납일이 다가와서 마져 읽기 시작했다. 이런 인프라 기술들을 읽고 있으면 이런 시스템을 구축하는 사람들이 대단하게 느껴진다.
 Gradle에서 자주 사용되는 Groovy 문법을 정리했고 Gradle에 관한 내용을 정리해야겠다. 기회가 된다면 입문서도 작성해보고 싶고&amp;hellip;</description>
     </item>
     
     <item>
       <title>TIL 2020 05 17 (일)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-17/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-17/</link>
       <pubDate>Sun, 17 May 2020 02:12:37 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-17/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-17/</guid>
       <description>오늘 한 일 Spring JPA강의를 보다가 백기선 강사님이 도커로 Mysql을 실행하시는 것을 보고 도커 알아보다 샛길로 빠졌다.
 우분트 도커를 학습하기 위해서는 Linux가 필요할거 같아서 Linux용 Windows 하위시스템을 오픈하고 우분트를 설치했다.
 하지만 도커를 학습하고나서 쓸모 없다는 걸 알았다.
@@ -37,20 +46,20 @@ Gradle에서 자주 사용되는 Groovy 문법을 정리했고 Gradle에 관한 
     
     <item>
       <title>Spring Boot를 이용한 Slack Webhooks 사용하기</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/spring/spring-slack-webhooks/</link>
+      <link>https://yeh35.github.io/blog.github.io/documents/spring/spring-slack-webhooks/</link>
       <pubDate>Sat, 16 May 2020 23:27:20 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/spring/spring-slack-webhooks/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/documents/spring/spring-slack-webhooks/</guid>
       <description>Slack README에 예제 소스와 사용법은 아래 Github에 적어놓았다.
 GitHub https://github.com/Yeh35/spring-boot-webhook-example</description>
     </item>
     
     <item>
       <title>TIL 2020 05 16 (토)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-16/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-16/</link>
       <pubDate>Sat, 16 May 2020 23:13:25 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-16/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-16/</guid>
       <description>오늘 한 일 Spring  인프런에서 백기선님의 Spring jpa를 결제하였다. JPA가 뭔지 처음 알았을 떄 너무 놀라웠다.
 더이상 귀찮은 쿼리를 안짜도 된다니 빨리 배우고 싶다.  영어  72개의 단어를 복습하였다.  잠  거의 하루종일 잠을 잤다. &amp;lt;수면의 모든 것-니시노 세이즈&amp;gt;에서 수면의 부채라는 이야기가 나오는데
 이거 인거 같다. 일어나도 계속 멍한 상태가 되니&amp;hellip;  Youtube 핸드폰에서는 유트브를 삭제해야겠다. 평균 시청시간이 4시간을 넘기다니..
@@ -59,10 +68,10 @@ GitHub https://github.com/Yeh35/spring-boot-webhook-example</description>
     
     <item>
       <title>TIL 2020 05 15 (금)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-15/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-15/</link>
       <pubDate>Fri, 15 May 2020 23:26:03 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-15/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-15/</guid>
       <description>오늘 한 일 영어  50개의 단어를 복습하였다. 버스에서 많이 외워야 하는데 버스만 타면 잠을 잔다.  WebHooks Slack에 WebHooks에 관한 사용법과 예제 소스를 만들었다.
  github 예제소스  재난 지원금 이사온지는 6개월이 넘었는데 세대주 분리를 깜박하고 4월 2일에 하였다.
 그런데 정부에서 이번에 코로나19 재난 지원금이라는 것을 가구별로 지급하는데 기준일이 3월 28일인 것이다..
@@ -72,49 +81,49 @@ GitHub https://github.com/Yeh35/spring-boot-webhook-example</description>
     
     <item>
       <title>TIL 2020 05 14 (목)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-14/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-14/</link>
       <pubDate>Thu, 14 May 2020 23:25:27 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-14/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-14/</guid>
       <description>오늘 한 일 영어  오늘 서울 한 바퀴를 돌았다 덕분에 대중교통에서 영어 단어를 많이 복습할 수 있었다.
 ANKI에 통계에서는 232개 카드를 복습했다고 한다. (서대문구 -&amp;gt; 강서 -&amp;gt; 성북구 -&amp;gt; 서대문구)  회사에서 Servr에 배포를 할 때  서버에 배포할때 직접 war파일을 구워서 서버로 접속하고 파일을 바꿔주는 식으로 배포를 하고 있는데 너무 귀찮고 하루에 버그 패치로 2번이상 배포해야한다면 뭐하는 짓인지 싶다&amp;hellip; CICD툴들이 있던데 나중에 꼭 공부해서 다음 프로젝트에는 적용시켜야겠다. (물론 가능하다면 현제 서비스중인 도메인에도.</description>
     </item>
     
     <item>
       <title>TIL 2020 05 13 (수)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-13/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-13/</link>
       <pubDate>Wed, 13 May 2020 23:38:45 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-13/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-13/</guid>
       <description>오늘 한 일 반성..  퇴근하고 집에와서 인터넷 서핑을 3시간동안 했다..  영어  Anki를 다시 설치했다. (사용법이 귀찮고 안이뻐서 다른 대안을 찾아봤는데 기능이 이게 가장 훌륭했다..) 출퇴근 시간 총 90개 단어를 복습했다. 잠들기전까지 틈틈히..  Slack  WebHook을 이용한 Web서버 모니터링 대몬의 핵심기능은 완성했다.
 (10초마다 서버 상태 확인하는&amp;hellip;) 내일 테스트 서버에 적용해봐야겠다.  </description>
     </item>
     
     <item>
       <title>TIL 2020 05 12 (화)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-12/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-12/</link>
       <pubDate>Tue, 12 May 2020 23:13:45 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-12/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-12/</guid>
       <description>오늘 한 일 영어  1시간 30분&amp;hellip; 81단어 암기 자기전까지 계속 외울듯..  Gradle  Gradle 그레이들 철저 입문 (429p 중 177p)  http://www.yes24.com/Product/Goods/23449551 총 620p 정도 되는데 다 읽는 건 가성비가 좋지 않을 거 같다.
 (429p 뒤로는 다른 것이랑 연동 이야기가 주라서 필요 없을듯..) 회사 점심시간 자기전에 읽었다. 메모하며 보고 있기는 한데 각잡고 정리하는 날을 잡아야겠다.    </description>
     </item>
     
     <item>
       <title>TIL 2020 05 11 (월)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-11/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-11/</link>
       <pubDate>Mon, 11 May 2020 23:33:09 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-11/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-11/</guid>
       <description>오늘 한 일 영어  GRAMMER ZONE Chapter 1, 2 모르는 단어 정리  영어 단어를 옮겨적는 일이 왜이리 오래 걸리는지 모르겠다. 고작 57개 단어를 엑셀에 정리하는데 40분이 걸렸다.  단어 입력 -&amp;gt; naver 사전 검색 -&amp;gt; 복붙 -&amp;gt; 다음단어 찾기     GRAMMER ZONE Chapter 1, 2 문제 풀기  영어문제는 풀기도 너우 오래걸린다..(1장 푸는데 1시간&amp;hellip;)   빅보카 52단어 시험, 18단어 암기  Slack Webhook  Webhook을 이용한 서버 모니터링 제작중 outgoint을 이용해서 모니터링 해야하는 서버를 추가 삭제하고 주기적으로 서버에 응답을 보내고 응답이 없으면 incoming을 이용해 Slack방에 알림  미용  오랜만에 미용실을 갔는데 (거의 3달.</description>
     </item>
     
     <item>
       <title>What is REST API(그런 REST API로 괜찮은가)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/documents/web/what_is_rest_api/</link>
+      <link>https://yeh35.github.io/blog.github.io/documents/web/what_is_rest_api/</link>
       <pubDate>Sun, 10 May 2020 15:45:22 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/documents/web/what_is_rest_api/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/documents/web/what_is_rest_api/</guid>
       <description>이응준님의 &amp;ldquo;그런 REST API로 괜찮은가&amp;rdquo; 발표를 보고 정리한 내용이다.
 REST API란?  REpresentational State Transfer REST 아키텍처를 따르는 API 인터넷 상의 시스템 간의 상호 운용성(interoperabiliy)을 제공하는 방법중 하나 시스템 제각각의 독립적인 진화를 보장하기 위한 방법  REST 아키택처 스타일란?  client-server stateless cache uniform interface layered system code-on-demand (optional)  (아키택처 스타일이란 제약조건의 집합) 나머지는 잘 지켜지지만 uniform interface는 쉽게 지켜지지 않는다..
 Uniform Interface의 제약 조건  Identification or resource : 리소스가 URL로 식별되면 된다.</description>
@@ -122,29 +131,29 @@ Uniform Interface의 제약 조건  Identification or resource : 리소스가 UR
     
     <item>
       <title>다이나믹 프록시</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/documents/java/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9_%ED%94%84%EB%A1%9D%EC%8B%9C/</link>
+      <link>https://yeh35.github.io/blog.github.io/documents/java/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9_%ED%94%84%EB%A1%9D%EC%8B%9C/</link>
       <pubDate>Sun, 10 May 2020 12:40:07 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/documents/java/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9_%ED%94%84%EB%A1%9D%EC%8B%9C/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/documents/java/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9_%ED%94%84%EB%A1%9D%EC%8B%9C/</guid>
       <description>사전 지식  java Class loading (실행과정) java 리플렉션  프록시 패턴  프록시와 리얼 서브젝트가 같은 인터페이스를 상속받고 클라이언트는 인터페이스를 프록시 타입으로 선언해서 사용한다. 프록시에서는 앞뒤로 부가 가능을 추가하고 리얼 서브젝트를 호출 한다.   결과적으로 리얼 서브젝트는 제공하는 핵심기능을 유지하며 코드 변경 없이 부가적인 기능(트렌젝션, 접근 제어, 로깅)을 제공할 수 있다.  다이나믹 프록시  테스트 코드 실행을 위해서 junit4를 사용할 것이다.    프록시 패턴 인터페이스가 필요하듯 인터페이스를 추가한다</description>
     </item>
     
     <item>
       <title>문장 성분과 문장 형식</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/documents/english/%EB%AC%B8%EC%9E%A5-%EC%84%B1%EB%B6%84%EA%B3%BC-%EB%AC%B8%EC%9E%A5-%ED%98%95%EC%8B%9D/</link>
+      <link>https://yeh35.github.io/blog.github.io/documents/english/%EB%AC%B8%EC%9E%A5-%EC%84%B1%EB%B6%84%EA%B3%BC-%EB%AC%B8%EC%9E%A5-%ED%98%95%EC%8B%9D/</link>
       <pubDate>Sun, 10 May 2020 12:19:01 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/documents/english/%EB%AC%B8%EC%9E%A5-%EC%84%B1%EB%B6%84%EA%B3%BC-%EB%AC%B8%EC%9E%A5-%ED%98%95%EC%8B%9D/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/documents/english/%EB%AC%B8%EC%9E%A5-%EC%84%B1%EB%B6%84%EA%B3%BC-%EB%AC%B8%EC%9E%A5-%ED%98%95%EC%8B%9D/</guid>
       <description>문장성분 주어(S) (~은, 는, 이, 가) 동사(V) 목적어(O) (~을[를], 에게) 보어(C)  주어의 의미나 상태를 보충 설명, 두개로 나뉜다. 주격 보어 (주격을 수식) 목적격 보어 (목적어를 수식)  수식어(M)  부사, 전명구는 무줘건 수식어!!
 물론 형용사도 수식어가 될 수 있다.  보어(C),수석어(M)을 구분  수식어와 주격보어의 구별: 주어와의 관련성  He remained here all night: &amp;lsquo;here&#39;은 부사고 부사는 무줘건 수식어 He remained poor all his life: &amp;lsquo;poor&#39;은 주어의 상태를 나타내는 주격 보어   수식어와 목적격보어의 구별: 목적어와의 관련성  I found the thick book easily : &amp;lsquo;easily&#39;는 목적어가 아닌 동사를 꾸며줌으로 수식어 I found the thick book easy to read : &amp;lsquo;easy to reads&#39;는 목적어를 꾸며줌으로 목적격보어    구와 절  구: 두 개 이상의 단어가 모여서 하나의 품사(하나의 뜻이 되는) 역할을 하는 것  의문사 + to부정사구는 &amp;ldquo;~해야할지&amp;rdquo;, &amp;ldquo;~할지&amp;quot;로 해석된다.</description>
     </item>
     
     <item>
       <title>TIL 2020 05 10 (일)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-10/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-10/</link>
       <pubDate>Sun, 10 May 2020 12:12:09 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-10/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-10/</guid>
       <description>오늘 한 일 더 자바, 코드를 조작하는 다양한 방법 (인프런-백기선강사님)  다아나믹 프록시 강의 듣기 블로그글로 추가 정리 영단어 17개 암기 (대중교통)  REST API 그런 REST API로 괜찮은가
  https://www.youtube.com/watch?v=RP_f5dMoHFc 발표 내용 블로그에 정리 현제로써는 REST를 API에서 따르는 것이 어렵게 느껴지기 때문에 HTTP API로 할 것 같다. 엄밀하게는 REST API는 아니지만 REST API라고 부를 수 있다.
 (마소도 네이버도 카카오도 그러는데 못할게 있나?)  HTTP(!=REST) API Versing problem
@@ -153,19 +162,19 @@ Uniform Interface의 제약 조건  Identification or resource : 리소스가 UR
     
     <item>
       <title>TIL 2020 05 09 (토)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-09/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-09/</link>
       <pubDate>Sat, 09 May 2020 23:10:06 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-09/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-09/</guid>
       <description>오늘 한 일  TIL(Today I learned)에 대한 블로그 글을 작성  https://yeh35.github.io/blog.github.io/img/posts/tir/tir-start/   영어과외 복습 (Grammar Zone)  문장 성분과 문장 형식 &amp;lt;&amp;ndash; document 기록    느낀점  공부를 하는 것이 생각보다 오래걸린다. (11시에 시작했는데 지금 1시다. 2시간&amp;hellip;)  물론 양에 따라 다르겠지만 한번에 정리하려고 하지말고 공부 틈틈히 정리하고 TIL은 마지막에 합치는 작업으로 해야겠다.   영어 공부는 규칙 이해 -&amp;gt; 문장 읽기 -&amp;gt; 단어 암기 -&amp;gt; 문장 읽기 -&amp;gt; 단어 암기&amp;hellip;.</description>
     </item>
     
     <item>
       <title>TIL(Today I Learned) start</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-start/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-start/</link>
       <pubDate>Sat, 09 May 2020 11:40:55 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-start/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-start/</guid>
       <description>매일 노트북을 열지만&amp;hellip; 잘때면 &amp;ldquo;내가 오늘 뭘했지?&amp;rdquo; (디지털 치매인가..)하며 현타가 자주 온다.
 내가 지금 제대로 하는 건가? 결과가 필요해!! 그러다가 jojoldu님의 일일 커밋을 보고 나도 저거 해봐야겠다는 마음을 먹었다.
 사전조사를 하면서.. Google님께 여줘보니 많은 후기와 조언들이 있었다. 그러던 중 TIL이라는 것을 발견했고 현재 내 상황에는 이것이 더 맞겠다는 생각이 들었다.
@@ -174,10 +183,10 @@ Uniform Interface의 제약 조건  Identification or resource : 리소스가 UR
     
     <item>
       <title>꽃미남 교수님께 배우는 C언어(pocu Comp2200) 후기</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/pocu/comp2200/</link>
+      <link>https://yeh35.github.io/blog.github.io/documents/pocu/comp2200/</link>
       <pubDate>Thu, 23 Apr 2020 21:22:02 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/pocu/comp2200/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/documents/pocu/comp2200/</guid>
       <description>comp2200?? 꽃미남(?) 포프님께 C언어를 배우는 과목이다.
 과목이라고 표현한 것은 Comp2200을 듣기 위하서는 선수 과목들을 배우고 들어야 하기 때문이다.
 (선수과목이 필수는 아니지만 풀코스를 수강한 학생으로써 선수과목은 사실상 필수라고 말하고 싶다.)
@@ -187,10 +196,10 @@ Uniform Interface의 제약 조건  Identification or resource : 리소스가 UR
     
     <item>
       <title>스프링 부트와 AWS로 혼자 구현하는 웹 서비스</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/spring/jojoldu-spring-boot-alone-building-book/</link>
+      <link>https://yeh35.github.io/blog.github.io/documents/spring/jojoldu-spring-boot-alone-building-book/</link>
       <pubDate>Tue, 21 Apr 2020 06:00:00 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/spring/jojoldu-spring-boot-alone-building-book/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/documents/spring/jojoldu-spring-boot-alone-building-book/</guid>
       <description>Beginning 회사에서 Spring + Tomcat로 구축된 WAS에 신규 도메인을 추가할 일이 생겼다.
 Java를 사용할 줄 알았기에 쉽게 할 줄 알았지만.. 현실은 코드 복붙을 하고 있는 나를 발견했다&amp;hellip; Spring에 대해서 공부를 해야겠다고 검색을 해보니 디자인부터 이쁜(?) 책이 있어서 사게 되었다.
  summary 책 제목처럼 서비스를 구현부터 서비스를 운영하는 과정을 간략하게 체험해 볼 수 있었다.
@@ -201,10 +210,10 @@ Java를 사용할 줄 알았기에 쉽게 할 줄 알았지만.. 현실은 코�
     
     <item>
       <title>Hugo Blog 구축기</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/hugo/hugo-blog-builder/</link>
+      <link>https://yeh35.github.io/blog.github.io/documents/hugo/hugo-blog-builder/</link>
       <pubDate>Wed, 11 Mar 2020 20:36:25 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/hugo/hugo-blog-builder/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/documents/hugo/hugo-blog-builder/</guid>
       <description>기술 블로그를 시작한 이유 멋진 기술 블로그들을 가보면 다들 글을 왜이렇게 잘 쓰는지&amp;hellip;
 뭔가 멋있기도 하고 내가 뒤쳐저 있는 것 같기도 하고&amp;hellip;
 그냥 그런 블로그를 가지고 싶었고 시작했다.

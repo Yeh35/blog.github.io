@@ -5,28 +5,27 @@
     <link>https://yeh35.github.io/blog.github.io/tags/til/</link>
     <description>Recent content in TIL on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>kr</language>
     <lastBuildDate>Mon, 18 May 2020 23:26:21 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/til/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>TIL 2020 05 18</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-18/</link>
+      <title>TIL 2020 05 18 (월)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-18/</link>
       <pubDate>Mon, 18 May 2020 23:26:21 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-18/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-18/</guid>
       <description>오늘 한 일 Gradle 정독도서관에서 빌린 Gradle 철저 입문이 반납일이 다가와서 마져 읽기 시작했다. 이런 인프라 기술들을 읽고 있으면 이런 시스템을 구축하는 사람들이 대단하게 느껴진다.
 Gradle에서 자주 사용되는 Groovy 문법을 정리했고 Gradle에 관한 내용을 정리해야겠다. 기회가 된다면 입문서도 작성해보고 싶고&amp;hellip;</description>
     </item>
     
     <item>
       <title>TIL 2020 05 17 (일)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-17/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-17/</link>
       <pubDate>Sun, 17 May 2020 02:12:37 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-17/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-17/</guid>
       <description>오늘 한 일 Spring JPA강의를 보다가 백기선 강사님이 도커로 Mysql을 실행하시는 것을 보고 도커 알아보다 샛길로 빠졌다.
 우분트 도커를 학습하기 위해서는 Linux가 필요할거 같아서 Linux용 Windows 하위시스템을 오픈하고 우분트를 설치했다.
 하지만 도커를 학습하고나서 쓸모 없다는 걸 알았다.
@@ -37,10 +36,10 @@ Gradle에서 자주 사용되는 Groovy 문법을 정리했고 Gradle에 관한 
     
     <item>
       <title>TIL 2020 05 16 (토)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-16/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-16/</link>
       <pubDate>Sat, 16 May 2020 23:13:25 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-16/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-16/</guid>
       <description>오늘 한 일 Spring  인프런에서 백기선님의 Spring jpa를 결제하였다. JPA가 뭔지 처음 알았을 떄 너무 놀라웠다.
 더이상 귀찮은 쿼리를 안짜도 된다니 빨리 배우고 싶다.  영어  72개의 단어를 복습하였다.  잠  거의 하루종일 잠을 잤다. &amp;lt;수면의 모든 것-니시노 세이즈&amp;gt;에서 수면의 부채라는 이야기가 나오는데
 이거 인거 같다. 일어나도 계속 멍한 상태가 되니&amp;hellip;  Youtube 핸드폰에서는 유트브를 삭제해야겠다. 평균 시청시간이 4시간을 넘기다니..
@@ -49,10 +48,10 @@ Gradle에서 자주 사용되는 Groovy 문법을 정리했고 Gradle에 관한 
     
     <item>
       <title>TIL 2020 05 15 (금)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-15/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-15/</link>
       <pubDate>Fri, 15 May 2020 23:26:03 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-15/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-15/</guid>
       <description>오늘 한 일 영어  50개의 단어를 복습하였다. 버스에서 많이 외워야 하는데 버스만 타면 잠을 잔다.  WebHooks Slack에 WebHooks에 관한 사용법과 예제 소스를 만들었다.
  github 예제소스  재난 지원금 이사온지는 6개월이 넘었는데 세대주 분리를 깜박하고 4월 2일에 하였다.
 그런데 정부에서 이번에 코로나19 재난 지원금이라는 것을 가구별로 지급하는데 기준일이 3월 28일인 것이다..
@@ -62,49 +61,49 @@ Gradle에서 자주 사용되는 Groovy 문법을 정리했고 Gradle에 관한 
     
     <item>
       <title>TIL 2020 05 14 (목)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-14/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-14/</link>
       <pubDate>Thu, 14 May 2020 23:25:27 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-14/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-14/</guid>
       <description>오늘 한 일 영어  오늘 서울 한 바퀴를 돌았다 덕분에 대중교통에서 영어 단어를 많이 복습할 수 있었다.
 ANKI에 통계에서는 232개 카드를 복습했다고 한다. (서대문구 -&amp;gt; 강서 -&amp;gt; 성북구 -&amp;gt; 서대문구)  회사에서 Servr에 배포를 할 때  서버에 배포할때 직접 war파일을 구워서 서버로 접속하고 파일을 바꿔주는 식으로 배포를 하고 있는데 너무 귀찮고 하루에 버그 패치로 2번이상 배포해야한다면 뭐하는 짓인지 싶다&amp;hellip; CICD툴들이 있던데 나중에 꼭 공부해서 다음 프로젝트에는 적용시켜야겠다. (물론 가능하다면 현제 서비스중인 도메인에도.</description>
     </item>
     
     <item>
       <title>TIL 2020 05 13 (수)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-13/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-13/</link>
       <pubDate>Wed, 13 May 2020 23:38:45 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-13/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-13/</guid>
       <description>오늘 한 일 반성..  퇴근하고 집에와서 인터넷 서핑을 3시간동안 했다..  영어  Anki를 다시 설치했다. (사용법이 귀찮고 안이뻐서 다른 대안을 찾아봤는데 기능이 이게 가장 훌륭했다..) 출퇴근 시간 총 90개 단어를 복습했다. 잠들기전까지 틈틈히..  Slack  WebHook을 이용한 Web서버 모니터링 대몬의 핵심기능은 완성했다.
 (10초마다 서버 상태 확인하는&amp;hellip;) 내일 테스트 서버에 적용해봐야겠다.  </description>
     </item>
     
     <item>
       <title>TIL 2020 05 12 (화)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-12/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-12/</link>
       <pubDate>Tue, 12 May 2020 23:13:45 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-12/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-12/</guid>
       <description>오늘 한 일 영어  1시간 30분&amp;hellip; 81단어 암기 자기전까지 계속 외울듯..  Gradle  Gradle 그레이들 철저 입문 (429p 중 177p)  http://www.yes24.com/Product/Goods/23449551 총 620p 정도 되는데 다 읽는 건 가성비가 좋지 않을 거 같다.
 (429p 뒤로는 다른 것이랑 연동 이야기가 주라서 필요 없을듯..) 회사 점심시간 자기전에 읽었다. 메모하며 보고 있기는 한데 각잡고 정리하는 날을 잡아야겠다.    </description>
     </item>
     
     <item>
       <title>TIL 2020 05 11 (월)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-11/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-11/</link>
       <pubDate>Mon, 11 May 2020 23:33:09 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-11/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-11/</guid>
       <description>오늘 한 일 영어  GRAMMER ZONE Chapter 1, 2 모르는 단어 정리  영어 단어를 옮겨적는 일이 왜이리 오래 걸리는지 모르겠다. 고작 57개 단어를 엑셀에 정리하는데 40분이 걸렸다.  단어 입력 -&amp;gt; naver 사전 검색 -&amp;gt; 복붙 -&amp;gt; 다음단어 찾기     GRAMMER ZONE Chapter 1, 2 문제 풀기  영어문제는 풀기도 너우 오래걸린다..(1장 푸는데 1시간&amp;hellip;)   빅보카 52단어 시험, 18단어 암기  Slack Webhook  Webhook을 이용한 서버 모니터링 제작중 outgoint을 이용해서 모니터링 해야하는 서버를 추가 삭제하고 주기적으로 서버에 응답을 보내고 응답이 없으면 incoming을 이용해 Slack방에 알림  미용  오랜만에 미용실을 갔는데 (거의 3달.</description>
     </item>
     
     <item>
       <title>TIL 2020 05 10 (일)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-10/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-10/</link>
       <pubDate>Sun, 10 May 2020 12:12:09 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-10/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-10/</guid>
       <description>오늘 한 일 더 자바, 코드를 조작하는 다양한 방법 (인프런-백기선강사님)  다아나믹 프록시 강의 듣기 블로그글로 추가 정리 영단어 17개 암기 (대중교통)  REST API 그런 REST API로 괜찮은가
  https://www.youtube.com/watch?v=RP_f5dMoHFc 발표 내용 블로그에 정리 현제로써는 REST를 API에서 따르는 것이 어렵게 느껴지기 때문에 HTTP API로 할 것 같다. 엄밀하게는 REST API는 아니지만 REST API라고 부를 수 있다.
 (마소도 네이버도 카카오도 그러는데 못할게 있나?)  HTTP(!=REST) API Versing problem
@@ -113,10 +112,10 @@ ANKI에 통계에서는 232개 카드를 복습했다고 한다. (서대문구 -
     
     <item>
       <title>TIL 2020 05 09 (토)</title>
-      <link>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-09/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-09/</link>
       <pubDate>Sat, 09 May 2020 23:10:06 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/posts/til/til-2020-05-09/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-09/</guid>
       <description>오늘 한 일  TIL(Today I learned)에 대한 블로그 글을 작성  https://yeh35.github.io/blog.github.io/img/posts/tir/tir-start/   영어과외 복습 (Grammar Zone)  문장 성분과 문장 형식 &amp;lt;&amp;ndash; document 기록    느낀점  공부를 하는 것이 생각보다 오래걸린다. (11시에 시작했는데 지금 1시다. 2시간&amp;hellip;)  물론 양에 따라 다르겠지만 한번에 정리하려고 하지말고 공부 틈틈히 정리하고 TIL은 마지막에 합치는 작업으로 해야겠다.   영어 공부는 규칙 이해 -&amp;gt; 문장 읽기 -&amp;gt; 단어 암기 -&amp;gt; 문장 읽기 -&amp;gt; 단어 암기&amp;hellip;.</description>
     </item>
     
