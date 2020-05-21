@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang='kr'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='title: gradle 마법해제하기-Build core
+이어서.. 전편에서는 빌드가 뭐고 Gradle 설치랑 Gradle 매우 대충 봤다. (책으로 치면 들어가기?) 이번에는 Gradle의 Core에 대한 내용이다.
+Groovy.. 앞으로 나오는 내용 중간중간에 스크립트가 나올 것인데 Groovy 문법에 모르신다면 여기를 눌러서 문법을 한번 읽어보시는 것을 추천드리고 싶다.
+Gradle 아키텍쳐 구조 Gradle은 core(본체)와 Plugin으로 나눠서 구성되어 있다. 갑자기 Plugin?이라고 생각이 들 수 있지만 사실 Gradle은 빌드툴임에도 빌드 기능은 Core가 아닌 Plugin으로 나와있다. java프로젝트에서 build.gradle 파일을 열어봤으면 아래와 같이 java를 plugin으로 받는게 보일 것이다.'>
+<meta name='theme-color' content='#ffcd00'>
+<meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
+
+<meta property='og:title' content=' • sango.h'>
+<meta property='og:description' content='title: gradle 마법해제하기-Build core
+이어서.. 전편에서는 빌드가 뭐고 Gradle 설치랑 Gradle 매우 대충 봤다. (책으로 치면 들어가기?) 이번에는 Gradle의 Core에 대한 내용이다.
+Groovy.. 앞으로 나오는 내용 중간중간에 스크립트가 나올 것인데 Groovy 문법에 모르신다면 여기를 눌러서 문법을 한번 읽어보시는 것을 추천드리고 싶다.
+Gradle 아키텍쳐 구조 Gradle은 core(본체)와 Plugin으로 나눠서 구성되어 있다. 갑자기 Plugin?이라고 생각이 들 수 있지만 사실 Gradle은 빌드툴임에도 빌드 기능은 Core가 아닌 Plugin으로 나와있다. java프로젝트에서 build.gradle 파일을 열어봤으면 아래와 같이 java를 plugin으로 받는게 보일 것이다.'>
+<meta property='og:url' content='https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start2/'>
+<meta property='og:site_name' content='sango.h'>
+<meta property='og:type' content='article'><meta property='article:section' content='documents'><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.66.0" />
+
+  <title> • sango.h</title>
+  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start2/'>
+  
+  
+  <link rel='icon' href='/blog.github.io/favicon.ico'>
+<link rel='stylesheet' href='/blog.github.io/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/blog.github.io/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-documents has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'></a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/blog.github.io/'>
+        <img src='https://avatars2.githubusercontent.com/u/46643699?s=460&amp;u=374c79ade497bda3a230e7ccc8693af69b94e766&amp;v=4'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/blog.github.io/'>
+      sango.h
+      </a>
+    </h2>
+    <div class='desc'>
+    백엔드 개발에 관심이 많습니다.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label=''>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/blog.github.io/documents/'>Document</a></li><li class='item'>
+  <a href='/blog.github.io/til/'>TIL</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'></h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/blog.github.io/tags/api/' style='font-size:1em'>API</a>
+      </li><li>
+        <a href='/blog.github.io/tags/blog/' style='font-size:1em'>blog</a>
+      </li><li>
+        <a href='/blog.github.io/tags/book/' style='font-size:1em'>book</a>
+      </li><li>
+        <a href='/blog.github.io/tags/build/' style='font-size:1em'>build</a>
+      </li><li>
+        <a href='/blog.github.io/tags/english/' style='font-size:1em'>english</a>
+      </li><li>
+        <a href='/blog.github.io/tags/gradle/' style='font-size:1em'>gradle</a>
+      </li><li>
+        <a href='/blog.github.io/tags/groovy/' style='font-size:1em'>groovy</a>
+      </li><li>
+        <a href='/blog.github.io/tags/http/' style='font-size:1em'>HTTP</a>
+      </li><li>
+        <a href='/blog.github.io/tags/hugo/' style='font-size:1em'>hugo</a>
+      </li><li>
+        <a href='/blog.github.io/tags/rest/' style='font-size:1em'>REST</a>
+      </li><li>
+        <a href='/blog.github.io/tags/review/' style='font-size:1em'>review</a>
+      </li><li>
+        <a href='/blog.github.io/tags/slack/' style='font-size:1em'>Slack</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring/' style='font-size:1em'>Spring</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring-boot/' style='font-size:1em'>spring-boot</a>
+      </li><li>
+        <a href='/blog.github.io/tags/start/' style='font-size:1em'>start</a>
+      </li><li>
+        <a href='/blog.github.io/tags/til/' style='font-size:2em'>TIL</a>
+      </li><li>
+        <a href='/blog.github.io/tags/web/' style='font-size:1em'>web</a>
+      </li><li>
+        <a href='/blog.github.io/tags/webhooks/' style='font-size:1em'>WebHooks</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label=''>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'></a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'></span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/blog.github.io/about-me/'>About Me</a>
+      </li><li class='item'>
+        <a href='/blog.github.io/documents/'>Document</a>
+      </li><li class='item'>
+        <a href='/blog.github.io/til/'>TIL</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span></span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>sango.h</p><p class='desc site-desc'>sango.h는 snagoh와 c언어의 stdio.h의 합성어이다.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='kr' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'></h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'> </span>
+  <time class='entry-date' datetime='0001-01-01T00:00:00Z'>0001-01-01</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <p>title: gradle 마법해제하기-Build core</p>
+<h2 id="이어서">이어서..</h2>
+<p>전편에서는 빌드가 뭐고 Gradle 설치랑 Gradle 매우 대충 봤다. (책으로 치면 들어가기?)
+이번에는 Gradle의 Core에 대한 내용이다.</p>
+<h2 id="groovy">Groovy..</h2>
+<p>앞으로 나오는 내용 중간중간에 스크립트가 나올 것인데 Groovy 문법에 모르신다면 <a href="">여기</a>를 눌러서 문법을 한번 읽어보시는 것을 추천드리고 싶다.</p>
+<h1 id="gradle-아키텍쳐-구조">Gradle 아키텍쳐 구조</h1>
+<p>Gradle은 core(본체)와 Plugin으로 나눠서 구성되어 있다.
+갑자기 Plugin?이라고 생각이 들 수 있지만 사실 Gradle은 빌드툴임에도 빌드 기능은 Core가 아닌 Plugin으로 나와있다.
+java프로젝트에서 <code>build.gradle</code> 파일을 열어봤으면 아래와 같이 java를 plugin으로 받는게 보일 것이다.</p>
+<pre><code>apply plugin: 'java'
+</code></pre><p>java를 Build 기능 역시 plugin으로 나와있다.</p>
+<p>왜? 이런 구조를 가졌을까? 그건 <code>Gradle이란?</code>에서 소개했던 Gradle의 철학 때문이다.
+<code>거의 모든 유형의 소프트웨어를 빌드 할 수있을 정도로 유연하게 설계된 오픈 소스 빌드 자동화 도구</code>라고 Gradle을 소개했었다.</p>
+<p><code>모든 유형의 소프트웨어 유연하게 빌드</code>하기 위해서는 직접적인 빌드에 관한 것을 코어에서 뺌으로써 Gradle을 사용하는 개발자가 Plugin을 직접 만들 수도 만들어진걸 쉽게 가져다 쓸수도 있게 구성을 하였다.당연 Plugin통해 규칙과 계층 구조(디렉토리 구조라던지..)를 정의해줌으로 프로젝트를 쉽게 빌드 할 수 있도록 지원한다.
+(이런 생각은 어떻게 하는거지&hellip;)</p>
+<p>추가로 Plugin을 보다 공유할 수 있도록 Hub도 존재한다.
+가서 구경하고 싶다면 <a href="https://plugins.gradle.org/">여기</a>있다.</p>
+<h1 id="gradle-core">Gradle Core</h1>
+<p>Gradle Core는 본체라고 이야기 했는데 Gradle 그 자체 Jar파일들을 이야기 하는 것이였다.
+<code>~\gradle-6.4.1\lib</code> 폴더를 보면 jar파일들이 있는데 볼 수 있다.
+걱정안하셔도 됩니다&hellip; 버진 6.4.1 기준으로 91개의 jar파일이 있는데 모두 볼 생각도 여력도 없다.ㅠ
+<img src="/img/gradle-core-jarfile.png" alt="temp forder"></p>
+<p>Core는 빌드를 하는데 있어서 <code>Lifecycle</code>과 제공되는 <code>API</code>을 몇개 살펴볼 것이다.</p>
+<h2 id="빌드-단계lifecycle">빌드 단계(Lifecycle)</h2>
+<p><code>project</code>폴더에 <code>gradlew init</code>을 했다는 가정으로 다음과 같이 파일들이 구성된다.<br>
+(플로그인에 따라 뭔가 더 있을 수는 있다)</p>
+<pre><code>project/
+    gradlew
+    gradlew.bat
+    gradle/wrapper/
+        gradle-wrapper.jar
+        gradle-wrapper.properties
+    build.gradle
+    settings.gradle
+</code></pre><p>Gradle은 세 단계의 빌드 스크립트를 실행한다.</p>
+<ol>
+<li>초기화</li>
+<li>구성</li>
+<li>실행</li>
+</ol>
+<p><em>Project폴더에 단일 프로젝트를 기준으로 설명할 것이다</em></p>
+<h3 id="1-초기화-설정-로드">1. 초기화 (설정 로드)</h3>
+<p>설정파일은 초기화 단계에서 읽히게 된다. Gradle의 기본 설정파일은 <code>settings.gradle</code>로 루트 프로젝트 위치에 파일이 있어야 한다. 
+설정 파일은 다중 프로젝트 빌드에 참여하는 프로젝트를 정의함으로 <code>단일 프로젝트에서 설정 파일은 선택 사항</code>이다.</p>
+<p><code>settings.gradle</code>을 열어보면 다음과 같이 구성되어있다.</p>
+<pre><code>rootProject.name = 'project'
+</code></pre><p>단일 프로젝트 임으로 rootProject naem만 설정이 된것을 알 수 있다.</p>
+<p>이제 읽은 <code>settings.gradle</code>을 가지고 <code>Settings</code>객체를 만들고 
+<code>Settings</code>객체를 이용하여 각 프로젝트의 <code>Project</code>인스턴스를 만든다.
+<a href="https://docs.gradle.org/current/dsl/org.gradle.api.initialization.Settings.html"><code>Settings</code></a>는 <code>Project</code>를 인스턴스화시키는 것은 알겠는데 <code>project</code>가 뭐지라고 생각되셨다면 정상이다.<br>
+(그렇구나 하고 넘어가지 마세요ㅠ)</p>
+<h4 id="project-interface">project interface</h4>
+<p><a href="https://docs.gradle.org/current/dsl/org.gradle.api.Project.html">공식문서</a>에서는 다음과 같이 정의 되어 있다.
+<code>이 인터페이스는 빌드 파일에서 Gradle과 상호 작용하는 데 사용하는 기본 API</code>, <code>Project모든 Gradle 기능에 프로그래밍 방식으로 액세스 할 수 있습니다</code></p>
+<p><a href="https://docs.gradle.org/current/dsl/org.gradle.api.Project.html">공식문서</a>를 가서 다 읽으면 좋지만 귀찮음으로 중요한 내용만 정리하면</p>
+<ul>
+<li><code>build.gradle</code>파일과 1:1 관계이다.</li>
+<li><code>settings.gradle</code>스크립트가 존재하는 경우</li>
+</ul>
+<h4 id="설정파일을-찾는-순서">설정파일을 찾는 순서</h4>
+<p>Gradle은 다음과 같은 순서로 설정 파일을 찾습니다.</p>
+<ol>
+<li>master현재 디렉토리와 동일한 중첩 레벨을 가진 디렉토리를 찾기</li>
+<li>아직 찾지 못한 경우 상위 디렉토리를 검색</li>
+<li>그래도 아직 찾지 못하면 빌드는 단일 프로젝트 빌드로 실행</li>
+</ol>
+<h4 id="간단하게-멀티-프로젝트를-구성-알아보기">간단하게 멀티 프로젝트를 구성 알아보기</h4>
+<p>멀티 프로젝트 관한 자세한 내용은 아래 <code>추천 글</code>에 남겨두었고 
+멀티 프로젝트는 Gradle에 익숙해지고 나서 고민하여도 괜찮다.</p>
+<p><code>멀티 프로젝트를 구성</code>하고 싶으면 project폴더 안에 module-a, module-b 폴더를 만들고 그 안에 프로젝트를 구성하고 <code>settings.gradle</code>에 <code>include</code> 키워드를 사용해서 추가하면 된다.</p>
+<pre><code>rootProject.name = 'project'
+include 'module-a', 'module-b'
+</code></pre><p>Gradle은 <code>setting.gradle</code>파일을 보고 다중 프로젝트 계층을 정의 되었으면 다중 프로젝트로 안되어 있으면 단일 프로젝트로 판단하고 빌드한다.</p>
+<h3 id="2-구성">2. 구성</h3>
+<p>구성단계는 단순하다, <code>초기화</code>단계에서 생성된 <code>Project</code>객체 그에 연결된 <code>build.gradle</code>가 실행된다.
+<code>build.gradle</code>에 있는 <code>task</code>를 읽어다가 <a href="https://docs.gradle.org/current/dsl/org.gradle.api.tasks.TaskContainer.html"><code>TaskContainer</code></a>를 이용해 <code>task</code>의 빈을 생성한 후 <code>Task 그래프</code>를 구성한다.</p>
+<p><code>build.gradle</code>을 다음과 같이 작성하고 console창에 <code>gradle testTask</code> 명령을 실행하면</p>
+<pre><code>// build.gradle file
+print &quot;Hello\n&quot;
+
+task testTask {
+    print &quot;testTask running\n&quot;
+
+    doLast {
+        print &quot;Task do Last\n&quot;
+    }
+    
+    doFirst {
+        print &quot;Task do First\n&quot;
+    }
+}
+
+print &quot;finish Configure\n&quot;
+</code></pre><pre><code>// 결과
+..\project&gt; .\gradlew testTask
+
+&gt; Configure project :
+Hello
+testTask running
+finish Configure
+
+&gt; Task :testTask
+Task do First
+Task do Last
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+</code></pre><p><code>Task</code>와 <code>Configure project :</code>라는 것이 새롭게 등장하였다.
+<code>Task</code>는 다룰 내용이 방대함으로 다음 글에서 자세하게 설명하겠다.
+여기서는 그냥 <code>Gradle의 실행단위</code>라고 외워두고 넘어가자</p>
+<h3 id="3-실행">3. 실행</h3>
+<p><code>구성</code>에 있는 예제 실행까지 보여줬는데 <code>gradle [task]</code> 명령을 내렸을 때
+<a href="https://docs.gradle.org/current/dsl/org.gradle.api.tasks.TaskContainer.html"><code>TaskContainer</code></a>에서 <code>[task]</code>으로 입력한 테스크랑 같은 이름을 찾아서 실행시켜준다.</p>
+<h3 id="정리">정리</h3>
+<p>초기화는 <code>setting.gradle</code>을 읽어서 <code>Project</code>인스턴스를 생성하고 
+구성은 <code>build.gradle</code>을 읽어서 <code>Project</code>을 실행하고
+실행은 Consolec 명령으로 들어온 task를 찾아서 실행해준다.</p>
+<h2 id="참고">참고</h2>
+<ul>
+<li>Gradle Lifecycle에 관한 <a href="https://docs.gradle.org/current/userguide/build_lifecycle.html#build_lifecycle">공식문서</a></li>
+<li>다중 프로젝트 관한 <a href="https://jojoldu.tistory.com/123">기억보단 기록을 블로그</a></li>
+</ul>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/blog.github.io/documents/infra/gradle/gradle-start3/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ </span>
+        <span class='screen-reader-text'>: </span></a>
+    </div><div class='next-entry sep-before'>
+      <a href='/blog.github.io/documents/hugo/hugo-blog-builder/'>
+        <span class='screen-reader-text'>: </span>Hugo Blog 구축기<span aria-hidden='true'> <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+<section id='comments' class='comments'>
+  <div class='container sep-before'>
+    <div class='comments-area'><script src='https://utteranc.es/client.js'
+  repo='Yeh35/blog.github.io' issue-term='https://github.com/Yeh35/blog.github.io/test'
+  crossorigin='anonymous' async>
+</script>
+</div>
+  </div>
+</section>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label=''>
+    <ul><li>
+        <a href='https://github.com/Yeh35' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:jaws0910@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019-2020 MunifTanjim </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/blog.github.io/assets/js/"</script>
+
+<script src='/blog.github.io/assets/js/main.c3bcf2df.js'></script><script src='/blog.github.io/js/custom.js'></script>
+
+</body>
+
+</html>
+

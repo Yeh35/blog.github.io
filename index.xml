@@ -51,6 +51,18 @@ Gradle에서 자주 사용되는 Groovy 문법을 정리했고 Gradle에 관한 
     </item>
     
     <item>
+      <title>Groovy Grammar</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/infra/gradle/groovy-grammar/</link>
+      <pubDate>Mon, 18 May 2020 20:40:15 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/infra/gradle/groovy-grammar/</guid>
+      <description>Groovy 문법 Gradle을 편하게 사용하기 위해서는 Groovy문법이 필요하다. 물론 요즘은 Kotlin으로 작성할 수 있다고는 하지만 아직 많은 예제소스들이 Groovy로 되어있어서 완전히 모를 수는 없다. Groovy에 대해 깊게 보는 것이 아닌 Gradle을 사용하면서 이정도는 알자라는 느낌으로 Groovy 공식 문서를 정리하였다. 솔직히 한번쭉 읽고 넘어가자 (필요할때 찾아쓰는걸로..)
+Semicolons Groovy에서는 세미콜론이 있어도 없어도 된다.
+println &#39;Hello World&#39;;println &#39;Hello World&#39;Parentheses 괄호 역시 필수가 아니다.
+println (&#39;Hello World&#39;)println &#39;Hello World&#39;def KeyWord def 키워드를 사용하면 함수도 변수도 타입을 명시적으로 지정하지 않아도 된다.</description>
+    </item>
+    
+    <item>
       <title>TIL 2020 05 17 (일)</title>
       <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-17/</link>
       <pubDate>Sun, 17 May 2020 02:12:37 +0900</pubDate>
@@ -242,6 +254,31 @@ Hugo를 선택한 이유 처음에는 Tstory에 한 두개 정도 글을 썻다.
 하지만 한편에 아쉬움이 계속 남았다.
 그래도 뭔가 더 이쁜 나만의 블로그를 가지고 싶다는 욕구가 해결되지 않았다.
 친구랑 빵맥(빵에 맥주)을 하던 중 &amp;ldquo;깃 블로그 해봐&amp;quot;라는 말에 다음날 부랴부랴 찾게 되었다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start2/</guid>
+      <description>title: gradle 마법해제하기-Build core
+이어서.. 전편에서는 빌드가 뭐고 Gradle 설치랑 Gradle 매우 대충 봤다. (책으로 치면 들어가기?) 이번에는 Gradle의 Core에 대한 내용이다.
+Groovy.. 앞으로 나오는 내용 중간중간에 스크립트가 나올 것인데 Groovy 문법에 모르신다면 여기를 눌러서 문법을 한번 읽어보시는 것을 추천드리고 싶다.
+Gradle 아키텍쳐 구조 Gradle은 core(본체)와 Plugin으로 나눠서 구성되어 있다. 갑자기 Plugin?이라고 생각이 들 수 있지만 사실 Gradle은 빌드툴임에도 빌드 기능은 Core가 아닌 Plugin으로 나와있다. java프로젝트에서 build.gradle 파일을 열어봤으면 아래와 같이 java를 plugin으로 받는게 보일 것이다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start3/</guid>
+      <description>title: gradle 마법해제하기-Build core
+이어서.. 전편에서 gradle의 아키텍쳐 설계와 gradle Lifecycle(생명주기)에 대해서 다뤘고 이번 편에서는 Task에 대해서 자세하게 다뤄보려고 한다.
+Task? 앞에서 task는 Gradle의 실행단위라고 하였다. 실행단위를 어떤 일을 하는데 하나의 작업 목록이라고 생각하면 편하다.
+Gradle을 실행되면 초기화 &amp;gt; 구성 &amp;gt; 실행 단계로 이어진다고 배웠다. 그리고 실행단계에서 실질적으로 우리가 원하는 일(행동)을 하는 것은 task다. (사실 모든건 task를 실행하기 위한 준비일 뿐이였다..)
+처음에 Console에서 gradle init 명령을 통해 프로젝트를 생성 했었을 것이다.</description>
     </item>
     
   </channel>

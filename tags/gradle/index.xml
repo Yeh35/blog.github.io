@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gradle on sango.h</title>
+    <link>https://yeh35.github.io/blog.github.io/tags/gradle/</link>
+    <description>Recent content in gradle on sango.h</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 18 May 2020 20:40:15 +0900</lastBuildDate>
+    
+	<atom:link href="https://yeh35.github.io/blog.github.io/tags/gradle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Groovy Grammar</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/infra/gradle/groovy-grammar/</link>
+      <pubDate>Mon, 18 May 2020 20:40:15 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/infra/gradle/groovy-grammar/</guid>
+      <description>Groovy 문법 Gradle을 편하게 사용하기 위해서는 Groovy문법이 필요하다. 물론 요즘은 Kotlin으로 작성할 수 있다고는 하지만 아직 많은 예제소스들이 Groovy로 되어있어서 완전히 모를 수는 없다. Groovy에 대해 깊게 보는 것이 아닌 Gradle을 사용하면서 이정도는 알자라는 느낌으로 Groovy 공식 문서를 정리하였다. 솔직히 한번쭉 읽고 넘어가자 (필요할때 찾아쓰는걸로..)
+Semicolons Groovy에서는 세미콜론이 있어도 없어도 된다.
+println &#39;Hello World&#39;;println &#39;Hello World&#39;Parentheses 괄호 역시 필수가 아니다.
+println (&#39;Hello World&#39;)println &#39;Hello World&#39;def KeyWord def 키워드를 사용하면 함수도 변수도 타입을 명시적으로 지정하지 않아도 된다.</description>
+    </item>
+    
+  </channel>
+</rss>
