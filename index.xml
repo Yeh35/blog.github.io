@@ -5,7 +5,7 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 21 May 2020 20:40:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2020 23:15:22 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,6 +21,16 @@
     </item>
     
     <item>
+      <title>TIL 2020 05 21 (목)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-21/</link>
+      <pubDate>Thu, 21 May 2020 23:15:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-21/</guid>
+      <description>오늘 한 일 Hugo 테마를 바꾸면서 이미지 주소들이 깨지고 있다!! 시간되는데로 확인해야겠다. ㅠㅠ
+Gradle 시리즈의 1탄을 완성했다. 총 4부작인데 생각했던 것보다 길 수도 짧을 수도 있다.</description>
+    </item>
+    
+    <item>
       <title>gradle 마법 분석1: Build?, Gradle?</title>
       <link>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start1/</link>
       <pubDate>Thu, 21 May 2020 20:40:00 +0900</pubDate>
@@ -32,7 +42,7 @@ gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어�
     </item>
     
     <item>
-      <title>TIL 2020 05 19 (수)</title>
+      <title>TIL 2020 05 20 (수)</title>
       <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-20/</link>
       <pubDate>Wed, 20 May 2020 23:15:22 +0900</pubDate>
       
