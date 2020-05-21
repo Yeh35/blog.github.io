@@ -4,21 +4,21 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='들어가면서 이 글은 그레이들을 처음 접하는 사람보다 Android studio 혹은 그외에서 사용은 하는데 뭐지 알아서 되네 정도로 쓰시는 분들을 타겟으로 작성하였다. (제가 그랬거든요 ㅎㅎ)
 gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어보면서 해체 할 것이다.
-커리큘럼 (미결정)  Build?, Gradle? Gradle 아키텍쳐 build.gradle, Task Gradle Plugin  빌드툴이란 위키에서는 빌드를 다음과 같이 정의하고 있다. 소프트웨어 빌드는 소스 코드 파일을 컴퓨터나 휴대폰에서 실행할 수 있는 독립(standalone) 소프트웨어 가공물로 변환하는 과정을 말하거나 그에 대한 결과물을 일컫는다.'>
+커리큘럼 (미결정)  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 build.gradle, Task Gradle Plugin  빌드툴이란 위키에서는 빌드를 다음과 같이 정의하고 있다. 소프트웨어 빌드는 소스 코드 파일을 컴퓨터나 휴대폰에서 실행할 수 있는 독립(standalone) 소프트웨어 가공물로 변환하는 과정을 말하거나 그에 대한 결과물을 일컫는다.'>
 <meta name='theme-color' content='#ffcd00'>
 <meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
 
-<meta property='og:title' content='gradle 마법 분석1: Build?, Gradle? • sango.h'>
+<meta property='og:title' content='초보자를 위한 Gradle 안내서: Build툴?, Gradle은 무엇인가? • sango.h'>
 <meta property='og:description' content='들어가면서 이 글은 그레이들을 처음 접하는 사람보다 Android studio 혹은 그외에서 사용은 하는데 뭐지 알아서 되네 정도로 쓰시는 분들을 타겟으로 작성하였다. (제가 그랬거든요 ㅎㅎ)
 gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어보면서 해체 할 것이다.
-커리큘럼 (미결정)  Build?, Gradle? Gradle 아키텍쳐 build.gradle, Task Gradle Plugin  빌드툴이란 위키에서는 빌드를 다음과 같이 정의하고 있다. 소프트웨어 빌드는 소스 코드 파일을 컴퓨터나 휴대폰에서 실행할 수 있는 독립(standalone) 소프트웨어 가공물로 변환하는 과정을 말하거나 그에 대한 결과물을 일컫는다.'>
+커리큘럼 (미결정)  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 build.gradle, Task Gradle Plugin  빌드툴이란 위키에서는 빌드를 다음과 같이 정의하고 있다. 소프트웨어 빌드는 소스 코드 파일을 컴퓨터나 휴대폰에서 실행할 수 있는 독립(standalone) 소프트웨어 가공물로 변환하는 과정을 말하거나 그에 대한 결과물을 일컫는다.'>
 <meta property='og:url' content='https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start1/'>
 <meta property='og:site_name' content='sango.h'>
 <meta property='og:type' content='article'><meta property='article:section' content='documents'><meta property='article:tag' content='gradle'><meta property='article:tag' content='series'><meta property='article:tag' content='build'><meta property='article:tag' content='infra'><meta property='article:published_time' content='2020-05-21T20:40:00&#43;09:00'/><meta property='article:modified_time' content='2020-05-21T20:40:00&#43;09:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.66.0" />
 
-  <title>gradle 마법 분석1: Build?, Gradle? • sango.h</title>
+  <title>초보자를 위한 Gradle 안내서: Build툴?, Gradle은 무엇인가? • sango.h</title>
   <link rel='canonical' href='https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start1/'>
   
   
@@ -153,7 +153,7 @@ gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어�
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>gradle 마법 분석1: Build?, Gradle?</span></li></ol>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>초보자를 위한 Gradle 안내서: Build툴?, Gradle은 무엇인가?</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -172,7 +172,7 @@ gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어�
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>gradle 마법 분석1: Build?, Gradle?</h1>
+      <h1 class='title'>초보자를 위한 Gradle 안내서: Build툴?, Gradle은 무엇인가?</h1>
       
 
     </div>
@@ -217,7 +217,7 @@ gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어�
 <strong>gradle의 마법</strong>같은 작동을 <strong>공식문서</strong>와 <strong>gradle의 파일들</strong>을 열어보면서 해체 할 것이다.</p>
 <h2 id="커리큘럼-미결정">커리큘럼 (미결정)</h2>
 <ol>
-<li>Build?, Gradle?</li>
+<li><strong>Build툴?, Gradle은 무엇인가?</strong></li>
 <li>Gradle 아키텍쳐</li>
 <li>build.gradle, Task</li>
 <li>Gradle Plugin</li>
