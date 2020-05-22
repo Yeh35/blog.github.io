@@ -228,7 +228,7 @@ Gradle 아키텍쳐 구조 Gradle은 core(본체)와 Plugin으로 나눠져 있�
 <h2 id="groovy">Groovy..</h2>
 <p>앞으로 내용 중간중간에 스크립트가 나올 것인데 <strong>Groovy 문법</strong>에 모르신다면 <a href="https://yeh35.github.io/blog.github.io/documents/infra/gradle/groovy-grammar/">여기</a>를 눌러서 문법을 한번 읽어보시는 것을 추천드리고 싶다.</p>
 <h1 id="gradle-아키텍쳐-구조">Gradle 아키텍쳐 구조</h1>
-<p><img src="/blog.github.io/img/documents/gradle-architecture.png" alt="gradle-architecture"><br>
+<p><img src="/blog.github.io/img/documents/infra/gradle/gradle-architecture.png" alt="gradle-architecture"><br>
 Gradle은 core(본체)와 Plugin으로 나눠져 있다. <br>
 갑자기 <strong>Plugin?</strong> 이라고 생각이 들 수 있지만 사실 Gradle은 빌드툴임에도 <strong>빌드 기능은 Core가 아닌 Plugin으로 구현되어 있다</strong><br>
 java project의 <code>build.gradle</code> 파일을 열어봤으면 아래와 같이 java를 plugin으로 받는게 보일 것이다.</p>
@@ -251,7 +251,7 @@ java project의 <code>build.gradle</code> 파일을 열어봤으면 아래와 �
         Plugin에 관한 Jar 파일
     gradle core에 관한 Jar 파일
 </code></pre><p>걱정안하셔도 됩니다&hellip; 버진 6.4.1 기준으로 Core만 91개의 jar파일이 있는데 모두 볼 생각도 여력도 없다.ㅠ<br>
-<img src="/blog.github.io/img/documents/gradle-core-jarfile.png" alt="temp forder"></p>
+<img src="/blog.github.io/img/documents/infra/gradle/gradle-core-jarfile.png" alt="temp forder"></p>
 <p>Core는 빌드를 하는데 있어서 <code>Lifecycle</code>과 제공되는 <code>API</code>을 몇개 살펴볼 것이다.</p>
 <h2 id="빌드-단계lifecycle">빌드 단계(Lifecycle)</h2>
 <p><code>project</code>폴더에 <code>gradle init</code>을 했다는 가정으로 다음과 같이 파일들이 구성된다.<br>
