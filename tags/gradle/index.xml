@@ -5,13 +5,26 @@
     <link>https://yeh35.github.io/blog.github.io/tags/gradle/</link>
     <description>Recent content in gradle on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 21 May 2020 20:40:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2020 12:40:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/gradle/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>초보자를 위한 Gradle 안내서: Build툴?, Gradle은 무엇인가?</title>
+      <title>초보자를 위한 Gradle 안내서 2편: Gradle 아키텍쳐</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start2/</link>
+      <pubDate>Fri, 22 May 2020 12:40:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start2/</guid>
+      <description>커리큘럼 (미결정)  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 build.gradle, Task  이어서.. 전편에서는 Build라는게 무엇을 뜻하고 Gradle 설치랑 Gradle wrapper, Gradle의 파일들의 의미에 대해서 봤었다.
+(까먹었다면 돌아가세욧!)
+이번에는 Gradle의 철학과 아키텍쳐에 대한 내용이다. 겁먹지마요 어렵지 않아요&amp;hellip;
+Groovy.. 앞으로 내용 중간중간에 스크립트가 나올 것인데 Groovy 문법에 모르신다면 여기를 눌러서 문법을 한번 읽어보시는 것을 추천드리고 싶다.
+Gradle 아키텍쳐 구조 Gradle은 core(본체)와 Plugin으로 나눠져 있다. 갑자기 Plugin? 이라고 생각이 들 수 있지만 사실 Gradle은 빌드툴임에도 빌드 기능은 Core가 아닌 Plugin으로 구현되어 있다</description>
+    </item>
+    
+    <item>
+      <title>초보자를 위한 Gradle 안내서 1편: Build툴?, Gradle은 무엇인가?</title>
       <link>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start1/</link>
       <pubDate>Thu, 21 May 2020 20:40:00 +0900</pubDate>
       
@@ -22,7 +35,7 @@ gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어�
     </item>
     
     <item>
-      <title>Groovy Grammar</title>
+      <title>Groovy 문법</title>
       <link>https://yeh35.github.io/blog.github.io/documents/infra/gradle/groovy-grammar/</link>
       <pubDate>Mon, 18 May 2020 20:40:15 +0900</pubDate>
       

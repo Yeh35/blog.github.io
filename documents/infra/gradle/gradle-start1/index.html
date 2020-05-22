@@ -8,7 +8,7 @@ gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어�
 <meta name='theme-color' content='#ffcd00'>
 <meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
 
-<meta property='og:title' content='초보자를 위한 Gradle 안내서: Build툴?, Gradle은 무엇인가? • sango.h'>
+<meta property='og:title' content='초보자를 위한 Gradle 안내서 1편: Build툴?, Gradle은 무엇인가? • sango.h'>
 <meta property='og:description' content='들어가면서 이 글은 그레이들을 처음 접하는 사람보다 Android studio 혹은 그외에서 사용은 하는데 뭐지 알아서 되네 정도로 쓰시는 분들을 타겟으로 작성하였다. (제가 그랬거든요 ㅎㅎ)
 gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어보면서 해체 할 것이다.
 커리큘럼 (미결정)  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 build.gradle, Task Gradle Plugin  빌드툴이란 위키에서는 빌드를 다음과 같이 정의하고 있다. 소프트웨어 빌드는 소스 코드 파일을 컴퓨터나 휴대폰에서 실행할 수 있는 독립(standalone) 소프트웨어 가공물로 변환하는 과정을 말하거나 그에 대한 결과물을 일컫는다.'>
@@ -18,7 +18,7 @@ gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어�
 
 <meta name="generator" content="Hugo 0.66.0" />
 
-  <title>초보자를 위한 Gradle 안내서: Build툴?, Gradle은 무엇인가? • sango.h</title>
+  <title>초보자를 위한 Gradle 안내서 1편: Build툴?, Gradle은 무엇인가? • sango.h</title>
   <link rel='canonical' href='https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start1/'>
   
   
@@ -76,11 +76,11 @@ gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어�
       </li><li>
         <a href='/blog.github.io/tags/book/' style='font-size:1em'>book</a>
       </li><li>
-        <a href='/blog.github.io/tags/build/' style='font-size:1.0833333333333333em'>build</a>
+        <a href='/blog.github.io/tags/build/' style='font-size:1.1666666666666667em'>build</a>
       </li><li>
         <a href='/blog.github.io/tags/english/' style='font-size:1em'>english</a>
       </li><li>
-        <a href='/blog.github.io/tags/gradle/' style='font-size:1.0833333333333333em'>gradle</a>
+        <a href='/blog.github.io/tags/gradle/' style='font-size:1.1666666666666667em'>gradle</a>
       </li><li>
         <a href='/blog.github.io/tags/groovy/' style='font-size:1em'>groovy</a>
       </li><li>
@@ -88,13 +88,13 @@ gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어�
       </li><li>
         <a href='/blog.github.io/tags/hugo/' style='font-size:1em'>hugo</a>
       </li><li>
-        <a href='/blog.github.io/tags/infra/' style='font-size:1em'>infra</a>
+        <a href='/blog.github.io/tags/infra/' style='font-size:1.0833333333333333em'>infra</a>
       </li><li>
         <a href='/blog.github.io/tags/rest/' style='font-size:1em'>REST</a>
       </li><li>
         <a href='/blog.github.io/tags/review/' style='font-size:1em'>review</a>
       </li><li>
-        <a href='/blog.github.io/tags/series/' style='font-size:1em'>series</a>
+        <a href='/blog.github.io/tags/series/' style='font-size:1.0833333333333333em'>series</a>
       </li><li>
         <a href='/blog.github.io/tags/slack/' style='font-size:1em'>Slack</a>
       </li><li>
@@ -153,7 +153,7 @@ gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어�
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>초보자를 위한 Gradle 안내서: Build툴?, Gradle은 무엇인가?</span></li></ol>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>초보자를 위한 Gradle 안내서 1편: Build툴?, Gradle은 무엇인가?</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -172,7 +172,7 @@ gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어�
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>초보자를 위한 Gradle 안내서: Build툴?, Gradle은 무엇인가?</h1>
+      <h1 class='title'>초보자를 위한 Gradle 안내서 1편: Build툴?, Gradle은 무엇인가?</h1>
       
 
     </div>
@@ -232,7 +232,7 @@ gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어�
 <li>전처리기 (#include 처리, 매크로 대체, 조건부 컴파일, 주석제거)</li>
 <li>컴파일러 (전처리과정을 거친 확정된 C언어를 어셈블리어로 변환)</li>
 <li>어셈블러 (어셈블리어를 기계어로 변환)</li>
-<li>링커 (기계어가된 파일들을 전부 읽고 심볼들에 )</li>
+<li>링커 (기계어가된 파일들을 전부 읽고 심볼에 함수 포인터 매핑)</li>
 </ol>
 <h2 id="java-빌드과정">Java 빌드과정</h2>
 <ol>
@@ -389,7 +389,17 @@ Wrapper을 적극 권장한다고 했었는데 <br>
   
 </svg>
  </span>
-        <span class='screen-reader-text'>: </span>Groovy Grammar</a>
+        <span class='screen-reader-text'>: </span>Groovy 문법</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/blog.github.io/documents/infra/gradle/gradle-start2/'>
+        <span class='screen-reader-text'>: </span>초보자를 위한 Gradle 안내서 2편: Gradle 아키텍쳐<span aria-hidden='true'> <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
     </div></div>
 </nav>
 
@@ -428,7 +438,7 @@ Wrapper을 적극 권장한다고 했었는데 <br>
       </li></ul>
   </nav>
 </section><div class='copyright'>
-  <p> &copy; 2019-2020 MunifTanjim </p>
+  <p> &copy; 2019-2020 Snag Oh Yeh </p>
 </div>
 
         </div>
