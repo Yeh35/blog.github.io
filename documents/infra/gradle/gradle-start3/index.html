@@ -279,7 +279,7 @@ BUILD SUCCESSFUL in 1s
 <p>어떤 작업을 할때 이 작업을 하기위해서 선행되야 하는 작업이 있을 수 있다<br>
 그럼 그런 선행되는 작업을 묶고 내가 원하는 작업을 하기전 호출 시켜주는 것이다.<br>
 Gradle에서 Task들간에 관계는 <a href="https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%96%A5_%EB%B9%84%EC%88%9C%ED%99%98_%EA%B7%B8%EB%9E%98%ED%94%84">DAG(Directed acyclic graph)</a>로 작동한다</p>
-<p><img src="img/task-dag-examples.png" alt="그래프"></p>
+<p><img src="/blog.github.io/img/task-dag-examples.png" alt="그래프"></p>
 <pre><code>    // build.gradle
     task taskX {
         dependsOn 'taskY'
