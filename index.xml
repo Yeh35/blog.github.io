@@ -44,6 +44,17 @@ Gradle 시리즈의 1탄을 완성했다. 총 4부작인데 생각했던 것보�
     </item>
     
     <item>
+      <title>TIL 2020 05 22 (금)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-22/</link>
+      <pubDate>Thu, 21 May 2020 23:15:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-22/</guid>
+      <description>오늘 한 일 Gradle 시리즈의 1탄을 다시 수정하였다. 정말 프로그래밍 언어에 대한 문서나 공식문서같은게 얼마나 작업하기 힘든 것인지 깨닫는 하루였다. 마소에 이것만 전문으로 하시는 분들은 대단하다. (그 퀄리티도 얼마나 좋은지..)
+그리고 시리즈 2탄을 공개하였다. 아직까지 보는 사람은 딱히 없는데 언젠가 &amp;ldquo;Gradle&amp;quot;을 구글에 검색하면 내 블로그가 1등으로 나오지 않을까?
+라는 자뻑에 시리즈를 채우고 있다.</description>
+    </item>
+    
+    <item>
       <title>초보자를 위한 Gradle 안내서 1편: Build툴?, Gradle은 무엇인가?</title>
       <link>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start1/</link>
       <pubDate>Thu, 21 May 2020 20:40:00 +0900</pubDate>
