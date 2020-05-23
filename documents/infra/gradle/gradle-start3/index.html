@@ -2,7 +2,7 @@
 <html lang='kr'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='커리큘럼 (미결정)  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 Task  이어서.. 전편에서 gradle의 아키텍쳐와 철학 그리고 Lifecycle(생명주기) 에 대해서 다뤘다.
+<meta name='description' content='커리큘럼  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 Task 각자의 프로젝트로  이어서.. 전편에서 gradle의 아키텍쳐와 철학 그리고 Lifecycle(생명주기) 에 대해서 다뤘다.
 이번 편에서는 Task에 대해서 자세하게 다뤄보려고 한다.
 Task? 앞에서 task는 Gradle의 실행단위라고 하였는데 실행단위를 어떤 작업을 하는 약속된 하나의 객체라고 생각하면 된다.
 Gradle의 초기화 &gt; 구성 &gt; 실행 3단계에서 실행 단계에서 실질적으로 우리가 원하는 기능을 하는 것은 task다. (사실 모든건 task를 실행하기 위한 준비일 뿐이였다..)
@@ -11,7 +11,7 @@ Gradle의 초기화 &gt; 구성 &gt; 실행 3단계에서 실행 단계에서 �
 <meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
 
 <meta property='og:title' content='초보자를 위한 Gradle 안내서 3편: Task • sango.h'>
-<meta property='og:description' content='커리큘럼 (미결정)  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 Task  이어서.. 전편에서 gradle의 아키텍쳐와 철학 그리고 Lifecycle(생명주기) 에 대해서 다뤘다.
+<meta property='og:description' content='커리큘럼  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 Task 각자의 프로젝트로  이어서.. 전편에서 gradle의 아키텍쳐와 철학 그리고 Lifecycle(생명주기) 에 대해서 다뤘다.
 이번 편에서는 Task에 대해서 자세하게 다뤄보려고 한다.
 Task? 앞에서 task는 Gradle의 실행단위라고 하였는데 실행단위를 어떤 작업을 하는 약속된 하나의 객체라고 생각하면 된다.
 Gradle의 초기화 &gt; 구성 &gt; 실행 3단계에서 실행 단계에서 실질적으로 우리가 원하는 기능을 하는 것은 task다. (사실 모든건 task를 실행하기 위한 준비일 뿐이였다..)
@@ -80,11 +80,11 @@ Gradle의 초기화 &gt; 구성 &gt; 실행 3단계에서 실행 단계에서 �
       </li><li>
         <a href='/blog.github.io/tags/book/' style='font-size:1em'>book</a>
       </li><li>
-        <a href='/blog.github.io/tags/build/' style='font-size:1.2307692307692308em'>build</a>
+        <a href='/blog.github.io/tags/build/' style='font-size:1.3076923076923077em'>build</a>
       </li><li>
         <a href='/blog.github.io/tags/english/' style='font-size:1em'>english</a>
       </li><li>
-        <a href='/blog.github.io/tags/gradle/' style='font-size:1.2307692307692308em'>gradle</a>
+        <a href='/blog.github.io/tags/gradle/' style='font-size:1.3076923076923077em'>gradle</a>
       </li><li>
         <a href='/blog.github.io/tags/groovy/' style='font-size:1em'>groovy</a>
       </li><li>
@@ -92,13 +92,13 @@ Gradle의 초기화 &gt; 구성 &gt; 실행 3단계에서 실행 단계에서 �
       </li><li>
         <a href='/blog.github.io/tags/hugo/' style='font-size:1em'>hugo</a>
       </li><li>
-        <a href='/blog.github.io/tags/infra/' style='font-size:1.1538461538461537em'>infra</a>
+        <a href='/blog.github.io/tags/infra/' style='font-size:1.2307692307692308em'>infra</a>
       </li><li>
         <a href='/blog.github.io/tags/rest/' style='font-size:1em'>REST</a>
       </li><li>
         <a href='/blog.github.io/tags/review/' style='font-size:1em'>review</a>
       </li><li>
-        <a href='/blog.github.io/tags/series/' style='font-size:1.1538461538461537em'>series</a>
+        <a href='/blog.github.io/tags/series/' style='font-size:1.2307692307692308em'>series</a>
       </li><li>
         <a href='/blog.github.io/tags/slack/' style='font-size:1em'>Slack</a>
       </li><li>
@@ -215,11 +215,12 @@ Gradle의 초기화 &gt; 구성 &gt; 실행 3단계에서 실행 단계에서 �
   
 
   <div class='container entry-content'>
-  <h2 id="커리큘럼-미결정">커리큘럼 (미결정)</h2>
+  <h2 id="커리큘럼">커리큘럼</h2>
 <ol>
 <li>Build툴?, Gradle은 무엇인가?</li>
 <li>Gradle 아키텍쳐</li>
 <li><strong>Task</strong></li>
+<li>각자의 프로젝트로</li>
 </ol>
 <h2 id="이어서">이어서..</h2>
 <p>전편에서 gradle의 <strong>아키텍쳐</strong>와 <strong>철학</strong> 그리고 <strong>Lifecycle(생명주기)</strong> 에 대해서 다뤘다.<br>
@@ -289,7 +290,7 @@ BUILD SUCCESSFUL in 1s
 Java에서 컴파일후에 Class 파일을 Target폴더로 옮겨준다던지 등등</p>
 <p>Task는 <strong>다른 Task에 종속이 될 수 있다</strong> 
 그리고 Task들간에 관계는 <strong><a href="https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%96%A5_%EB%B9%84%EC%88%9C%ED%99%98_%EA%B7%B8%EB%9E%98%ED%94%84">DAG(Directed acyclic graph)</a></strong> 로 작동한다</p>
-<p><img src="/blog.github.io/img/task-dag-examples.png" alt="그래프"></p>
+<p><img src="/blog.github.io/img/documents/infra/gradle/task-dag-examples.png" alt="그래프"></p>
 <h3 id="task-종속-테스크-지정">Task 종속 테스크 지정</h3>
 <pre><code>    // build.gradle
     task taskX {
@@ -350,6 +351,16 @@ Java에서 컴파일후에 Class 파일을 Target폴더로 옮겨준다던지 �
 </svg>
  </span>
         <span class='screen-reader-text'>: </span>초보자를 위한 Gradle 안내서 2편: Gradle 아키텍쳐</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/blog.github.io/documents/infra/gradle/gradle-start4/'>
+        <span class='screen-reader-text'>: </span>초보자를 위한 Gradle 안내서 4편: 각자의 프로젝트로<span aria-hidden='true'> <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
     </div></div>
 </nav>
 

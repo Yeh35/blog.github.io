@@ -5,10 +5,24 @@
     <link>https://yeh35.github.io/blog.github.io/tags/series/</link>
     <description>Recent content in series on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 23 May 2020 12:40:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2020 22:40:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/series/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>초보자를 위한 Gradle 안내서 4편: 각자의 프로젝트로</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start4/</link>
+      <pubDate>Sat, 23 May 2020 22:40:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start4/</guid>
+      <description>커리큘럼  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 Task 각자의 프로젝트로  이어서.. 여기까지 읽으셨다면 정말 고생하셨습니다.
+이제 거의 마지막을 달리고 있습니다.
+Gradle의 철학 과 Task의 작동방식 을 설명하였다.
+물론 아직 Gradle을 완벽하게 다루기에는 제 설명이 분명 부족한 내용들이 존재한다. 하지만 제 판단에는 앞의 내용을들 완전히 숙지하셨다면 각 Plugin 혹은 Gradle이 출력해주는 로그가 어떤 의미인지 찾아볼 능력 이 생겼을 것이라고 생각한다
+이제 각자의 프로젝트에 가서 사용하는 Plugin이 어떻게 작동 하는지
+build.gradle의 내용을 보며 공부하시면 된다.</description>
+    </item>
     
     <item>
       <title>초보자를 위한 Gradle 안내서 3편: Task</title>
@@ -16,7 +30,7 @@
       <pubDate>Sat, 23 May 2020 12:40:00 +0900</pubDate>
       
       <guid>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start3/</guid>
-      <description>커리큘럼 (미결정)  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 Task  이어서.. 전편에서 gradle의 아키텍쳐와 철학 그리고 Lifecycle(생명주기) 에 대해서 다뤘다.
+      <description>커리큘럼  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 Task 각자의 프로젝트로  이어서.. 전편에서 gradle의 아키텍쳐와 철학 그리고 Lifecycle(생명주기) 에 대해서 다뤘다.
 이번 편에서는 Task에 대해서 자세하게 다뤄보려고 한다.
 Task? 앞에서 task는 Gradle의 실행단위라고 하였는데 실행단위를 어떤 작업을 하는 약속된 하나의 객체라고 생각하면 된다.
 Gradle의 초기화 &amp;gt; 구성 &amp;gt; 실행 3단계에서 실행 단계에서 실질적으로 우리가 원하는 기능을 하는 것은 task다. (사실 모든건 task를 실행하기 위한 준비일 뿐이였다..)
@@ -29,7 +43,7 @@ Gradle의 초기화 &amp;gt; 구성 &amp;gt; 실행 3단계에서 실행 단계�
       <pubDate>Fri, 22 May 2020 12:40:00 +0900</pubDate>
       
       <guid>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start2/</guid>
-      <description>커리큘럼 (미결정)  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 build.gradle, Task  이어서.. 전편에서는 Build라는게 무엇을 뜻하고 Gradle 설치랑 Gradle wrapper, Gradle의 파일들의 의미에 대해서 봤었다.
+      <description>커리큘럼  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 Task 각자의 프로젝트로  이어서.. 전편에서는 Build라는게 무엇을 뜻하고 Gradle 설치랑 Gradle wrapper, Gradle의 파일들의 의미에 대해서 봤었다.
 (까먹었다면 돌아가세욧!)
 이번에는 Gradle의 철학과 아키텍쳐에 대한 내용이다. 겁먹지마요 어렵지 않아요&amp;hellip;
 Groovy.. 앞으로 내용 중간중간에 스크립트가 나올 것인데 Groovy 문법에 모르신다면 여기를 눌러서 문법을 한번 읽어보시는 것을 추천드리고 싶다.
@@ -44,7 +58,7 @@ Gradle 아키텍쳐 구조 Gradle은 core(본체)와 Plugin으로 나눠져 있�
       <guid>https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start1/</guid>
       <description>들어가면서 이 글은 그레이들을 처음 접하는 사람보다 Android studio 혹은 그외에서 사용은 하는데 뭐지 알아서 되네 정도로 쓰시는 분들을 타겟으로 작성하였다. (제가 그랬거든요 ㅎㅎ)
 gradle의 마법같은 작동을 공식문서와 gradle의 파일들을 열어보면서 해체 할 것이다.
-커리큘럼 (미결정)  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 build.gradle, Task Gradle Plugin  빌드툴이란 위키에서는 빌드를 다음과 같이 정의하고 있다. 소프트웨어 빌드는 소스 코드 파일을 컴퓨터나 휴대폰에서 실행할 수 있는 독립(standalone) 소프트웨어 가공물로 변환하는 과정을 말하거나 그에 대한 결과물을 일컫는다.</description>
+커리큘럼  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 Task 각자의 프로젝트로  빌드툴이란 위키에서는 빌드를 다음과 같이 정의하고 있다. 소프트웨어 빌드는 소스 코드 파일을 컴퓨터나 휴대폰에서 실행할 수 있는 독립(standalone) 소프트웨어 가공물로 변환하는 과정을 말하거나 그에 대한 결과물을 일컫는다.</description>
     </item>
     
   </channel>

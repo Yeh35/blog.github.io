@@ -2,7 +2,7 @@
 <html lang='kr'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='커리큘럼 (미결정)  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 build.gradle, Task  이어서.. 전편에서는 Build라는게 무엇을 뜻하고 Gradle 설치랑 Gradle wrapper, Gradle의 파일들의 의미에 대해서 봤었다.
+<meta name='description' content='커리큘럼  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 Task 각자의 프로젝트로  이어서.. 전편에서는 Build라는게 무엇을 뜻하고 Gradle 설치랑 Gradle wrapper, Gradle의 파일들의 의미에 대해서 봤었다.
 (까먹었다면 돌아가세욧!)
 이번에는 Gradle의 철학과 아키텍쳐에 대한 내용이다. 겁먹지마요 어렵지 않아요&hellip;
 Groovy.. 앞으로 내용 중간중간에 스크립트가 나올 것인데 Groovy 문법에 모르신다면 여기를 눌러서 문법을 한번 읽어보시는 것을 추천드리고 싶다.
@@ -11,7 +11,7 @@ Gradle 아키텍쳐 구조 Gradle은 core(본체)와 Plugin으로 나눠져 있�
 <meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
 
 <meta property='og:title' content='초보자를 위한 Gradle 안내서 2편: Gradle 아키텍쳐 • sango.h'>
-<meta property='og:description' content='커리큘럼 (미결정)  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 build.gradle, Task  이어서.. 전편에서는 Build라는게 무엇을 뜻하고 Gradle 설치랑 Gradle wrapper, Gradle의 파일들의 의미에 대해서 봤었다.
+<meta property='og:description' content='커리큘럼  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 Task 각자의 프로젝트로  이어서.. 전편에서는 Build라는게 무엇을 뜻하고 Gradle 설치랑 Gradle wrapper, Gradle의 파일들의 의미에 대해서 봤었다.
 (까먹었다면 돌아가세욧!)
 이번에는 Gradle의 철학과 아키텍쳐에 대한 내용이다. 겁먹지마요 어렵지 않아요&hellip;
 Groovy.. 앞으로 내용 중간중간에 스크립트가 나올 것인데 Groovy 문법에 모르신다면 여기를 눌러서 문법을 한번 읽어보시는 것을 추천드리고 싶다.
@@ -80,11 +80,11 @@ Gradle 아키텍쳐 구조 Gradle은 core(본체)와 Plugin으로 나눠져 있�
       </li><li>
         <a href='/blog.github.io/tags/book/' style='font-size:1em'>book</a>
       </li><li>
-        <a href='/blog.github.io/tags/build/' style='font-size:1.2307692307692308em'>build</a>
+        <a href='/blog.github.io/tags/build/' style='font-size:1.3076923076923077em'>build</a>
       </li><li>
         <a href='/blog.github.io/tags/english/' style='font-size:1em'>english</a>
       </li><li>
-        <a href='/blog.github.io/tags/gradle/' style='font-size:1.2307692307692308em'>gradle</a>
+        <a href='/blog.github.io/tags/gradle/' style='font-size:1.3076923076923077em'>gradle</a>
       </li><li>
         <a href='/blog.github.io/tags/groovy/' style='font-size:1em'>groovy</a>
       </li><li>
@@ -92,13 +92,13 @@ Gradle 아키텍쳐 구조 Gradle은 core(본체)와 Plugin으로 나눠져 있�
       </li><li>
         <a href='/blog.github.io/tags/hugo/' style='font-size:1em'>hugo</a>
       </li><li>
-        <a href='/blog.github.io/tags/infra/' style='font-size:1.1538461538461537em'>infra</a>
+        <a href='/blog.github.io/tags/infra/' style='font-size:1.2307692307692308em'>infra</a>
       </li><li>
         <a href='/blog.github.io/tags/rest/' style='font-size:1em'>REST</a>
       </li><li>
         <a href='/blog.github.io/tags/review/' style='font-size:1em'>review</a>
       </li><li>
-        <a href='/blog.github.io/tags/series/' style='font-size:1.1538461538461537em'>series</a>
+        <a href='/blog.github.io/tags/series/' style='font-size:1.2307692307692308em'>series</a>
       </li><li>
         <a href='/blog.github.io/tags/slack/' style='font-size:1em'>Slack</a>
       </li><li>
@@ -215,11 +215,12 @@ Gradle 아키텍쳐 구조 Gradle은 core(본체)와 Plugin으로 나눠져 있�
   
 
   <div class='container entry-content'>
-  <h2 id="커리큘럼-미결정">커리큘럼 (미결정)</h2>
+  <h2 id="커리큘럼">커리큘럼</h2>
 <ol>
 <li>Build툴?, Gradle은 무엇인가?</li>
 <li><strong>Gradle 아키텍쳐</strong></li>
-<li>build.gradle, Task</li>
+<li>Task</li>
+<li>각자의 프로젝트로</li>
 </ol>
 <h2 id="이어서">이어서..</h2>
 <p>전편에서는 <code>Build</code>라는게 무엇을 뜻하고 Gradle 설치랑 <strong>Gradle wrapper</strong>, Gradle의 파일들의 의미에 대해서 봤었다.<br>
