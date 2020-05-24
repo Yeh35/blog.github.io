@@ -5,10 +5,23 @@
     <link>https://yeh35.github.io/blog.github.io/til/</link>
     <description>Recent content in TIL (Today I Learned) on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 23 May 2020 23:15:22 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2020 23:15:22 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 05 24 (일)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-24/</link>
+      <pubDate>Sun, 24 May 2020 23:15:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-24/</guid>
+      <description>오늘 한 일 Docker docker 기본 명령어에 대해서 정리하였다.
+기본 명령어는 알고 있다고 생각했는데 정리하고 보니 모르고 넘어간 내용들이 많았다.ㅠㅠ
+Spring JPA 백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분인데 9시간 정도 된다. 하루에 3시간씩 3일안에 끝내는 것을 목표로 하고 있다. (목요일까지는 끝내는 것으로&amp;hellip;)
+시간 관리 주말에 더 많은 집중을 해야하는데 집중이 안된다 루틴이 필요하다&amp;hellip;
+평일 루틴 계획 7시 기상 씻고 아침 식사 영어공부 8시 출근 점심시간 헬스 간편 도시락.. (안되면 셀러드 구입)</description>
+    </item>
     
     <item>
       <title>TIL 2020 05 23 (토)</title>
@@ -182,19 +195,6 @@ ANKI에 통계에서는 232개 카드를 복습했다고 한다. (서대문구 -
 내가 지금 제대로 하는 건가? 결과가 필요해!! 그러다가 jojoldu님의 일일 커밋을 보고 나도 저거 해봐야겠다는 마음을 먹었다.
 사전조사를 하면서.. Google님께 여줘보니 많은 후기와 조언들이 있었다. 그러던 중 TIL이라는 것을 발견했고 현재 내 상황에는 이것이 더 맞겠다는 생각이 들었다.
 후기들을 읽으면서 정리한 내용은 아래에 [일일 커밋(TIR 포함) 후기 요약]으로 추가해 놨다. (일일커밋, TIL이 뭔지는 검색하면 널리고 널렸으니 설명은 생략!)</description>
-    </item>
-    
-    <item>
-      <title>TIL 2020 05 24 (일)</title>
-      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-24/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-24/</guid>
-      <description>오늘 한 일 Docker docker 기본 명령어에 대해서 정리하였다.
-기본 명령어는 알고 있다고 생각했는데 정리하고 보니 모르고 넘어간 내용들이 많았다.ㅠㅠ
-Spring JPA 백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분인데 9시간 정도 된다. 하루에 3시간씩 3일안에 끝내는 것을 목표로 하고 있다. (목요일까지는 끝내는 것으로&amp;hellip;)
-시간 관리 주말에 더 많은 집중을 해야하는데 집중이 안된다 루틴이 필요하다&amp;hellip;
-평일 루틴 계획 7시 기상 씻고 아침 식사 영어공부 8시 출근 점심시간 헬스 간편 도시락.. (안되면 셀러드 구입)</description>
     </item>
     
   </channel>

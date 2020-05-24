@@ -13,22 +13,12 @@
   
   <url>
     <loc>https://yeh35.github.io/blog.github.io/til/</loc>
-    <lastmod>2020-05-23T23:15:22+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yeh35.github.io/blog.github.io/tags/docker/</loc>
-    <lastmod>2020-05-24T11:52:46+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yeh35.github.io/blog.github.io/documents/infra/docker/docker-command/</loc>
-    <lastmod>2020-05-24T11:52:46+09:00</lastmod>
+    <lastmod>2020-05-24T23:15:22+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://yeh35.github.io/blog.github.io/</loc>
-    <lastmod>2020-05-24T11:52:46+09:00</lastmod>
+    <lastmod>2020-05-24T23:15:22+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -43,7 +33,7 @@
   
   <url>
     <loc>https://yeh35.github.io/blog.github.io/tags/</loc>
-    <lastmod>2020-05-24T11:52:46+09:00</lastmod>
+    <lastmod>2020-05-24T23:15:22+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -58,7 +48,22 @@
   
   <url>
     <loc>https://yeh35.github.io/blog.github.io/tags/til/</loc>
-    <lastmod>2020-05-23T23:15:22+09:00</lastmod>
+    <lastmod>2020-05-24T23:15:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/til/til-2020-05-24/</loc>
+    <lastmod>2020-05-24T23:15:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/tags/docker/</loc>
+    <lastmod>2020-05-24T11:52:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/documents/infra/docker/docker-command/</loc>
+    <lastmod>2020-05-24T11:52:46+09:00</lastmod>
   </url>
   
   <url>
@@ -340,10 +345,6 @@
                 hreflang="kr"
                 href="https://yeh35.github.io/blog.github.io/series/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://yeh35.github.io/blog.github.io/til/til-2020-05-24/</loc>
   </url>
   
 </urlset>

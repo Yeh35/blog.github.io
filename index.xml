@@ -5,7 +5,7 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 24 May 2020 11:52:46 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2020 23:15:22 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,19 @@
       <guid>https://yeh35.github.io/blog.github.io/about-me/</guid>
       <description>안녕하세요, 예상오입니다 현제 소프트원에서 패션 ERP를 유지보수 업무를 하고 있으며, 2018년 9월부터 2021년 7월까지 병역특례를 하고 있습니다.
 주로 백엔드 개발을 전문으로하며 최근에는 Spring, Gradle에 관심을 많습니다.</description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 05 24 (일)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-24/</link>
+      <pubDate>Sun, 24 May 2020 23:15:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-24/</guid>
+      <description>오늘 한 일 Docker docker 기본 명령어에 대해서 정리하였다.
+기본 명령어는 알고 있다고 생각했는데 정리하고 보니 모르고 넘어간 내용들이 많았다.ㅠㅠ
+Spring JPA 백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분인데 9시간 정도 된다. 하루에 3시간씩 3일안에 끝내는 것을 목표로 하고 있다. (목요일까지는 끝내는 것으로&amp;hellip;)
+시간 관리 주말에 더 많은 집중을 해야하는데 집중이 안된다 루틴이 필요하다&amp;hellip;
+평일 루틴 계획 7시 기상 씻고 아침 식사 영어공부 8시 출근 점심시간 헬스 간편 도시락.. (안되면 셀러드 구입)</description>
     </item>
     
     <item>
@@ -352,19 +365,6 @@ Hugo를 선택한 이유 처음에는 Tstory에 한 두개 정도 글을 썻다.
 하지만 한편에 아쉬움이 계속 남았다.
 그래도 뭔가 더 이쁜 나만의 블로그를 가지고 싶다는 욕구가 해결되지 않았다.
 친구랑 빵맥(빵에 맥주)을 하던 중 &amp;ldquo;깃 블로그 해봐&amp;quot;라는 말에 다음날 부랴부랴 찾게 되었다.</description>
-    </item>
-    
-    <item>
-      <title>TIL 2020 05 24 (일)</title>
-      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-24/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-24/</guid>
-      <description>오늘 한 일 Docker docker 기본 명령어에 대해서 정리하였다.
-기본 명령어는 알고 있다고 생각했는데 정리하고 보니 모르고 넘어간 내용들이 많았다.ㅠㅠ
-Spring JPA 백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분인데 9시간 정도 된다. 하루에 3시간씩 3일안에 끝내는 것을 목표로 하고 있다. (목요일까지는 끝내는 것으로&amp;hellip;)
-시간 관리 주말에 더 많은 집중을 해야하는데 집중이 안된다 루틴이 필요하다&amp;hellip;
-평일 루틴 계획 7시 기상 씻고 아침 식사 영어공부 8시 출근 점심시간 헬스 간편 도시락.. (안되면 셀러드 구입)</description>
     </item>
     
   </channel>
