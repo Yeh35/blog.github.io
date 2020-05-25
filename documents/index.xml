@@ -5,10 +5,25 @@
     <link>https://yeh35.github.io/blog.github.io/documents/</link>
     <description>Recent content in Document on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 24 May 2020 11:52:46 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2020 12:19:01 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/documents/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>김정호 3시간만에 끝내는 영문법 총정리</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/english/%EA%B9%80%EC%A0%95%ED%98%B8-3%EC%8B%9C%EA%B0%84%EB%A7%8C%EC%97%90-%EB%81%9D%EB%82%B4%EB%8A%94-%EC%98%81%EB%AC%B8%EB%B2%95-%EC%B4%9D%EC%A0%95%EB%A6%AC/</link>
+      <pubDate>Mon, 25 May 2020 12:19:01 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/english/%EA%B9%80%EC%A0%95%ED%98%B8-3%EC%8B%9C%EA%B0%84%EB%A7%8C%EC%97%90-%EB%81%9D%EB%82%B4%EB%8A%94-%EC%98%81%EB%AC%B8%EB%B2%95-%EC%B4%9D%EC%A0%95%EB%A6%AC/</guid>
+      <description>8품사 글을 구성하는 구속품 8가지
+  명사
+사람, 사물, 개념, 행동 등의 이름
+tommy: car, water, peace, answer, shower
+  대명사 명사를 대신 받아주는 것
+  인칭 대명사: 유일하게 격 의 구분이 있다. (목적어, 소유격 등등 나눠진다)   지시 대명사: (~한 것), 지시해주는 말 This, That, these, those, such
+  부정 대명사: 정해져 있지 않은 것을 지시 all, some, any, none, each, another, other(s), one(s), much, little, few</description>
+    </item>
     
     <item>
       <title>Docker 기본 명령어 정리</title>

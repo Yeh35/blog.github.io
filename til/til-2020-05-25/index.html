@@ -2,22 +2,24 @@
 <html lang='kr'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='sango.h는 snagoh와 c언어의 stdio.h의 합성어이다.'>
+<meta name='description' content='오늘 한 일 안드로이드 android에서 static 전역변수가 초기화되는 현상이 계속 발생 해결 방안으로 SharedProferences를 사용해야겠다. (사실 초기화 되는 원인을 발견하는게 중요한데 그걸 모르겠다.ㅠ)
+멀티 쓰레드 멀티 쓰레드 상황에서 duty select로 인한, transaction 문제가 발생하였다. transaction Level이나 이런것도 나중에 한번 정리해야겠다.
+ https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/  체크 리스트 (내일부터 작성)    할일 여부     24시(오후 12시) 취침 실패!   7시 기상 성공!   아침식사 (시리얼도 인정) 실패!'>
 <meta name='theme-color' content='#ffcd00'>
 <meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
 
-<meta property='og:title' content='tag: REST • sango.h'>
-<meta property='og:description' content='sango.h는 snagoh와 c언어의 stdio.h의 합성어이다.'>
-<meta property='og:url' content='https://yeh35.github.io/blog.github.io/tags/rest/'>
+<meta property='og:title' content='TIL 2020 05 25 (월) • sango.h'>
+<meta property='og:description' content='오늘 한 일 안드로이드 android에서 static 전역변수가 초기화되는 현상이 계속 발생 해결 방안으로 SharedProferences를 사용해야겠다. (사실 초기화 되는 원인을 발견하는게 중요한데 그걸 모르겠다.ㅠ)
+멀티 쓰레드 멀티 쓰레드 상황에서 duty select로 인한, transaction 문제가 발생하였다. transaction Level이나 이런것도 나중에 한번 정리해야겠다.
+ https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/  체크 리스트 (내일부터 작성)    할일 여부     24시(오후 12시) 취침 실패!   7시 기상 성공!   아침식사 (시리얼도 인정) 실패!'>
+<meta property='og:url' content='https://yeh35.github.io/blog.github.io/til/til-2020-05-25/'>
 <meta property='og:site_name' content='sango.h'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content='2020-05-25T12:19:01&#43;09:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='TIL'><meta property='article:tag' content='TIL'><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.66.0" />
 
-  <title>tag: REST • sango.h</title>
-  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/tags/rest/'>
-  
-    <link href="https://yeh35.github.io/blog.github.io/tags/rest/index.xml" rel="alternate" type="application/rss+xml" title="sango.h" />
+  <title>TIL 2020 05 25 (월) • sango.h</title>
+  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/til/til-2020-05-25/'>
   
   
   <link rel='icon' href='/blog.github.io/favicon.ico'>
@@ -28,7 +30,7 @@
   
 
 </head>
-<body class='taxonomy type-tags taxonomy-tag has-sidebar'>
+<body class='page type-TIL has-sidebar'>
 
   <div class='site'><div id='sidebar' class='sidebar'>
   <a class='screen-reader-text' href='#main-menu'></a>
@@ -153,7 +155,7 @@
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/tags/'>Tags</a></li><li><span>REST</span></li></ol>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/til/'>TIL</a></li><li><span>TIL 2020 05 25 (월)</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -168,44 +170,149 @@
       <main id='content'>
 
 
-<header class='header'>
+<article lang='kr' class='entry'>
+  <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'><span class='taxonomy-name'>tag: </span>REST</h1>
-
+      <h1 class='title'>TIL 2020 05 25 (월)</h1>
       
 
     </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'> </span>
+  <time class='entry-date' datetime='0001-01-01T00:00:00Z'>0001-01-01</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+
+</span>
+
+
+</div>
+
+
   </div>
 </header>
 
-
-
-
-<div class='container list-container'>
-  <ul class='list'>
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'> </span>
-  <time datetime='2020-05-10T15:45:22&#43;09:00'>2020-05-10</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/blog.github.io/documents/web/what_is_rest_api/'>What is REST API(그런 REST API로 괜찮은가)</a>
-    </h3>
-  </header>
-</li>
-
-    
-  </ul>
-
+  
   
 
+  <div class='container entry-content'>
+  <h2 id="오늘-한-일">오늘 한 일</h2>
+<h3 id="안드로이드">안드로이드</h3>
+<p>android에서 static 전역변수가 초기화되는 현상이 계속 발생
+해결 방안으로 <a href="https://developer.android.com/reference/android/content/SharedPreferences">SharedProferences</a>를 사용해야겠다.
+(사실 초기화 되는 원인을 발견하는게 중요한데 그걸 모르겠다.ㅠ)</p>
+<h3 id="멀티-쓰레드">멀티 쓰레드</h3>
+<p>멀티 쓰레드 상황에서 duty select로 인한, transaction 문제가 발생하였다.
+transaction Level이나 이런것도 나중에 한번 정리해야겠다.</p>
+<ul>
+<li><a href="https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/">https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/</a></li>
+</ul>
+<h3 id="체크-리스트-내일부터-작성">체크 리스트 (내일부터 작성)</h3>
+<table>
+<thead>
+<tr>
+<th align="left">할일</th>
+<th align="center">여부</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">24시(오후 12시) 취침</td>
+<td align="center">실패!</td>
+</tr>
+<tr>
+<td align="left">7시 기상</td>
+<td align="center">성공!</td>
+</tr>
+<tr>
+<td align="left">아침식사 (시리얼도 인정)</td>
+<td align="center">실패! 아침에 미역국을 먹으려고 했지만 시간 부족으로 시리얼을 주문해야겠다.</td>
+</tr>
+<tr>
+<td align="left">아침 영어 (30분 이상, 단어 정리 혹은 문법 강의)</td>
+<td align="center">성공!</td>
+</tr>
+<tr>
+<td align="left">점심 헬스 (저녁은 노인정)</td>
+<td align="center">성공!</td>
+</tr>
+<tr>
+<td align="left">JPA 강좌 수강</td>
+<td align="center">실패.. 약속이 있어서 할 시간을 확보하지 못했다.</td>
+</tr>
+<tr>
+<td align="left">영단어 (Anki: 신규 50, 복습)</td>
+<td align="center">성공!</td>
+</tr>
+</tbody>
+</table>
+<h2 id="체크리스트-반성">체크리스트 반성</h2>
+<ul>
+<li>오후 12시에 취짐 
+12시에 눕기는 했는데 1시가 넘어서 잠에 들었다.<br>
+잠자기 위해 영단어도 외우려고 했었는데 좋지 않은 방법인거 같다.<br>
+그냥 폰은 던져둬야겠다.</li>
+</ul>
+
 </div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>tags: </span><a class='tag' href='/blog.github.io/tags/til/'>TIL</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='next-entry sep-before'>
+      <a href='/blog.github.io/til/til-start/'>
+        <span class='screen-reader-text'>: </span>TIL(Today I Learned) start<span aria-hidden='true'> <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+<section id='comments' class='comments'>
+  <div class='container sep-before'>
+    <div class='comments-area'><script src='https://utteranc.es/client.js'
+  repo='Yeh35/blog.github.io' issue-term='https://github.com/Yeh35/blog.github.io/test'
+  crossorigin='anonymous' async>
+</script>
+</div>
+  </div>
+</section>
 
       </main>
 

@@ -185,5 +185,16 @@ ANKI에 통계에서는 232개 카드를 복습했다고 한다. (서대문구 -
       <description>오늘 한 일  TIL(Today I learned)에 대한 블로그 글을 작성 영어과외 복습 (Grammar Zone)  문장 성분과 문장 형식 &amp;lt;&amp;ndash; document 기록    느낀점  공부를 하는 것이 생각보다 오래걸린다. (11시에 시작했는데 지금 1시다. 2시간&amp;hellip;)  물론 양에 따라 다르겠지만 한번에 정리하려고 하지말고 공부 틈틈히 정리하고 TIL은 마지막에 합치는 작업으로 해야겠다.   영어 공부는 규칙 이해 -&amp;gt; 문장 읽기 -&amp;gt; 단어 암기 -&amp;gt; 문장 읽기 -&amp;gt; 단어 암기&amp;hellip;.</description>
     </item>
     
+    <item>
+      <title>TIL 2020 05 25 (월)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-25/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-25/</guid>
+      <description>오늘 한 일 안드로이드 android에서 static 전역변수가 초기화되는 현상이 계속 발생 해결 방안으로 SharedProferences를 사용해야겠다. (사실 초기화 되는 원인을 발견하는게 중요한데 그걸 모르겠다.ㅠ)
+멀티 쓰레드 멀티 쓰레드 상황에서 duty select로 인한, transaction 문제가 발생하였다. transaction Level이나 이런것도 나중에 한번 정리해야겠다.
+ https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/  체크 리스트 (내일부터 작성)    할일 여부     24시(오후 12시) 취침 실패!   7시 기상 성공!   아침식사 (시리얼도 인정) 실패!</description>
+    </item>
+    
   </channel>
 </rss>

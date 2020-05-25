@@ -197,5 +197,16 @@ ANKI에 통계에서는 232개 카드를 복습했다고 한다. (서대문구 -
 후기들을 읽으면서 정리한 내용은 아래에 [일일 커밋(TIR 포함) 후기 요약]으로 추가해 놨다. (일일커밋, TIL이 뭔지는 검색하면 널리고 널렸으니 설명은 생략!)</description>
     </item>
     
+    <item>
+      <title>TIL 2020 05 25 (월)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-25/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-25/</guid>
+      <description>오늘 한 일 안드로이드 android에서 static 전역변수가 초기화되는 현상이 계속 발생 해결 방안으로 SharedProferences를 사용해야겠다. (사실 초기화 되는 원인을 발견하는게 중요한데 그걸 모르겠다.ㅠ)
+멀티 쓰레드 멀티 쓰레드 상황에서 duty select로 인한, transaction 문제가 발생하였다. transaction Level이나 이런것도 나중에 한번 정리해야겠다.
+ https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/  체크 리스트 (내일부터 작성)    할일 여부     24시(오후 12시) 취침 실패!   7시 기상 성공!   아침식사 (시리얼도 인정) 실패!</description>
+    </item>
+    
   </channel>
 </rss>
