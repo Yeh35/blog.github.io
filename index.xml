@@ -5,7 +5,7 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 25 May 2020 23:15:22 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2020 23:15:22 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,16 @@
       <guid>https://yeh35.github.io/blog.github.io/about-me/</guid>
       <description>안녕하세요, 예상오입니다 현제 소프트원에서 패션 ERP를 유지보수 업무를 하고 있으며, 2018년 9월부터 2021년 7월까지 병역특례를 하고 있습니다.
 주로 백엔드 개발을 전문으로하며 최근에는 Spring, Gradle에 관심을 많습니다.</description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 05 26 (화)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-26/</link>
+      <pubDate>Tue, 26 May 2020 23:15:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-26/</guid>
+      <description>오늘 한 일 데드락 DB 데드락이 엄청 걸리는 문제가 발생하였다. DB 고객테이블에 데드락이 걸리니 시스템 전체가 정지하였다&amp;hellip; 트렌젝션은 잘 보고 주자
+체크 리스트    할일 여부     24시(오후 12시) 취침 X   7시 기상 O   아침식사 (시리얼도 인정) X   아침 영어 (30분 이상, 단어 정리 혹은 문법 강의) O   점심 헬스 (저녁은 노인정) O   JPA 강좌 수강 △   영단어 (Anki: 신규 50, 복습) X    체크리스트 반성  시리얼은 주문했으면서 우유가 없었음.</description>
     </item>
     
     <item>
