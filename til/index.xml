@@ -5,10 +5,19 @@
     <link>https://yeh35.github.io/blog.github.io/til/</link>
     <description>Recent content in TIL (Today I Learned) on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 26 May 2020 23:15:22 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2020 23:15:22 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 05 27 (수)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-27/</link>
+      <pubDate>Wed, 27 May 2020 23:15:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-27/</guid>
+      <description>오늘 한 일 체크 리스트    할일 여부     24시(오후 12시) 취침 O   7시 기상 O   아침식사 (시리얼도 인정) O   아침 영어 (30분 이상, 단어 정리 혹은 문법 강의) X   점심 헬스 (저녁은 노인정) O   JPA 강좌 수강 O   영단어 (Anki: 신규 50, 복습) O     점심 헬스를 하려고 했지만 근육통 때문에 걷기도 대체했다.</description>
+    </item>
     
     <item>
       <title>TIL 2020 05 26 (화)</title>
