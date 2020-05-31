@@ -253,7 +253,8 @@ EXPOSE 8080
 ARG JAR_FILE=/build/libs/*.jar
 ADD ${JAR_FILE} spring-boot.jar
 ENTRYPOINT [&quot;java&quot;,&quot;-jar&quot;,&quot;/spring-boot.jar&quot;]
-</code></pre><p><code>gradlew bild</code> 명령어로 .jar 파일을 만들고 <code>docker build -t spring-echo .</code>로 Image를 만든다.<br>
+</code></pre><p>전체 소스를 원하신다면 <a href="https://github.com/Yeh35/spring-boot-echo">여기 Github</a></p>
+<p><code>gradlew bild</code> 명령어로 .jar 파일을 만들고 <code>docker build -t spring-echo .</code>로 Image를 만든다.<br>
 잘 되는지 확인하기 위해 <code>docker run -d -p 8080:8080 spring-echo</code> 명령으로 컨테이너를 실행 후 
 cmd창에 다음 같은 명령어를 입력한다.</p>
 <pre><code>&gt;curl http://localhost:8080/echo/hoho
