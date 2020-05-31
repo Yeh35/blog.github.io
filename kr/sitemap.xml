@@ -13,7 +13,47 @@
   
   <url>
     <loc>https://yeh35.github.io/blog.github.io/til/</loc>
-    <lastmod>2020-05-29T23:15:22+09:00</lastmod>
+    <lastmod>2020-05-31T23:15:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/</loc>
+    <lastmod>2020-05-31T23:15:22+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yeh35.github.io/blog.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="kr"
+                href="https://yeh35.github.io/blog.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/tags/</loc>
+    <lastmod>2020-05-31T23:15:22+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yeh35.github.io/blog.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="kr"
+                href="https://yeh35.github.io/blog.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/tags/til/</loc>
+    <lastmod>2020-05-31T23:15:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/til/til-2020-05-31/</loc>
+    <lastmod>2020-05-31T23:15:22+09:00</lastmod>
   </url>
   
   <url>
@@ -32,36 +72,6 @@
   </url>
   
   <url>
-    <loc>https://yeh35.github.io/blog.github.io/</loc>
-    <lastmod>2020-05-31T01:59:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yeh35.github.io/blog.github.io/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="kr"
-                href="https://yeh35.github.io/blog.github.io/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://yeh35.github.io/blog.github.io/tags/</loc>
-    <lastmod>2020-05-31T01:59:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yeh35.github.io/blog.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="kr"
-                href="https://yeh35.github.io/blog.github.io/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://yeh35.github.io/blog.github.io/tags/aws/</loc>
     <lastmod>2020-05-31T01:00:00+09:00</lastmod>
   </url>
@@ -72,22 +82,17 @@
   </url>
   
   <url>
+    <loc>https://yeh35.github.io/blog.github.io/til/til-2020-05-30/</loc>
+    <lastmod>2020-05-30T23:15:22+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yeh35.github.io/blog.github.io/documents/infra/aws/aws-study-start-1/</loc>
     <lastmod>2020-05-30T01:00:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yeh35.github.io/blog.github.io/tags/til/</loc>
-    <lastmod>2020-05-29T23:15:22+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://yeh35.github.io/blog.github.io/til/til-2020-05-29/</loc>
-    <lastmod>2020-05-29T23:15:22+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yeh35.github.io/blog.github.io/til/til-2020-05-30/</loc>
     <lastmod>2020-05-29T23:15:22+09:00</lastmod>
   </url>
   

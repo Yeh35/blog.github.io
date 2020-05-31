@@ -5,10 +5,29 @@
     <link>https://yeh35.github.io/blog.github.io/tags/til/</link>
     <description>Recent content in TIL on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 29 May 2020 23:15:22 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2020 23:15:22 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 05 31 (일)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-31/</link>
+      <pubDate>Sun, 31 May 2020 23:15:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-31/</guid>
+      <description>오늘 한 일 AWS AWS EC2 서버와 Route 53 서버에서 도메인까지 구입해서 연결하는 것을 해봤다. 지금은 단순한 Echo 서버이지만&amp;hellip;
+체크 리스트    할일 여부     24시(오후 12시) 취침 X   7시 기상 X   아침식사 (시리얼도 인정) O   아침 영어 (30분 이상, 단어 정리 혹은 문법 강의) O   점심 헬스 (저녁은 노인정) X   JPA 강좌 수강 X   영단어 (Anki: 신규 50, 복습) X     하&amp;hellip; ㅠ 왜그러냐ㅠ  </description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 05 30 (토)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-30/</link>
+      <pubDate>Sat, 30 May 2020 23:15:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-30/</guid>
+      <description>오늘 한 일 체크 리스트    할일 여부     24시(오후 12시) 취침 X   7시 기상 X   아침식사 (시리얼도 인정) X   아침 영어 (30분 이상, 단어 정리 혹은 문법 강의) X   점심 헬스 (저녁은 노인정) X   JPA 강좌 수강 X   영단어 (Anki: 신규 50, 복습) X     주말이라 좀 많이 풀어진거 같다.</description>
+    </item>
     
     <item>
       <title>TIL 2020 05 29 (금)</title>
@@ -21,19 +40,6 @@
 잘 할 수 있을까&amp;hellip;
 그외.. 좋은 싸이트를 발견하였다. NETMANIAS라는 사이트인데 좋은 자료가 어어엄청 많아보인다. 지금 DNS, DHCP프로토콜을 보고 있는데 글이 정말 잘쓰여져 있다.
 체크 리스트    할일 여부     24시(오후 12시) 취침 O   7시 기상 O   아침식사 (시리얼도 인정) O   아침 영어 (30분 이상, 단어 정리 혹은 문법 강의) X   점심 헬스 (저녁은 노인정) O   JPA 강좌 수강 X   영단어 (Anki: 신규 50, 복습) O     근육통이 있어서 헬스 대신 등산을 하였다.</description>
-    </item>
-    
-    <item>
-      <title>TIL 2020 05 30 (토)</title>
-      <link>https://yeh35.github.io/blog.github.io/til/til-2020-05-30/</link>
-      <pubDate>Fri, 29 May 2020 23:15:22 +0900</pubDate>
-      
-      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-05-30/</guid>
-      <description>오늘 한 일 사이드 프로젝트 사촌 누나와 사이트 프로젝트를 하기로 했다.
-사이드 프로젝트를 본격적으로 해보겠다고 마음 먹은 것은 이번이 처음이라서 기대반 걱정반이다.
-잘 할 수 있을까&amp;hellip;
-그외.. 좋은 싸이트를 발견하였다. NETMANIAS라는 사이트인데 좋은 자료가 어어엄청 많아보인다. 지금 DNS, DHCP프로토콜을 보고 있는데 글이 정말 잘쓰여져 있다.
-체크 리스트    할일 여부     24시(오후 12시) 취침 X   7시 기상 X   아침식사 (시리얼도 인정) X   아침 영어 (30분 이상, 단어 정리 혹은 문법 강의) X   점심 헬스 (저녁은 노인정) X   JPA 강좌 수강 X   영단어 (Anki: 신규 50, 복습) X     주말이라 좀 많이 풀어진거 같다.</description>
     </item>
     
     <item>
