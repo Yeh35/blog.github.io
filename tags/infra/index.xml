@@ -5,10 +5,52 @@
     <link>https://yeh35.github.io/blog.github.io/tags/infra/</link>
     <description>Recent content in infra on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 23 May 2020 22:40:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2020 01:59:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/infra/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker Hub</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/infra/docker/docker-hub/</link>
+      <pubDate>Sun, 31 May 2020 01:59:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/infra/docker/docker-hub/</guid>
+      <description>들어가기 이번에는 Docker Hub에 대해서 알아볼 것이다. Docker Image를 만들었다면 이 이미지를 배포 혹은 공유할 수 있는 방법이다.
+Docker Hub Github와 같은 Docker Hub라는 사이트가 있다. Github와 다른 것은 Private Repository를 하나밖에 못사용 한다는 것?
+(불만이 있다면 Registry Server를 직접 구축해도 된다)
+사이트에서 회원가입을 하고 Console에서 docker login이라고 입력하면 Docker Hub에 로그인 할 수 있다.
+Image Tag 구성 도커 이미지 이름은 다음과 같은 형태로 구성된다. [Registry URL]/[사용자 ID]/[이미지명]:[tag]
+ Registry URL 기본 URL은 docker.</description>
+    </item>
+    
+    <item>
+      <title>Docker 컨테이너, Image, Dockerfile</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/infra/docker/docker-container-image-dockerfile/</link>
+      <pubDate>Thu, 28 May 2020 23:00:46 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/infra/docker/docker-container-image-dockerfile/</guid>
+      <description>들어가기 Docker 컨테이너 뭐고 Docker Image의 생성 Dockerfile은 어떻게 실행되는지 정리하려고 한다.
+Application 환경세팅 문제 우리가 만드는 Application은 실행되는 환경에 따라 OS와 동적 Library에 의존성을 가진다.
+즉, Application이 실행되기 위해서는 OS, 동적 Library라는 실행환경이 필요하다.
+여기서 문제는 하나의 시스템위에 여러개의 Application을 실행하려고 할때이다.
+각 Application이 동일한 라이브러리 버전과 동일한 OS가 필요하다면 상관이 없겠지만
+그렇지 않는다고 하면 세팅 지옥의 문이 열린다. (혹시 하나의 Application만 실행하면 되지 라고 생각했다면 간단한 블로그를 띄우려고 해도 WebServer, DB, WebApplication이라는 3개나 필요하다)</description>
+    </item>
+    
+    <item>
+      <title>Docker 기본 명령어 정리</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/infra/docker/docker-command/</link>
+      <pubDate>Sun, 24 May 2020 11:52:46 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/infra/docker/docker-command/</guid>
+      <description>들어가기 Docker 명령어를 자꾸 까먹어서 정리하는 차원에 글을 작성한다.
+Dokcer가 처음이신 분들은 subicura님의 도커 안내서 를 추천드리고 싶다. (사실 이 글도 subicura님의 도커 안내서를 요약한 것일 뿐이다.)
+도커 버전확인 docker version명령어를 입력하면 Client와 Server 정보 두개가 보인다.
+Docker는 하나의 실행 파일이지만 Client와 Server 역할을 각각 할 수 있다
+커맨드를 입력하면 Client가 Server로 전송하고 결과를 받아 출력해준다.
+도커의 실행 docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]옵션[OPTIONS]  -d : detached mode 흔히 말하는 백그라운드 모드 -p : 호스트와 컨테이너의 포트를 연결 (포워딩) -v : 호스트와 컨테이너의 디렉토리를 연결 (마운트) -e : 컨테이너 내에서 사용할 환경변수 설정 –name : 컨테이너 이름 설정 –rm : 프로세스 종료시 컨테이너 자동 제거 -it : -i와 -t를 동시에 사용한 것으로 터미널 입력을 위한 옵션 –link : 컨테이너 연결 [컨테이너명:별칭]  컨테이너 목록 확인 docker ps [OPTIONS]기본은 실행중인 컨테이너 목록만 보여줌</description>
+    </item>
     
     <item>
       <title>초보자를 위한 Gradle 안내서 4편: 각자의 프로젝트로</title>

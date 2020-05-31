@@ -5,10 +5,24 @@
     <link>https://yeh35.github.io/blog.github.io/tags/docker/</link>
     <description>Recent content in docker on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 28 May 2020 23:00:46 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2020 01:59:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker Hub</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/infra/docker/docker-hub/</link>
+      <pubDate>Sun, 31 May 2020 01:59:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/infra/docker/docker-hub/</guid>
+      <description>들어가기 이번에는 Docker Hub에 대해서 알아볼 것이다. Docker Image를 만들었다면 이 이미지를 배포 혹은 공유할 수 있는 방법이다.
+Docker Hub Github와 같은 Docker Hub라는 사이트가 있다. Github와 다른 것은 Private Repository를 하나밖에 못사용 한다는 것?
+(불만이 있다면 Registry Server를 직접 구축해도 된다)
+사이트에서 회원가입을 하고 Console에서 docker login이라고 입력하면 Docker Hub에 로그인 할 수 있다.
+Image Tag 구성 도커 이미지 이름은 다음과 같은 형태로 구성된다. [Registry URL]/[사용자 ID]/[이미지명]:[tag]
+ Registry URL 기본 URL은 docker.</description>
+    </item>
     
     <item>
       <title>Docker 컨테이너, Image, Dockerfile</title>
