@@ -5,10 +5,23 @@
     <link>https://yeh35.github.io/blog.github.io/til/</link>
     <description>Recent content in TIL (Today I Learned) on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 01 Jun 2020 23:15:22 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2020 23:15:22 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 06 02 (화)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-02/</link>
+      <pubDate>Tue, 02 Jun 2020 23:15:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-02/</guid>
+      <description>오늘 한 일 건강관리 이빨때문에 항생제 하나 먹었다고 이빨은 물론 장까지 아파온다. (아마 유산균이 다 죽어서??)
+어금니쪽 잇몸이 부워서 앞이로만 음식을 먹다보니 제대로 안씹고 삼키고 유산균도 장도 예민해져 있어 소화도 제대로 안되고 컨디션도 안좋아지고 으아아ㅏㅏㅏ. 악순환이다. 빨리 뽑아버렸으면 좋겠다. 대학병원은 검사후에 2주나 기다려야 한다는데..
+쿠버네티스 쿠버네티스의 설명만 읽었는데 &amp;ldquo;이건 써야되!!&amp;ldquo;라는 느낌을 받았다.
+이 좋은 것을 왜 이제 알았을까&amp;hellip;
+Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 강의를 들었다. 다른 강의에서 Test 코드를 작성할때마다 어떤식으로 작동하나 궁금했는데 하나씩 해결되고 있다.</description>
+    </item>
     
     <item>
       <title>TIL 2020 06 01 (월)</title>
