@@ -92,7 +92,7 @@
       </li><li>
         <a href='/blog.github.io/tags/infra/' style='font-size:1.3333333333333333em'>infra</a>
       </li><li>
-        <a href='/blog.github.io/tags/java/' style='font-size:1em'>java</a>
+        <a href='/blog.github.io/tags/java/' style='font-size:1.0416666666666667em'>java</a>
       </li><li>
         <a href='/blog.github.io/tags/junit5/' style='font-size:1em'>junit5</a>
       </li><li>
@@ -351,6 +351,97 @@ class StudyTest {
 <li><a href="https://kr.piliapp.com/facebook-symbols/">이모지 보고 싶다면</a></li>
 <li><a href="https://junit.org/junit5/docs/current/user-guide/">이거 말고 다른 방법</a></li>
 </ul>
+<h2 id="assert-api">assert API</h2>
+<p>테스트 코드라면 당연 Assert를 써서 값이 제대로 됬는지 확인해야한다.<br>
+Java assert 예약어를 사용해도 되지만 그것보다는 좀 더 다양한 기능을 제공하는 Junit의 assert API들이 있다.<br>
+JUnit5의 <code>org.junit.jupiter.api.Assertions.*</code>에 다양한 Assert들이 있다.<br>
+자주 사용하는 것들만 보자면 &hellip;</p>
+<ul>
+<li>
+<p>기본적인 assert</p>
+<pre><code>assertEquals(&quot;예상하는 값&quot;, &quot;결과&quot;, ()-&gt;&quot;에러 메시지&quot;);
+assertNotNull(new String(), ()-&gt;&quot;에러 메시지&quot;);
+assertNull(null, ()-&gt;&quot;에러 메시지&quot;);
+assertTrue(1 &gt; 0, ()-&gt;&quot;에러 메시지&quot;);
+assertFalse(1 &lt; 0, ()-&gt;&quot;에러 메시지&quot;);
+</code></pre><p>&ldquo;에러 메시지&quot;를 굳이 람다식으로 작성하지 않아도 되지만 에러 메시지의 연산이 있을 경우<br>
+람다식으로 작성하여 함수화 시키면 실질적으로 에러 메세지를 보여줘야 할 때만 보여준다.</p>
+</li>
+<li>
+<p>모든 assert 한번에 계산
+assert를 사용하면 위의 assert가 False라는게 밝혀지만 아래 assert는 실행하지 않는데.. <br>
+이걸 <code>assertAll()</code>로 해결할 수 있다.</p>
+<pre><code>assertAll(() -&gt; {
+    assertTrue(1 &lt; 0, ()-&gt;&quot;에러 메시지&quot;);
+    assertFalse(1 &gt; 0, ()-&gt;&quot;에러 메시지&quot;);
+});
+</code></pre></li>
+<li>
+<p>Exception 체크
+<code>assertThrows</code>을 사용하면 Exception을 체크할 수 있다.</p>
+<pre><code>IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -&gt; {
+    throw new IllegalArgumentException(&quot;test&quot;);
+});
+
+assertEquals(&quot;test&quot;, exception.getMessage());
+</code></pre></li>
+<li>
+<p>시작 체크
+<code>assertTimeout</code>, <code>assertTimeoutPreemptively</code>을 사용하면 작동되는 시간을 측정할 수 있다.<br>
+둘중에서 <code>assertTimeoutPreemptively</code>을 사용하는 것을 권장한다
+타입아웃이 되는 경우 <code>assertTimeout</code>는 종료해버리지만 <code>assertTimeoutPreemptively</code>는 끝내버림으로 테스트 속도향상을 할 수 있다.
+단, <strong>ThreadLocal을 제대로 모른다면 쓰지마라! 특히 transaction 같은 것에</strong></p>
+<pre><code>assertTimeoutPreemptively(Duration.ofMillis(100), () -&gt; {
+    Thread.sleep(1000);
+});
+
+assertTimeout(Duration.ofMillis(100), () -&gt; {
+    Thread.sleep(1000);
+});
+</code></pre></li>
+</ul>
+<h2 id="테스트에-조건에-따라-실행">테스트에 조건에 따라 실행</h2>
+<p>특정 OS, Java Version, 실행 변수등에 따라 실행할지 안할지 지정할 수 있다.</p>
+<ul>
+<li>
+<p>코드로 하는 방법은 <code>org.junit.jupiter.api.Assumptions.*</code>의 API를 사용하면 된다.</p>
+<pre><code>@Test
+void test1() {
+    assumeTrue(&quot;LOCAL&quot;.equals(System.getenv(&quot;TEST_ENV&quot;)));
+    assertTrue(false); //TEST_ENV값이 LOCAL이 아닐 경우 실행 안함
+}
+</code></pre><p>혹은</p>
+<pre><code>assumingThat(&quot;LOCAL&quot;.equals(System.getenv(&quot;TEST_ENV&quot;)), () -&gt; {
+    assertTrue(false);
+});
+</code></pre></li>
+<li>
+<p>에노테이션으로 하는 방법은 <code>@Enabled___</code> 와 <code>@Disabled___</code>로 시작해</p>
+<ul>
+<li>OnOS</li>
+<li>OnJre</li>
+<li>IfSystemProperty</li>
+<li>IfEnvironmentVariable
+를 붙여서 쓰면 된다.</li>
+</ul>
+<pre><code>@EnabledOnOs({OS.WINDOWS, OS.MAC})
+void test() {
+    System.out.println(&quot;test 2&quot;);
+}
+</code></pre></li>
+</ul>
+<h2 id="테스트-태깅과-필터링">테스트 태깅과 필터링</h2>
+<p>태깅은 우리의 테스트에 Tag를 걸 수 있다. 
+<code>org.junit.jupiter.api.tag</code> 혹은 <code>tags</code>를 사용하면 된다.
+<code>@Tag(&quot;fast&quot;) @Test void test1() { System.out.println(&quot;fast test&quot;); }</code>
+이렇게 Tag는 필터를 통해 특정한 테스트만 실행할 수 있다.<br>
+<img src="/blog.github.io/img/documents/java/junit5-test-tag-filter.png" alt="tag-filter"> <br>
+이외에는</p>
+<ul>
+<li><a href="https://maven.apache.org/guides/introduction/introduction-to-profiles.html">https://maven.apache.org/guides/introduction/introduction-to-profiles.html</a></li>
+<li><a href="https://junit.org/junit5/docs/current/user-guide/#running-tests-tag-expressions">https://junit.org/junit5/docs/current/user-guide/#running-tests-tag-expressions</a></li>
+</ul>
+<h2 id="커스텀-에노테이션">커스텀 에노테이션</h2>
 <h2 id="참고">참고</h2>
 <ul>
 <li><a href="https://www.inflearn.com/course/the-java-application-test/dashboard">백기선님의 인프런 강좌</a></li>
@@ -386,6 +477,16 @@ class StudyTest {
 </svg>
  </span>
         <span class='screen-reader-text'>: </span>Docker Hub</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/blog.github.io/documents/java/lamdba-java/'>
+        <span class='screen-reader-text'>: </span>람다식<span aria-hidden='true'> <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
     </div></div>
 </nav>
 

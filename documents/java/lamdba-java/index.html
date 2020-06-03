@@ -2,24 +2,38 @@
 <html lang='kr'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='오늘 한 일 안드로이드 android에서 static 전역변수가 초기화되는 현상이 계속 발생 해결 방안으로 SharedProferences를 사용해야겠다. (사실 초기화 되는 원인을 발견하는게 중요한데 그걸 모르겠다.ㅠ)
-멀티 쓰레드 멀티 쓰레드 상황에서 duty select로 인한, transaction 문제가 발생하였다. transaction Level이나 이런것도 나중에 한번 정리해야겠다.
- https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/  체크 리스트 (내일부터 작성)    할일 여부     24시(오후 12시) 취침 실패!   7시 기상 성공!   아침식사 (시리얼도 인정) 실패!'>
+<meta name='description' content='들어가기전 IDE에서 추천해주니 의심하지 않고 사용을 하였지만 어떤식으로 작동하는 것인지
+알아보면서 정리한 내용이다.
+람다식(Lamdaba Expressions)? 처음 람다라는 이야기를 들었을 떄 &lsquo;람보&#39;가 생각나는&hellip;. 나만 그런건가?&hellip;
+람다식은 Java8부터 도입되었다.
+람다식은 익명함수(anonymous function)을 생성하기 위한 식으로 함수 지향 프로그래밍에 사실 더 가깝다.
+매개변수를 가진 코드블록에 불가하지만, 런티임 시 익명 구현 객체를 생성한다.
+람다식를 사용하기 위해서는 규칙이 있다.
+람다식이 구현할 인터페이스에 추상메소드가 한개만 존재햐아한다.
+Java8이전에 코드에 익숙하다면 간결해 보이지만 조금 낫선감은 없지 않다.
+정리하면 람다식은 로컬 익명 구현객체를 생성을 하며 주로 Interface의 메소드를 간편하게 구현하는 목적으로 사용한다'>
 <meta name='theme-color' content='#ffcd00'>
 <meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
 
-<meta property='og:title' content='TIL 2020 05 25 (월) • sango.h'>
-<meta property='og:description' content='오늘 한 일 안드로이드 android에서 static 전역변수가 초기화되는 현상이 계속 발생 해결 방안으로 SharedProferences를 사용해야겠다. (사실 초기화 되는 원인을 발견하는게 중요한데 그걸 모르겠다.ㅠ)
-멀티 쓰레드 멀티 쓰레드 상황에서 duty select로 인한, transaction 문제가 발생하였다. transaction Level이나 이런것도 나중에 한번 정리해야겠다.
- https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/  체크 리스트 (내일부터 작성)    할일 여부     24시(오후 12시) 취침 실패!   7시 기상 성공!   아침식사 (시리얼도 인정) 실패!'>
-<meta property='og:url' content='https://yeh35.github.io/blog.github.io/til/til-2020-05-25/'>
+<meta property='og:title' content='람다식 • sango.h'>
+<meta property='og:description' content='들어가기전 IDE에서 추천해주니 의심하지 않고 사용을 하였지만 어떤식으로 작동하는 것인지
+알아보면서 정리한 내용이다.
+람다식(Lamdaba Expressions)? 처음 람다라는 이야기를 들었을 떄 &lsquo;람보&#39;가 생각나는&hellip;. 나만 그런건가?&hellip;
+람다식은 Java8부터 도입되었다.
+람다식은 익명함수(anonymous function)을 생성하기 위한 식으로 함수 지향 프로그래밍에 사실 더 가깝다.
+매개변수를 가진 코드블록에 불가하지만, 런티임 시 익명 구현 객체를 생성한다.
+람다식를 사용하기 위해서는 규칙이 있다.
+람다식이 구현할 인터페이스에 추상메소드가 한개만 존재햐아한다.
+Java8이전에 코드에 익숙하다면 간결해 보이지만 조금 낫선감은 없지 않다.
+정리하면 람다식은 로컬 익명 구현객체를 생성을 하며 주로 Interface의 메소드를 간편하게 구현하는 목적으로 사용한다'>
+<meta property='og:url' content='https://yeh35.github.io/blog.github.io/documents/java/lamdba-java/'>
 <meta property='og:site_name' content='sango.h'>
-<meta property='og:type' content='article'><meta property='article:section' content='TIL'><meta property='article:tag' content='TIL'><meta property='article:published_time' content='2020-05-25T23:15:22&#43;09:00'/><meta property='article:modified_time' content='2020-05-25T23:15:22&#43;09:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://yeh35.github.io/blog.github.io/img/documents/java/Lamdaba.png'><meta property='article:section' content='documents'><meta property='article:tag' content='java'><meta property='article:published_time' content='2020-06-03T20:15:00&#43;09:00'/><meta property='article:modified_time' content='2020-06-03T20:15:00&#43;09:00'/><meta name='twitter:card' content='summary_large_image'><meta property='twitter:image' content='https://yeh35.github.io/blog.github.io/img/documents/java/Lamdaba.png'>
 
 <meta name="generator" content="Hugo 0.66.0" />
 
-  <title>TIL 2020 05 25 (월) • sango.h</title>
-  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/til/til-2020-05-25/'>
+  <title>람다식 • sango.h</title>
+  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/documents/java/lamdba-java/'>
   
   
   <link rel='icon' href='/blog.github.io/favicon.ico'>
@@ -30,7 +44,7 @@
   
 
 </head>
-<body class='page type-TIL has-sidebar'>
+<body class='page type-documents has-cover has-sidebar'>
 
   <div class='site'><div id='sidebar' class='sidebar'>
   <a class='screen-reader-text' href='#main-menu'></a>
@@ -163,7 +177,7 @@
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/til/'>TIL</a></li><li><span>TIL 2020 05 25 (월)</span></li></ol>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>람다식</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -182,7 +196,7 @@
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>TIL 2020 05 25 (월)</h1>
+      <h1 class='title'>람다식</h1>
       
 
     </div>
@@ -196,7 +210,7 @@
   
 </svg>
 <span class='screen-reader-text'> </span>
-  <time class='entry-date' datetime='2020-05-25T23:15:22&#43;09:00'>2020-05-25</time>
+  <time class='entry-date' datetime='2020-06-03T20:15:00&#43;09:00'>2020-06-03</time>
 </span>
 
   
@@ -217,66 +231,94 @@
   </div>
 </header>
 
-  
+  <div class='entry-cover'>
+  <figure class='container cover-normal'>
+    <img src='/blog.github.io/img/documents/java/Lamdaba.png'/>
+    
+  </figure>
+</div>
   
 
   <div class='container entry-content'>
-  <h2 id="오늘-한-일">오늘 한 일</h2>
-<h3 id="안드로이드">안드로이드</h3>
-<p>android에서 static 전역변수가 초기화되는 현상이 계속 발생
-해결 방안으로 <a href="https://developer.android.com/reference/android/content/SharedPreferences">SharedProferences</a>를 사용해야겠다.
-(사실 초기화 되는 원인을 발견하는게 중요한데 그걸 모르겠다.ㅠ)</p>
-<h3 id="멀티-쓰레드">멀티 쓰레드</h3>
-<p>멀티 쓰레드 상황에서 duty select로 인한, transaction 문제가 발생하였다.
-transaction Level이나 이런것도 나중에 한번 정리해야겠다.</p>
+  <h2 id="들어가기전">들어가기전</h2>
+<p>IDE에서 추천해주니 의심하지 않고 사용을 하였지만 어떤식으로 작동하는 것인지<br>
+알아보면서 정리한 내용이다.</p>
+<h3 id="람다식lamdaba-expressions">람다식(Lamdaba Expressions)?</h3>
+<p>처음 람다라는 이야기를 들었을 떄 &lsquo;람보'가 생각나는&hellip;. 나만 그런건가?&hellip;<br>
+람다식은 <code>Java8</code>부터 도입되었다.<br>
+람다식은 익명함수(anonymous function)을 생성하기 위한 식으로 함수 지향 프로그래밍에 사실 더 가깝다.<br>
+매개변수를 가진 코드블록에 불가하지만, 런티임 시 익명 구현 객체를 생성한다.</p>
+<p>람다식를 사용하기 위해서는 규칙이 있다.<br>
+<strong>람다식이 구현할 인터페이스에 추상메소드가 한개만 존재햐아한다.</strong></p>
+<p><code>Java8</code>이전에 코드에 익숙하다면 간결해 보이지만 조금 낫선감은 없지 않다.</p>
+<p>정리하면 <strong>람다식은 로컬 익명 구현객체를 생성을 하며 주로 Interface의 메소드를 간편하게 구현하는 목적으로 사용한다</strong></p>
+<h3 id="이제-코드로-보자">이제 코드로 보자</h3>
+<p>아래와 같은 인터페이스가 있다고 가정해보자 (무쓸모지만..)</p>
+<pre><code>@FunctionalInterface
+public interface LamdabaInterface {
+    String hello();
+}
+</code></pre><p><code>@FunctionalInterface</code>는 함수형 인터페이스라고 선언하는 것으로 람다식을 사용할 수 있다고 명시해주는 어노테이션이다.<br>
+위에서 람다식을 사용하기 위해서는 추상화 메소드가 하나만 있어야 한다고 했는데 그 규칙을 어기면 컴파일 에러를 내보낸다.</p>
+<p>이제 위의 인터페이스를 구현해야 한다고 하면 처음에는 상속을 이용할 것이다.</p>
+<pre><code>public class LamdabaClass implements LamdabaInterface {
+
+    @Override
+    public String hello() {
+        return &quot;Hello&quot;;
+    }
+
+    public static void main(String[] args) {
+        LamdabaClass lamdaba = new LamdabaClass();
+        print(lamdaba);
+    }
+
+    public static void print(LamdabaInterface lamdaba) {
+        System.out.println(lamdaba.hello());
+    }
+}
+</code></pre><p>재사용도 가능하고 익숙하다 하지만 다른 곳에서 사용하지 않는 것이라면 이렇게 만드는거 자체가 유지보수(어디서 몰래 가져다 쓸지 모르니까..)에도 코드를 작성하는 입장에서도 좋지 않다..</p>
+<p>그 대안으로 <code>익명함수</code>를 사용하는 방법이다.</p>
+<pre><code>public class LamdabaClass {
+
+    public static void main(String[] args) {
+        print(new LamdabaInterface() {
+
+            @Override
+            public String hello() {
+                return &quot;Hello&quot;;
+            }
+        });
+    }
+
+    public static void print(LamdabaInterface lamdaba) {
+        System.out.println(lamdaba.hello());
+    }
+}
+</code></pre><p>처음에 비해 많이 간결하기도 하고 쓸대 없는 재사용도 하지 않을 수 있다.<br>
+하지만 그래도 뭔가 길다&hellip; 이걸 더 줄일 수 있는 것이 <code>람다식</code>이다.</p>
+<pre><code>public class LamdabaClass {
+
+    public static void main(String[] args) {
+        print(() -&gt; &quot;Hello&quot;);
+    }
+
+    public static void print(LamdabaInterface lamdaba) {
+        System.out.println(lamdaba.hello());
+    }
+}
+</code></pre><p>와우 놀라울 정도로 간결해졌다.<br>
+물론 Interface에 무슨 메소드가 추상화 되었는지는 따라가봐야 알 수 있지만 이 간결함에 그정도는 감수 할 수 있다.<br>
+예제에서는 파라미터가 없는 추상 메소드를 사용하였지만 파라미터가 있어도 된다.</p>
+<h3 id="람다식-문법">람다식 문법..</h3>
+<p>람디식의 간결함에 대해서 봤으니 이제 재미없는 문법을 볼 차례이다.
+람다식의 기본 문법은 <code>(타입 매개변수, ....) -&gt; {실행문;};</code> 이렇다.
+하지만 여기서도 다음과 같은 사항을 더 생략할 수 있다.</p>
 <ul>
-<li><a href="https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/">https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/</a></li>
-</ul>
-<h3 id="체크-리스트-내일부터-작성">체크 리스트 (내일부터 작성)</h3>
-<table>
-<thead>
-<tr>
-<th align="left">할일</th>
-<th align="center">여부</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">24시(오후 12시) 취침</td>
-<td align="center">실패!</td>
-</tr>
-<tr>
-<td align="left">7시 기상</td>
-<td align="center">성공!</td>
-</tr>
-<tr>
-<td align="left">아침식사 (시리얼도 인정)</td>
-<td align="center">실패! 아침에 미역국을 먹으려고 했지만 시간 부족으로 시리얼을 주문해야겠다.</td>
-</tr>
-<tr>
-<td align="left">아침 영어 (30분 이상, 단어 정리 혹은 문법 강의)</td>
-<td align="center">성공!</td>
-</tr>
-<tr>
-<td align="left">점심 헬스 (저녁은 노인정)</td>
-<td align="center">성공!</td>
-</tr>
-<tr>
-<td align="left">JPA 강좌 수강</td>
-<td align="center">실패.. 약속이 있어서 할 시간을 확보하지 못했다.</td>
-</tr>
-<tr>
-<td align="left">영단어 (Anki: 신규 50, 복습)</td>
-<td align="center">성공!</td>
-</tr>
-</tbody>
-</table>
-<h2 id="체크리스트-반성">체크리스트 반성</h2>
-<ul>
-<li>오후 12시에 취짐 
-12시에 눕기는 했는데 1시가 넘어서 잠에 들었다.<br>
-잠자기 위해 영단어도 외우려고 했었는데 좋지 않은 방법인거 같다.<br>
-그냥 폰은 던져둬야겠다.</li>
+<li>매개변수의 자료형은 생략 가능</li>
+<li>매개변수가 하나이면 소괄호&rsquo;()&rsquo; 생략 가능</li>
+<li>실행문이 한개라면 중괄호&rsquo;{}&rsquo; 생략 가능</li>
+<li>실행문이 한개고 그 한개의 실행문이 return문일 경우 중괄호&rsquo;{}&lsquo;와 return문 생략 가능</li>
 </ul>
 
 </div>
@@ -289,7 +331,7 @@ transaction Level이나 이런것도 나중에 한번 정리해야겠다.</p>
   <line x1="7" y1="7" x2="7" y2="7"/>
   
 </svg>
-<span class='screen-reader-text'>tags: </span><a class='tag' href='/blog.github.io/tags/til/'>TIL</a></div>
+<span class='screen-reader-text'>tags: </span><a class='tag' href='/blog.github.io/tags/java/'>java</a></div>
 
   </div>
 </footer>
@@ -299,7 +341,7 @@ transaction Level이나 이런것도 나중에 한번 정리해야겠다.</p>
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/blog.github.io/til/til-2020-05-24/'>
+      <a href='/blog.github.io/documents/java/junit5/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -307,17 +349,7 @@ transaction Level이나 이런것도 나중에 한번 정리해야겠다.</p>
   
 </svg>
  </span>
-        <span class='screen-reader-text'>: </span>TIL 2020 05 24 (일)</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/blog.github.io/til/til-2020-05-26/'>
-        <span class='screen-reader-text'>: </span>TIL 2020 05 26 (화)<span aria-hidden='true'> <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader-text'>: </span>Junit5 기초</a>
     </div></div>
 </nav>
 

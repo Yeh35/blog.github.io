@@ -5,7 +5,7 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 02 Jun 2020 23:15:22 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2020 20:15:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,24 @@
       <guid>https://yeh35.github.io/blog.github.io/about-me/</guid>
       <description>안녕하세요, 예상오입니다 현제 소프트원에서 패션 ERP를 유지보수 업무를 하고 있으며, 2018년 9월부터 2021년 7월까지 병역특례를 하고 있습니다.
 주로 백엔드 개발을 전문으로하며 최근에는 Spring, Gradle에 관심을 많습니다.</description>
+    </item>
+    
+    <item>
+      <title>람다식</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/java/lamdba-java/</link>
+      <pubDate>Wed, 03 Jun 2020 20:15:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/java/lamdba-java/</guid>
+      <description>들어가기전 IDE에서 추천해주니 의심하지 않고 사용을 하였지만 어떤식으로 작동하는 것인지
+알아보면서 정리한 내용이다.
+람다식(Lamdaba Expressions)? 처음 람다라는 이야기를 들었을 떄 &amp;lsquo;람보&#39;가 생각나는&amp;hellip;. 나만 그런건가?&amp;hellip;
+람다식은 Java8부터 도입되었다.
+람다식은 익명함수(anonymous function)을 생성하기 위한 식으로 함수 지향 프로그래밍에 사실 더 가깝다.
+매개변수를 가진 코드블록에 불가하지만, 런티임 시 익명 구현 객체를 생성한다.
+람다식를 사용하기 위해서는 규칙이 있다.
+람다식이 구현할 인터페이스에 추상메소드가 한개만 존재햐아한다.
+Java8이전에 코드에 익숙하다면 간결해 보이지만 조금 낫선감은 없지 않다.
+정리하면 람다식은 로컬 익명 구현객체를 생성을 하며 주로 Interface의 메소드를 간편하게 구현하는 목적으로 사용한다</description>
     </item>
     
     <item>
