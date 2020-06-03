@@ -39,7 +39,7 @@ Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 강의�
       <pubDate>Tue, 02 Jun 2020 21:24:00 +0900</pubDate>
       
       <guid>https://yeh35.github.io/blog.github.io/documents/java/junit5/</guid>
-      <description>junit은 단위 테스트를 작성하는 자바 개발자 93%가 사용하는 테스팅 프레임워크 이다.
+      <description>소개 junit은 단위 테스트를 작성하는 자바 개발자 93%가 사용하는 테스팅 프레임워크 이다. 테스트 코드를 작성해야하는
 구성  JUnit Platform : 테스트를 실행시켜주는 런처를 제공, TestEngine API가 제공된다. Jupiter: JUnit 5를 지원하는 TestEngine API의 구연체 Vintage: JUnit 4, 3를 지원하는 TestEngine API의 구연체  의존성 추가  2.2+ 버전의 스프링 부트 프로젝트라면 spring-boot-starter-test에 기본으로 탑제가 되어있다. 아니라면&amp;hellip; &amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.junit.jupiter&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;junit-jupiter-engine&amp;lt;/artifactId&amp;gt;&amp;lt;version&amp;gt;5.5.2&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt;  기본 에노테이션은  @Test @BeforeAll / @AfterAll : 전체 @Test 메소드 전후 @BeforeEach / @AfterEach : 각 @Test 메소드 전후 @Disabled : @Test 메소드 실행 안하기  예제 import org.</description>
     </item>
     
