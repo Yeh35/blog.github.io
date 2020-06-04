@@ -7,7 +7,7 @@
 <meta name='theme-color' content='#ffcd00'>
 <meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
 
-<meta property='og:title' content='Junit5 기초 • sango.h'>
+<meta property='og:title' content='Junit5 한번에 끝내기 • sango.h'>
 <meta property='og:description' content='소개 junit은 단위 테스트를 작성하는 자바 개발자 93%가 사용하는 테스팅 프레임워크 이다. 테스트 코드를 작성해야하는
 구성  JUnit Platform : 테스트를 실행시켜주는 런처를 제공, TestEngine API가 제공된다. Jupiter: JUnit 5를 지원하는 TestEngine API의 구연체 Vintage: JUnit 4, 3를 지원하는 TestEngine API의 구연체  의존성 추가  2.2&#43; 버전의 스프링 부트 프로젝트라면 spring-boot-starter-test에 기본으로 탑제가 되어있다. 아니라면&hellip; &lt;dependency&gt;&lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;&lt;artifactId&gt;junit-jupiter-engine&lt;/artifactId&gt;&lt;version&gt;5.5.2&lt;/version&gt;&lt;/dependency&gt;  기본 에노테이션은  @Test @BeforeAll / @AfterAll : 전체 @Test 메소드 전후 @BeforeEach / @AfterEach : 각 @Test 메소드 전후 @Disabled : @Test 메소드 실행 안하기  예제 import org.'>
 <meta property='og:url' content='https://yeh35.github.io/blog.github.io/documents/java/junit5/'>
@@ -16,7 +16,7 @@
 
 <meta name="generator" content="Hugo 0.66.0" />
 
-  <title>Junit5 기초 • sango.h</title>
+  <title>Junit5 한번에 끝내기 • sango.h</title>
   <link rel='canonical' href='https://yeh35.github.io/blog.github.io/documents/java/junit5/'>
   
   
@@ -161,7 +161,7 @@
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>Junit5 기초</span></li></ol>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>Junit5 한번에 끝내기</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -180,7 +180,7 @@
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>Junit5 기초</h1>
+      <h1 class='title'>Junit5 한번에 끝내기</h1>
       
 
     </div>
@@ -442,6 +442,217 @@ void test() {
 <li><a href="https://junit.org/junit5/docs/current/user-guide/#running-tests-tag-expressions">https://junit.org/junit5/docs/current/user-guide/#running-tests-tag-expressions</a></li>
 </ul>
 <h2 id="커스텀-에노테이션">커스텀 에노테이션</h2>
+<p>기본적은 JUnit5 jupiter 메타 에노테이션을 가지고 커스텀 에노테이션을 만들 수 있다.</p>
+<pre><code>@Tag(&quot;custome&quot;)
+@Test
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+public @interface CustomeTest {
+}
+</code></pre><p>사용할때는</p>
+<pre><code>@CustomeTest
+void customeTest() {
+    System.out.println(&quot;Custome Test&quot;);
+}
+</code></pre><h2 id="단순-테스트-반복">단순 테스트 반복</h2>
+<p><code>@RepeatedTest</code> 에노테이션을 사용하면 된다.
+단순하게는</p>
+<pre><code>@RepeatedTest(value = 10)
+void repeatedTest(RepetitionInfo repetitionInfo) {
+    System.out.println(repetitionInfo.getCurrentRepetition() + &quot; of &quot; + repetitionInfo.getTotalRepetitions());
+}
+</code></pre><p><code>RepetitionInfo</code>라는 메소드를 통해 우리가 반복하려는 횟수와 토탈횟수등을 받을 수 있다.</p>
+<p>테스트를 좀 더 이쁘게 꾸미려면&hellip;</p>
+<pre><code>@DisplayName(&quot;반복&quot;)
+@RepeatedTest(value = 10, name = &quot;{displayName} {currentRepetition} / {totalRepetitions}&quot;)
+void repeatedTest(RepetitionInfo repetitionInfo) {
+    System.out.println(repetitionInfo.getCurrentRepetition() + &quot; of &quot; + repetitionInfo.getTotalRepetitions());
+}
+</code></pre><p><code>name</code>에 <code>{displayName}</code>, <code>{currentRepetition}</code>, <code>{totalRepetitions}</code>에 변수를 이용해서 이름을 이쁘게 꾸밀 수 있다.</p>
+<h2 id="파라미터를-테스트-반복">파라미터를 테스트 반복</h2>
+<p><code>@ParameterizedTest</code>을 이용해서 값을 바꿔가며 테스트 할 수 있다.
+단순하게는..</p>
+<pre><code>@ParameterizedTest
+@ValueSource(strings = {&quot;더위&quot;, &quot;추위&quot;, &quot;선선&quot;, &quot;비&quot;})
+void parameterTest(String weather) {
+    System.out.println(&quot;날씨: &quot; + value);
+}
+</code></pre><p>테스트의 이름을 꾸미고 싶다면 다음과 같이 에노테이션을 바꾸면 된다.</p>
+<pre><code>@DisplayName(&quot;값 바꾸며 반복&quot;)
+@ParameterizedTest(name = &quot;{displayName} {index}...{0}, {1}&quot;)
+</code></pre><p><code>@ValueSource</code>말고도 다양한 에노테이션이 있다.</p>
+<ul>
+<li>@NullSource, @EmptySource, @NullAndEmptySource</li>
+<li>@EnumSource</li>
+<li>@MethodSource</li>
+<li>@CvsSource</li>
+<li>@CvsFileSource</li>
+<li>@ArgumentSource
+이런 값 에노테이션에는 <a href="https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests-argument-conversion-implicit">암묵적인 타입 변환</a>이 있다.</li>
+</ul>
+<h2 id="테스트-인스턴스">테스트 인스턴스</h2>
+<p>기본적인 테스트 클래스의 인스턴스는 각 테스트 메소드마다 만들어지게 된다. (메소드가 100개면 100개..)
+다음과 같은 코드를 실행하면 <code>commonValue</code>의 값이 2개 나와야 할거 같지만..</p>
+<pre><code>public class ExampleTest {
+
+    int commonValue = 0;
+
+    @Test
+    void test1() {
+        commonValue++;
+        System.out.println(this + &quot;.test1 : &quot; + commonValue);
+    }
+
+    @Test
+    void test2() {
+        commonValue++;
+        System.out.println(this + &quot;.test2 : &quot; + commonValue);
+    }
+
+}
+</code></pre><p>결과는 1이 나온다.</p>
+<pre><code>me.sangoh.testing.ExampleTest@1c1bbc4e.test1 : 1
+me.sangoh.testing.ExampleTest@247bddad.test2 : 1
+</code></pre><p>왜 이런식으로 기본 동작이 각 메소드마다 인스턴스를 만드냐면 <strong>테스트 메소드를 독립적으로 실행하여 테스트 메소드간에 의존성을 제거하기 위함</strong> 이다.</p>
+<h3 id="테스트-인스턴스-공유하기">테스트 인스턴스 공유하기</h3>
+<p><code>@TestInstance(Lifecycle.PER_CLASS)</code> 에노테이션을 Class에 붙이면 테스트 메소드별로 생성하지 않고 하나의 인스턴스를 공유한다.</p>
+<pre><code>@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+public class ExampleTest {
+
+    int commonValue = 0;
+
+    @Test
+    void test1() {
+        commonValue++;
+        System.out.println(this + &quot;.test1 : &quot; + commonValue);
+    }
+
+    @Test
+    void test2() {
+        commonValue++;
+        System.out.println(this + &quot;.test2 : &quot; + commonValue);
+    }
+}
+</code></pre><p>결과</p>
+<pre><code>me.sangoh.testing.ExampleTest@45c7e403.test1 : 1
+me.sangoh.testing.ExampleTest@45c7e403.test2 : 2
+</code></pre><h2 id="테스트-순서">테스트 순서</h2>
+<p>기본적으로 <strong>테스트 메소드의 실행 순서는 어떤 메소드가 먼저 실행될지 알 수 없다.</strong><br>
+물론 Junit5부터는 메소드의 순서대로 작동이 되지만 하나의 메소드가 하나의 유닛테스트라면 <strong>테스트 순서에 의존해서도 신경을 써도 안된다</strong></p>
+<p>하지만&hellip; 그럼에도 테스트 메소드 실행 순서를 정하는 방법은 있다.
+그러려면 <code>@TestInstance(TestInstance.Lifecycle.PER_CLASS)</code>을 사용해서 인스턴스를 공유하게 하고 
+<code>@TestMethodOrder</code>을 순서 정하는 방법을 정하고 순서를 정의하면 된다.</p>
+<ul>
+<li>Alphanumeric</li>
+<li>OrderAnnoation</li>
+<li>Random</li>
+</ul>
+<pre><code>@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+public class ExampleTest {
+
+    int commonValue = 0;
+
+    @Order(1)
+    @Test
+    void test1() {
+        commonValue++;
+        System.out.println(this + &quot;.test1 : &quot; + commonValue);
+    }
+
+    @Order(2)
+    @Test
+    void test2() {
+        commonValue++;
+        System.out.println(this + &quot;.test2 : &quot; + commonValue);
+    }
+}
+</code></pre><h2 id="junit-설정-파일">JUnit 설정 파일</h2>
+<p>클래스패스 루트 (src/test/resources/)에 <code>junit-platform.properties</code>을 넣으면 설정파일로 인식한다.
+안된다고 하면&hellip; 다음 이미지를 보고 Project <code>Test Resources</code>를 설정하자..
+<a href="/blog.github.io/img/documents/java/junit5-test-resource.png">resource 설정</a></p>
+<p>다음과 같은 것들을 설정 할 수 있다.</p>
+<ul>
+<li>
+<p>테스트 인스턴스 라이프사이클 설정
+<code>junit.jupiter.testinstance.lifecycle.default = per_class</code></p>
+</li>
+<li>
+<p>확장팩 자동 감지 기능
+<code>junit.jupiter.extensions.autodetection.enabled = true</code><br>
+기본 값은 false</p>
+</li>
+<li>
+<p>@Disabled 무시하고 실행하기
+<code>junit.jupiter.conditions.deactivate = org.junit.*DisabledCondition</code></p>
+</li>
+<li>
+<p>테스트 이름 표기 전략 설정</p>
+<pre><code>junit.jupiter.displayname.generator.default = \ 
+    org.junit.jupiter.api.DisplayNameGenerator$ReplaceUnderscores
+</code></pre></li>
+</ul>
+<h2 id="junit-5-확장-모델httpsjunitorgjunit5docscurrentuser-guideextensions"><a href="https://junit.org/junit5/docs/current/user-guide/#extensions">JUnit 5 확장 모델</a></h2>
+<p>JUnit 4의 확장 모델은 @RunWith(Runner), TestRule, MethodRule.<br>
+JUnit 5의 확장 모델은 단 하나, Extension.</p>
+<p>테스트에 확장팩을 등록 방법은</p>
+<ul>
+<li>선언적인 등록 @ExtendWith</li>
+<li>프로그래밍 등록 @RegisterExtension</li>
+<li>자동 등록 자바 ServiceLoader 이용</li>
+</ul>
+<p>확장팩을 만들면 할 수 있는 것들</p>
+<ul>
+<li>테스트 실행 조건</li>
+<li>테스트 인스턴스 팩토리</li>
+<li>테스트 인스턴스 후-처리기</li>
+<li>테스트 매개변수 리졸버</li>
+<li>테스트 라이프사이클 콜백</li>
+<li>예외 처리</li>
+</ul>
+<p>테스트가 느린 메소드 찾는 확장팩</p>
+<pre><code>public class FindSlowTestExtension implements BeforeTestExecutionCallback, AfterTestExecutionCallback {
+
+    private static final String START_TIME = &quot;START_TIME&quot;;
+
+    @Override
+    public void beforeTestExecution(ExtensionContext extensionContext) throws Exception {
+        String testClassName = extensionContext.getRequiredTestClass().getName();
+        String testMethodName = extensionContext.getRequiredTestMethod().getName();
+        ExtensionContext.Store store = extensionContext.getStore(ExtensionContext.Namespace.create(testClassName + &quot;.&quot; + testMethodName));
+
+        store.put(&quot;START_TIME&quot;, System.currentTimeMillis());
+    }
+
+    @Override
+    public void afterTestExecution(ExtensionContext extensionContext) throws Exception {
+        String testClassName = extensionContext.getRequiredTestClass().getName();
+        String testMethodName = extensionContext.getRequiredTestMethod().getName();
+        ExtensionContext.Store store = extensionContext.getStore(ExtensionContext.Namespace.create(testClassName + &quot;.&quot; + testMethodName));
+
+        Long startTime = store.remove(START_TIME, long.class);
+        long duration = System.currentTimeMillis() - startTime;
+
+        if (duration &gt; 1000L) {
+            System.out.printf(&quot;Pleas check method [%s] this method is vary slow\n&quot;, testMethodName);
+        }
+    }
+}
+</code></pre><p>선언적으로 사용하기</p>
+<pre><code>@ExtendWith(FindSlowTestExtension.class)
+class StudyTest {
+</code></pre><p>혹은
+프로그래밍적으로 추가하기</p>
+<pre><code>class StudyTest {
+    @RegisterExtension
+    static FindSlowTestExtension findSlowTestExtension = new FindSlowTestExtension();
+
+    ...test...
+}
+</code></pre><h2 id="junit34를-junit5로-마이그래이션">JUnit3,4를 JUnit5로 마이그래이션</h2>
+<p>JUnit 3과 4 작성된 테스트 JUnit5의 <code>junit-platform</code>을 사용해서 실행할 수 있다.
+단 기본 기능이 아님으로 <code>junit-jupiter-migrationsupport</code> 의존성을 추가 해야한다.</p>
+<p>자세한 내용은 Pass..</p>
 <h2 id="참고">참고</h2>
 <ul>
 <li><a href="https://www.inflearn.com/course/the-java-application-test/dashboard">백기선님의 인프런 강좌</a></li>
