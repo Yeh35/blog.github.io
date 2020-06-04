@@ -5,10 +5,20 @@
     <link>https://yeh35.github.io/blog.github.io/til/</link>
     <description>Recent content in TIL (Today I Learned) on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 03 Jun 2020 23:15:22 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2020 23:15:22 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 06 04 (목)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-04/</link>
+      <pubDate>Thu, 04 Jun 2020 23:15:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-04/</guid>
+      <description>오늘 한 일 Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 Junit 파트를 드디어 다 들었다. Junit5 한번에 끝내기라는 글로 정리도 다 하였다. 오메..
+Spring Domain Diartory 구조  https://cheese10yun.github.io/spring-guide-directory/ 정말 좋은 자료를 발견하였다. 내용을 곱씹으며 구조를 학습하였는데 https://github.com/Yeh35/springboot.default 내용을 추가해야겠다.  체크 리스트    할일 여부     24시(오후 12시) 취침 O   7시 기상 O   아침식사 (시리얼도 인정) O   아침 영어 (30분 이상, 단어 정리 혹은 문법 강의) X   점심 헬스 (저녁은 노인정) O   강좌 수강 O   영단어 (Anki: 신규 50, 복습) X     사실상 이번주는 영어를 포기했다&amp;hellip;  </description>
+    </item>
     
     <item>
       <title>TIL 2020 06 03 (수)</title>
