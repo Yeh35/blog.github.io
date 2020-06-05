@@ -5,10 +5,21 @@
     <link>https://yeh35.github.io/blog.github.io/documents/</link>
     <description>Recent content in Document on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 03 Jun 2020 20:15:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2020 20:15:22 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/documents/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring Boot Directory</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/spring/spring-boot-directory/</link>
+      <pubDate>Fri, 05 Jun 2020 20:15:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/spring/spring-boot-directory/</guid>
+      <description>들어가기전 Yun Blog님 블로그를 참고하였습니다 저의 멋대로 정리한 것임으로.. 자세한 내용은 Yun Blog님 블로그를 보시길 권장드립니다.
+패키지 구성의 2가지 유형   계층형 : 각 계층을 대표하는 디렉터리를 기준으로 코드를 작성
+└── src├── main│ ├── java│ │ └── com│ │ └── example│ │ └── demo│ │ ├── DemoApplication.java│ │ ├── config│ │ ├── controller│ │ ├── dao│ │ ├── domain│ │ ├── exception│ │ └── service│ └── resources│ └── application.</description>
+    </item>
     
     <item>
       <title>람다식</title>

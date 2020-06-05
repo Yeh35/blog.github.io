@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang='kr'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='들어가기전 Yun Blog님 블로그를 참고하였습니다 저의 멋대로 정리한 것임으로.. 자세한 내용은 Yun Blog님 블로그를 보시길 권장드립니다.
+패키지 구성의 2가지 유형   계층형 : 각 계층을 대표하는 디렉터리를 기준으로 코드를 작성
+└── src├── main│ ├── java│ │ └── com│ │ └── example│ │ └── demo│ │ ├── DemoApplication.java│ │ ├── config│ │ ├── controller│ │ ├── dao│ │ ├── domain│ │ ├── exception│ │ └── service│ └── resources│ └── application.'>
+<meta name='theme-color' content='#ffcd00'>
+<meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
+
+<meta property='og:title' content='Spring Boot Directory • sango.h'>
+<meta property='og:description' content='들어가기전 Yun Blog님 블로그를 참고하였습니다 저의 멋대로 정리한 것임으로.. 자세한 내용은 Yun Blog님 블로그를 보시길 권장드립니다.
+패키지 구성의 2가지 유형   계층형 : 각 계층을 대표하는 디렉터리를 기준으로 코드를 작성
+└── src├── main│ ├── java│ │ └── com│ │ └── example│ │ └── demo│ │ ├── DemoApplication.java│ │ ├── config│ │ ├── controller│ │ ├── dao│ │ ├── domain│ │ ├── exception│ │ └── service│ └── resources│ └── application.'>
+<meta property='og:url' content='https://yeh35.github.io/blog.github.io/documents/spring/spring-boot-directory/'>
+<meta property='og:site_name' content='sango.h'>
+<meta property='og:type' content='article'><meta property='article:section' content='documents'><meta property='article:tag' content='Spring Boot'><meta property='article:tag' content='Directory'><meta property='article:published_time' content='2020-06-05T20:15:22&#43;09:00'/><meta property='article:modified_time' content='2020-06-05T20:15:22&#43;09:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.66.0" />
+
+  <title>Spring Boot Directory • sango.h</title>
+  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/documents/spring/spring-boot-directory/'>
+  
+  
+  <link rel='icon' href='/blog.github.io/favicon.ico'>
+<link rel='stylesheet' href='/blog.github.io/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/blog.github.io/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-documents has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'></a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/blog.github.io/'>
+        <img src='https://avatars2.githubusercontent.com/u/46643699?s=460&amp;u=374c79ade497bda3a230e7ccc8693af69b94e766&amp;v=4'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/blog.github.io/'>
+      sango.h
+      </a>
+    </h2>
+    <div class='desc'>
+    백엔드 개발에 관심이 많습니다.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label=''>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/blog.github.io/documents/'>Document</a></li><li class='item'>
+  <a href='/blog.github.io/til/'>TIL</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'></h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/blog.github.io/tags/api/' style='font-size:1em'>API</a>
+      </li><li>
+        <a href='/blog.github.io/tags/aws/' style='font-size:1.0384615384615385em'>AWS</a>
+      </li><li>
+        <a href='/blog.github.io/tags/blog/' style='font-size:1em'>blog</a>
+      </li><li>
+        <a href='/blog.github.io/tags/book/' style='font-size:1em'>book</a>
+      </li><li>
+        <a href='/blog.github.io/tags/build/' style='font-size:1.1538461538461537em'>build</a>
+      </li><li>
+        <a href='/blog.github.io/tags/directory/' style='font-size:1em'>Directory</a>
+      </li><li>
+        <a href='/blog.github.io/tags/docker/' style='font-size:1.0769230769230769em'>docker</a>
+      </li><li>
+        <a href='/blog.github.io/tags/english/' style='font-size:1.0384615384615385em'>english</a>
+      </li><li>
+        <a href='/blog.github.io/tags/gradle/' style='font-size:1.1538461538461537em'>gradle</a>
+      </li><li>
+        <a href='/blog.github.io/tags/groovy/' style='font-size:1em'>groovy</a>
+      </li><li>
+        <a href='/blog.github.io/tags/http/' style='font-size:1em'>HTTP</a>
+      </li><li>
+        <a href='/blog.github.io/tags/hugo/' style='font-size:1em'>hugo</a>
+      </li><li>
+        <a href='/blog.github.io/tags/infra/' style='font-size:1.3076923076923077em'>infra</a>
+      </li><li>
+        <a href='/blog.github.io/tags/java/' style='font-size:1.0384615384615385em'>java</a>
+      </li><li>
+        <a href='/blog.github.io/tags/junit5/' style='font-size:1em'>junit5</a>
+      </li><li>
+        <a href='/blog.github.io/tags/rest/' style='font-size:1em'>REST</a>
+      </li><li>
+        <a href='/blog.github.io/tags/review/' style='font-size:1em'>review</a>
+      </li><li>
+        <a href='/blog.github.io/tags/series/' style='font-size:1.1153846153846154em'>series</a>
+      </li><li>
+        <a href='/blog.github.io/tags/slack/' style='font-size:1em'>Slack</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring/' style='font-size:1em'>Spring</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring-boot/' style='font-size:1.0384615384615385em'>spring-boot</a>
+      </li><li>
+        <a href='/blog.github.io/tags/start/' style='font-size:1em'>start</a>
+      </li><li>
+        <a href='/blog.github.io/tags/test/' style='font-size:1em'>test</a>
+      </li><li>
+        <a href='/blog.github.io/tags/til/' style='font-size:2em'>TIL</a>
+      </li><li>
+        <a href='/blog.github.io/tags/web/' style='font-size:1em'>web</a>
+      </li><li>
+        <a href='/blog.github.io/tags/webhooks/' style='font-size:1em'>WebHooks</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label=''>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'></a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'></span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/blog.github.io/about-me/'>About Me</a>
+      </li><li class='item'>
+        <a href='/blog.github.io/documents/'>Document</a>
+      </li><li class='item'>
+        <a href='/blog.github.io/til/'>TIL</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>Spring Boot Directory</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>sango.h</p><p class='desc site-desc'>sango.h는 snagoh와 c언어의 stdio.h의 합성어이다.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='kr' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Spring Boot Directory</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'> </span>
+  <time class='entry-date' datetime='2020-06-05T20:15:22&#43;09:00'>2020-06-05</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <h2 id="들어가기전">들어가기전</h2>
+<p><a href="https://cheese10yun.github.io/spring-guide-directory/">Yun Blog</a>님 블로그를 참고하였습니다
+저의 멋대로 정리한 것임으로.. 자세한 내용은 Yun Blog님 블로그를 보시길 권장드립니다.</p>
+<h3 id="패키지-구성의-2가지-유형">패키지 구성의 2가지 유형</h3>
+<ul>
+<li>
+<p>계층형 : 각 계층을 대표하는 디렉터리를 기준으로 코드를 작성</p>
+<pre><code>└── src
+├── main
+│   ├── java
+│   │   └── com
+│   │       └── example
+│   │           └── demo
+│   │               ├── DemoApplication.java
+│   │               ├── config
+│   │               ├── controller
+│   │               ├── dao
+│   │               ├── domain
+│   │               ├── exception
+│   │               └── service
+│   └── resources
+│       └── application.properties
+</code></pre><h4 id="장단점">장단점</h4>
+<ul>
+<li>(장) 해당 프로젝트에 이해가 상대적으로 낮아도 전체적인 구조를 빠르게 파악 가능</li>
+<li>(단) 디렉터리에 클래스들이 너무 많이 모이게 되는 점</li>
+</ul>
+</li>
+<li>
+<p>도메인형 : 도메인 디렉터리 기준으로 코드 구성</p>
+<pre><code>└── src
+├── main
+│   ├── java
+│   │   └── com
+│   │       └── example
+│   │           └── demo
+│   │               ├── DemoApplication.java
+│   │               ├── coupon
+│   │               │   ├── controller
+│   │               │   ├── domain
+│   │               │   ├── exception
+│   │               │   ├── repository
+│   │               │   └── service
+│   │               ├── member
+│   │               │   ├── controller
+│   │               │   ├── domain
+│   │               │   ├── exception
+│   │               │   ├── repository
+│   │               │   └── service
+│   │               └── order
+│   │                   ├── controller
+│   │                   ├── domain
+│   │                   ├── exception
+│   │                   ├── repository
+│   │                   └── service
+│   └── resources
+│       └── application.properties
+</code></pre><h4 id="장단점-1">장단점</h4>
+<ul>
+<li>(장) 관련된 코드들이 응집</li>
+<li>(단) 프로젝트에 이해도가 낮을 경우 전체적인 구조를 파악하기 어려움</li>
+</ul>
+</li>
+</ul>
+<h3 id="도메인형이-더-좋아">도메인형이 더 좋아!</h3>
+<p>간단한 프로젝트라면 모르겠지만 프로젝트가 복잡도에 따라 계층형 구조에서는 한개의 패키지에 적게는 30 ~ 40의 클래스들이 xxxController, xxxService 같이 비슷한 패턴으로 나열된다.<br>
+하지만 도메인형은 관련된 코드들끼리 응집해 있음으로 이런 문제를 피할 수 있다.</p>
+<p>프로젝트를 진행하며 각 도메인에 대한 이해도가 올라감으로 도메인형 구조의 단점은 금방 해결된다.</p>
+<h3 id="최종-구조">최종 구조!</h3>
+<pre><code>└── src
+    ├── main
+    │   ├── java
+    │   │   └── com
+    │   │       └── example
+    │   │           └── project
+    │   │               ├── ApiApp.java
+    │   │               ├── SampleApi.java
+    │   │               ├── domain
+    │   │               │   ├── coupon
+    │   │               │   │   ├── api
+    │   │               │   │   ├── application
+    │   │               │   │   ├── dao
+    │   │               │   │   ├── domain
+    │   │               │   │   ├── dto
+    │   │               │   │   └── exception
+    │   │               │   ├── member
+    │   │               │   │   ├── api
+    │   │               │   │   ├── application
+    │   │               │   │   ├── dao
+    │   │               │   │   ├── domain
+    │   │               │   │   ├── dto
+    │   │               │   │   └── exception
+    │   │               │   └── model 
+    │   │               │       ├── Address.java
+    │   │               │       ├── Email.java
+    │   │               │       └── Name.java
+    │   │               ├── global
+    │   │               │   ├── common
+    │   │               │   │   ├── request
+    │   │               │   │   └── response
+    │   │               │   ├── config
+    │   │               │   │   ├── SwaggerConfig.java
+    │   │               │   │   ├── properties
+    │   │               │   │   ├── resttemplate
+    │   │               │   │   └── security
+    │   │               │   ├── error
+    │   │               │   │   ├── ErrorResponse.java
+    │   │               │   │   ├── GlobalExceptionHandler.java
+    │   │               │   │   └── exception
+    │   │               │   └── util
+    │   │               └── infra
+    │   │                   ├── email
+    │   │                   └── sms
+    │   │                       ├── AmazonSmsClient.java
+    │   │                       ├── SmsClient.java
+    │   │                       └── dto
+    │   └── resources
+    │       ├── application-dev.yml
+    │       ├── application-local.yml
+    │       ├── application-prod.yml
+    │       └── application.yml
+</code></pre><h4 id="각-directory-설명">각 Directory 설명</h4>
+<h6 id="model">Model</h6>
+<pre><code>model 
+├── Address.java
+├── Email.java
+└── Name.java
+</code></pre><p>Domain Entity 객체들이 공통적으로 사용할 객체들로 구성
+주로 <code>Embeddable</code>, <code>Enum</code>, <code>상위 Entity</code> 객체</p>
+<h6 id="member-각-domain들">Member (각 Domain들)</h6>
+<pre><code>member
+├── api
+│   └── MemberApi.java
+├── application
+│   ├── MemberProfileService.java
+│   ├── MemberSearchService.java
+│   ├── MemberSignUpRestService.java
+│   └── MemberSignUpService.java
+├── dao
+│   ├── MemberFindDao.java
+│   ├── MemberPredicateExecutor.java
+│   ├── MemberRepository.java
+│   ├── MemberSupportRepository.java
+│   └── MemberSupportRepositoryImpl.java
+├── domain
+│   ├── Member.java
+│   └── ReferralCode.java
+├── dto
+│   ├── MemberExistenceType.java
+│   ├── MemberProfileUpdate.java
+│   ├── MemberResponse.java
+│   └── SignUpRequest.java
+└── exception
+    ├── EmailDuplicateException.java
+    ├── EmailNotFoundException.java
+    └── MemberNotFoundException.java
+</code></pre><ul>
+<li><code>api</code> : <code>Controller</code>Class의 위치 <br>
+주로 <code>rest api</code> 프로젝트를 구성하는 경우가 많아 줄여서 api라고 명시</li>
+<li><code>domain</code> : Domain <code>Entity</code> Class의 위치 
+추가로 특정 Domain에만 속하는 <code>Embeddable</code>, <code>Enum</code>도 포함</li>
+<li><code>dto</code> : <code>dto</code> Class의 위치</li>
+<li><code>exception</code> : domain에서 발생시키는 <code>exception</code> class의 위치</li>
+<li><code>application</code>: <code>service</code> 계층</li>
+<li><code>dao</code> : <code>repository</code>, <code>dao</code>계층, 사실 두개는 나눌만큼 차이가 있다고 판단되지 않아서 나누지 않기로 했다.<br>
+<a href="http://egloos.zum.com/springmvc/v/543686">그렇게 생각하게 된 출처</a></li>
+</ul>
+<h5 id="global">global</h5>
+<pre><code>global
+├── common
+│   ├── request
+│   └── response
+├── config
+│   ├── SwaggerConfig.java
+│   ├── properties
+│   ├── resttemplate
+│   └── security
+├── error
+│   ├── ErrorResponse.java
+│   ├── GlobalExceptionHandler.java
+│   └── exception
+└── util
+</code></pre><p>프로젝트 전반에 걸쳐서 사용되는 객체 혹은 설정 값을 구성한다.</p>
+<ul>
+<li>common : 공통으로 사용하는 <code>DAO</code>같은 객체 사용</li>
+<li>config : 스프링 각종 설정 파일</li>
+<li>error : 예외 <code>Exception</code> <br>
+cheese10yum님의 <a href="https://github.com/cheese10yun/spring-guide/blob/master/docs/exception-guide.md">Exception Guild</a>를 참고</li>
+<li>util : <code>Util Class</code></li>
+</ul>
+<h5 id="infra">infra</h5>
+<pre><code>infra
+├── email
+└── sms
+    ├── AmazonSmsClient.java
+    ├── SmsClient.java
+    └── dto
+</code></pre><p>이메일, SMS, WebHook 등 외부 서비스에 대한 코드들이 존재<br>
+이런 외부 코드는 사용하는 서비스에 따라서 쉽게 변경되고 지워질 수 있기 때문에 따로 분리하는게 좋다.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>tags: </span><a class='tag' href='/blog.github.io/tags/directory/'>Directory</a>, <a class='tag' href='/blog.github.io/tags/spring-boot/'>spring-boot</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/blog.github.io/documents/java/lamdba-java/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ </span>
+        <span class='screen-reader-text'>: </span>람다식</a>
+    </div></div>
+</nav>
+
+
+<section id='comments' class='comments'>
+  <div class='container sep-before'>
+    <div class='comments-area'><script src='https://utteranc.es/client.js'
+  repo='Yeh35/blog.github.io' issue-term='https://github.com/Yeh35/blog.github.io/test'
+  crossorigin='anonymous' async>
+</script>
+</div>
+  </div>
+</section>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label=''>
+    <ul><li>
+        <a href='https://github.com/Yeh35' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:jaws0910@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019-2020 Snag Oh Yeh </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/blog.github.io/assets/js/"</script>
+
+<script src='/blog.github.io/assets/js/main.c3bcf2df.js'></script><script src='/blog.github.io/js/custom.js'></script>
+
+</body>
+
+</html>
+
