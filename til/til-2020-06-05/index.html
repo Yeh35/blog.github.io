@@ -2,28 +2,28 @@
 <html lang='kr'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='오늘 한 일 건강관리 이빨때문에 항생제 하나 먹었다고 이빨은 물론 장까지 아파온다. (아마 유산균이 다 죽어서??)
-어금니쪽 잇몸이 부워서 앞이로만 음식을 먹다보니 제대로 안씹고 삼키고 유산균도 장도 예민해져 있어 소화도 제대로 안되고 컨디션도 안좋아지고 으아아ㅏㅏㅏ. 악순환이다. 빨리 뽑아버렸으면 좋겠다. 대학병원은 검사후에 2주나 기다려야 한다는데..
-쿠버네티스 쿠버네티스의 설명만 읽었는데 &ldquo;이건 써야되!!&ldquo;라는 느낌을 받았다.
-이 좋은 것을 왜 이제 알았을까&hellip;
-Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 강의를 들었다. 다른 강의에서 Test 코드를 작성할때마다 어떤식으로 작동하나 궁금했는데 하나씩 해결되고 있다.'>
+<meta name='description' content='오늘 한 일 Spring Domain Diartory 구조 cheese10yun님이 올려주신 Best Practice 소스를 받아 한줄한줄 설명과 함께 읽어보고 있다.
+Domain 구조 설계와 Exception과 에러 공통을 어떤식으로 담아야 하는지 디테일이 중요하다는 것을 또 한번 깨닫는거 같다&hellip;
+회사 Demo 발표 회사에서 Spring boot &#43; Gradle &#43; JPA &#43; Docker를 이용한 간단한 유저 가입 Demo를 발표하였다.
+다음주에 최종 정리해서 보여드리게로 했다. (문서작업해야돼!!ㅠ)
+체크 리스트    할일 여부     24시(오후 12시) 취침 O   7시 기상 X   아침식사 (시리얼도 인정) O   아침 영어 (30분 이상, 단어 정리 혹은 문법 강의) X   점심 헬스 (저녁은 노인정) X   강좌 수강 X   영단어 (Anki: 신규 50, 복습) X     밤에 맥주 한캔(500ml)을 마셨는데 아침에 일어나기 너무 힘들었다&hellip; 술을 마신다고 해도 11시 전에 할일을 마치고 마셔야겠다.'>
 <meta name='theme-color' content='#ffcd00'>
 <meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
 
-<meta property='og:title' content='TIL 2020 06 02 (화) • sango.h'>
-<meta property='og:description' content='오늘 한 일 건강관리 이빨때문에 항생제 하나 먹었다고 이빨은 물론 장까지 아파온다. (아마 유산균이 다 죽어서??)
-어금니쪽 잇몸이 부워서 앞이로만 음식을 먹다보니 제대로 안씹고 삼키고 유산균도 장도 예민해져 있어 소화도 제대로 안되고 컨디션도 안좋아지고 으아아ㅏㅏㅏ. 악순환이다. 빨리 뽑아버렸으면 좋겠다. 대학병원은 검사후에 2주나 기다려야 한다는데..
-쿠버네티스 쿠버네티스의 설명만 읽었는데 &ldquo;이건 써야되!!&ldquo;라는 느낌을 받았다.
-이 좋은 것을 왜 이제 알았을까&hellip;
-Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 강의를 들었다. 다른 강의에서 Test 코드를 작성할때마다 어떤식으로 작동하나 궁금했는데 하나씩 해결되고 있다.'>
-<meta property='og:url' content='https://yeh35.github.io/blog.github.io/til/til-2020-06-02/'>
+<meta property='og:title' content='TIL 2020 06 05 (금) • sango.h'>
+<meta property='og:description' content='오늘 한 일 Spring Domain Diartory 구조 cheese10yun님이 올려주신 Best Practice 소스를 받아 한줄한줄 설명과 함께 읽어보고 있다.
+Domain 구조 설계와 Exception과 에러 공통을 어떤식으로 담아야 하는지 디테일이 중요하다는 것을 또 한번 깨닫는거 같다&hellip;
+회사 Demo 발표 회사에서 Spring boot &#43; Gradle &#43; JPA &#43; Docker를 이용한 간단한 유저 가입 Demo를 발표하였다.
+다음주에 최종 정리해서 보여드리게로 했다. (문서작업해야돼!!ㅠ)
+체크 리스트    할일 여부     24시(오후 12시) 취침 O   7시 기상 X   아침식사 (시리얼도 인정) O   아침 영어 (30분 이상, 단어 정리 혹은 문법 강의) X   점심 헬스 (저녁은 노인정) X   강좌 수강 X   영단어 (Anki: 신규 50, 복습) X     밤에 맥주 한캔(500ml)을 마셨는데 아침에 일어나기 너무 힘들었다&hellip; 술을 마신다고 해도 11시 전에 할일을 마치고 마셔야겠다.'>
+<meta property='og:url' content='https://yeh35.github.io/blog.github.io/til/til-2020-06-05/'>
 <meta property='og:site_name' content='sango.h'>
-<meta property='og:type' content='article'><meta property='article:section' content='TIL'><meta property='article:tag' content='TIL'><meta property='article:published_time' content='2020-06-02T23:15:22&#43;09:00'/><meta property='article:modified_time' content='2020-06-02T23:15:22&#43;09:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='TIL'><meta property='article:tag' content='TIL'><meta property='article:published_time' content='2020-06-05T23:15:22&#43;09:00'/><meta property='article:modified_time' content='2020-06-05T23:15:22&#43;09:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.66.0" />
 
-  <title>TIL 2020 06 02 (화) • sango.h</title>
-  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/til/til-2020-06-02/'>
+  <title>TIL 2020 06 05 (금) • sango.h</title>
+  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/til/til-2020-06-05/'>
   
   
   <link rel='icon' href='/blog.github.io/favicon.ico'>
@@ -169,7 +169,7 @@ Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 강의�
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/til/'>TIL</a></li><li><span>TIL 2020 06 02 (화)</span></li></ol>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/til/'>TIL</a></li><li><span>TIL 2020 06 05 (금)</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -188,7 +188,7 @@ Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 강의�
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>TIL 2020 06 02 (화)</h1>
+      <h1 class='title'>TIL 2020 06 05 (금)</h1>
       
 
     </div>
@@ -202,7 +202,7 @@ Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 강의�
   
 </svg>
 <span class='screen-reader-text'> </span>
-  <time class='entry-date' datetime='2020-06-02T23:15:22&#43;09:00'>2020-06-02</time>
+  <time class='entry-date' datetime='2020-06-05T23:15:22&#43;09:00'>2020-06-05</time>
 </span>
 
   
@@ -228,17 +228,13 @@ Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 강의�
 
   <div class='container entry-content'>
   <h2 id="오늘-한-일">오늘 한 일</h2>
-<h3 id="건강관리">건강관리</h3>
-<p>이빨때문에 항생제 하나 먹었다고 이빨은 물론 장까지 아파온다. (아마 유산균이 다 죽어서??)<br>
-어금니쪽 잇몸이 부워서 앞이로만 음식을 먹다보니 제대로 안씹고 삼키고 유산균도 장도 예민해져 있어 소화도 제대로 안되고 
-컨디션도 안좋아지고 으아아ㅏㅏㅏ. 악순환이다. 빨리 뽑아버렸으면 좋겠다. 
-대학병원은 검사후에 2주나 기다려야 한다는데..</p>
-<h3 id="쿠버네티스">쿠버네티스</h3>
-<p>쿠버네티스의 설명만 읽었는데 &ldquo;이건 써야되!!&ldquo;라는 느낌을 받았다.<br>
-이 좋은 것을 왜 이제 알았을까&hellip;</p>
-<h3 id="junit">Junit</h3>
-<p><a href="https://www.inflearn.com/course/the-java-application-test/dashboard">더 자바, 애플리케이션을 테스트하는 다양한 방법</a> 강의를 들었다.  다른 강의에서 Test 코드를 작성할때마다 어떤식으로 작동하나 궁금했는데 하나씩 해결되고 있다.
-자세한 내용은 정리해서 블로그에 포스팅해야겠다.</p>
+<h3 id="spring-domain-diartory-구조">Spring Domain Diartory 구조</h3>
+<p><a href="https://cheese10yun.github.io/spring-guide-directory/">cheese10yun</a>님이 올려주신 Best Practice 소스를 받아 한줄한줄 설명과 함께 읽어보고 있다.<br>
+Domain 구조 설계와 Exception과 에러 공통을 어떤식으로 담아야 하는지 디테일이 중요하다는 것을 또 한번 깨닫는거 같다&hellip;</p>
+<h3 id="회사-demo-발표">회사 Demo 발표</h3>
+<p>회사에서 Spring boot + Gradle + JPA + Docker를 이용한 간단한 유저 가입 Demo를 발표하였다.<br>
+다음주에 최종 정리해서 보여드리게로 했다.
+(문서작업해야돼!!ㅠ)</p>
 <h3 id="체크-리스트">체크 리스트</h3>
 <table>
 <thead>
@@ -250,7 +246,7 @@ Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 강의�
 <tbody>
 <tr>
 <td align="left">24시(오후 12시) 취침</td>
-<td align="center">X</td>
+<td align="center">O</td>
 </tr>
 <tr>
 <td align="left">7시 기상</td>
@@ -270,7 +266,7 @@ Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 강의�
 </tr>
 <tr>
 <td align="left">강좌 수강</td>
-<td align="center">O</td>
+<td align="center">X</td>
 </tr>
 <tr>
 <td align="left">영단어 (Anki: 신규 50, 복습)</td>
@@ -279,7 +275,8 @@ Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 강의�
 </tbody>
 </table>
 <ul>
-<li>내일 대학병원을 간다. 전생에 얼마나 그러(응?)했으면 사랑이가 4개나&hellip;</li>
+<li>밤에 맥주 한캔(500ml)을 마셨는데 아침에 일어나기 너무 힘들었다&hellip; 
+술을 마신다고 해도 11시 전에 할일을 마치고 마셔야겠다.</li>
 </ul>
 
 </div>
@@ -302,7 +299,7 @@ Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 강의�
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/blog.github.io/til/til-2020-06-01/'>
+      <a href='/blog.github.io/til/til-2020-06-04/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -310,17 +307,7 @@ Junit 더 자바, 애플리케이션을 테스트하는 다양한 방법 강의�
   
 </svg>
  </span>
-        <span class='screen-reader-text'>: </span>TIL 2020 06 01 (월)</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/blog.github.io/til/til-2020-06-03/'>
-        <span class='screen-reader-text'>: </span>TIL 2020 06 03 (수)<span aria-hidden='true'> <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader-text'>: </span>TIL 2020 06 04 (목)</a>
     </div></div>
 </nav>
 

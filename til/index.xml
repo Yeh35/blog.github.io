@@ -5,10 +5,23 @@
     <link>https://yeh35.github.io/blog.github.io/til/</link>
     <description>Recent content in TIL (Today I Learned) on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Jun 2020 23:15:22 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2020 23:15:22 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 06 05 (금)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-05/</link>
+      <pubDate>Fri, 05 Jun 2020 23:15:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-05/</guid>
+      <description>오늘 한 일 Spring Domain Diartory 구조 cheese10yun님이 올려주신 Best Practice 소스를 받아 한줄한줄 설명과 함께 읽어보고 있다.
+Domain 구조 설계와 Exception과 에러 공통을 어떤식으로 담아야 하는지 디테일이 중요하다는 것을 또 한번 깨닫는거 같다&amp;hellip;
+회사 Demo 발표 회사에서 Spring boot + Gradle + JPA + Docker를 이용한 간단한 유저 가입 Demo를 발표하였다.
+다음주에 최종 정리해서 보여드리게로 했다. (문서작업해야돼!!ㅠ)
+체크 리스트    할일 여부     24시(오후 12시) 취침 O   7시 기상 X   아침식사 (시리얼도 인정) O   아침 영어 (30분 이상, 단어 정리 혹은 문법 강의) X   점심 헬스 (저녁은 노인정) X   강좌 수강 X   영단어 (Anki: 신규 50, 복습) X     밤에 맥주 한캔(500ml)을 마셨는데 아침에 일어나기 너무 힘들었다&amp;hellip; 술을 마신다고 해도 11시 전에 할일을 마치고 마셔야겠다.</description>
+    </item>
     
     <item>
       <title>TIL 2020 06 04 (목)</title>
