@@ -5,10 +5,22 @@
     <link>https://yeh35.github.io/blog.github.io/tags/spring-boot/</link>
     <description>Recent content in spring-boot on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 Jun 2020 20:15:22 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2020 22:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring JPA 1편: Build UP!!</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/spring/spring-jpa-core/</link>
+      <pubDate>Mon, 08 Jun 2020 22:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/spring/spring-jpa-core/</guid>
+      <description>관계형 DB 와 Java 관계형 DB 와 Java를 연결하는 기본은 JDBC이다. JDBC를 기반으로 여러 방식들이 제시되었다.
+JDBC JDBC는 Java Data Base Connectivity으로 JDK 1.1을 기준으로 Java의 표준(java.sql.*)이 되었다.
+Java 표준으로 정해졌기 떄문에 사용하려는 DBMS 진영에서 JDBC 드라이버(API를 구현한 라이브러리)를 제공하면 어떤 DBMS든 쉽게 사용할 수 있을 줄 알았다. 하지만 DBMS와 연결하는 API만 표준으로 제공할뿐 실질적은 Query는 직접 작성해야겠다.
+ 예제  Mybatis: SQL Mapping JDBC를 그냥 사용하니 코드와 SQL이 같이 있어서 불편해.</description>
+    </item>
     
     <item>
       <title>Spring Boot Directory</title>

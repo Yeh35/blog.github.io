@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang='kr'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='관계형 DB 와 Java 관계형 DB 와 Java를 연결하는 기본은 JDBC이다. JDBC를 기반으로 여러 방식들이 제시되었다.
+JDBC JDBC는 Java Data Base Connectivity으로 JDK 1.1을 기준으로 Java의 표준(java.sql.*)이 되었다.
+Java 표준으로 정해졌기 떄문에 사용하려는 DBMS 진영에서 JDBC 드라이버(API를 구현한 라이브러리)를 제공하면 어떤 DBMS든 쉽게 사용할 수 있을 줄 알았다. 하지만 DBMS와 연결하는 API만 표준으로 제공할뿐 실질적은 Query는 직접 작성해야겠다.
+ 예제  Mybatis: SQL Mapping JDBC를 그냥 사용하니 코드와 SQL이 같이 있어서 불편해.'>
+<meta name='theme-color' content='#ffcd00'>
+<meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
+
+<meta property='og:title' content='Spring JPA 1편: Build UP!! • sango.h'>
+<meta property='og:description' content='관계형 DB 와 Java 관계형 DB 와 Java를 연결하는 기본은 JDBC이다. JDBC를 기반으로 여러 방식들이 제시되었다.
+JDBC JDBC는 Java Data Base Connectivity으로 JDK 1.1을 기준으로 Java의 표준(java.sql.*)이 되었다.
+Java 표준으로 정해졌기 떄문에 사용하려는 DBMS 진영에서 JDBC 드라이버(API를 구현한 라이브러리)를 제공하면 어떤 DBMS든 쉽게 사용할 수 있을 줄 알았다. 하지만 DBMS와 연결하는 API만 표준으로 제공할뿐 실질적은 Query는 직접 작성해야겠다.
+ 예제  Mybatis: SQL Mapping JDBC를 그냥 사용하니 코드와 SQL이 같이 있어서 불편해.'>
+<meta property='og:url' content='https://yeh35.github.io/blog.github.io/documents/spring/spring-jpa-core/'>
+<meta property='og:site_name' content='sango.h'>
+<meta property='og:type' content='article'><meta property='article:section' content='documents'><meta property='article:tag' content='Spring Boot'><meta property='article:tag' content='JPA'><meta property='article:tag' content='ORM'><meta property='article:tag' content='JDBC'><meta property='article:tag' content='JAVA'><meta property='article:published_time' content='2020-06-08T22:00:00&#43;09:00'/><meta property='article:modified_time' content='2020-06-08T22:00:00&#43;09:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.66.0" />
+
+  <title>Spring JPA 1편: Build UP!! • sango.h</title>
+  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/documents/spring/spring-jpa-core/'>
+  
+  
+  <link rel='icon' href='/blog.github.io/favicon.ico'>
+<link rel='stylesheet' href='/blog.github.io/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/blog.github.io/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-documents has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'></a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/blog.github.io/'>
+        <img src='https://avatars2.githubusercontent.com/u/46643699?s=460&amp;u=374c79ade497bda3a230e7ccc8693af69b94e766&amp;v=4'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/blog.github.io/'>
+      sango.h
+      </a>
+    </h2>
+    <div class='desc'>
+    백엔드 개발에 관심이 많습니다.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label=''>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/blog.github.io/documents/'>Document</a></li><li class='item'>
+  <a href='/blog.github.io/til/'>TIL</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'></h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/blog.github.io/tags/api/' style='font-size:1em'>API</a>
+      </li><li>
+        <a href='/blog.github.io/tags/assert/' style='font-size:1em'>assert</a>
+      </li><li>
+        <a href='/blog.github.io/tags/aws/' style='font-size:1.0344827586206897em'>AWS</a>
+      </li><li>
+        <a href='/blog.github.io/tags/blog/' style='font-size:1em'>blog</a>
+      </li><li>
+        <a href='/blog.github.io/tags/book/' style='font-size:1em'>book</a>
+      </li><li>
+        <a href='/blog.github.io/tags/build/' style='font-size:1.1379310344827587em'>build</a>
+      </li><li>
+        <a href='/blog.github.io/tags/directory/' style='font-size:1em'>Directory</a>
+      </li><li>
+        <a href='/blog.github.io/tags/docker/' style='font-size:1.0689655172413792em'>docker</a>
+      </li><li>
+        <a href='/blog.github.io/tags/english/' style='font-size:1.0344827586206897em'>english</a>
+      </li><li>
+        <a href='/blog.github.io/tags/gradle/' style='font-size:1.1379310344827587em'>gradle</a>
+      </li><li>
+        <a href='/blog.github.io/tags/groovy/' style='font-size:1em'>groovy</a>
+      </li><li>
+        <a href='/blog.github.io/tags/http/' style='font-size:1em'>HTTP</a>
+      </li><li>
+        <a href='/blog.github.io/tags/hugo/' style='font-size:1em'>hugo</a>
+      </li><li>
+        <a href='/blog.github.io/tags/infra/' style='font-size:1.2758620689655173em'>infra</a>
+      </li><li>
+        <a href='/blog.github.io/tags/java/' style='font-size:1.103448275862069em'>java</a>
+      </li><li>
+        <a href='/blog.github.io/tags/jdbc/' style='font-size:1em'>JDBC</a>
+      </li><li>
+        <a href='/blog.github.io/tags/jpa/' style='font-size:1em'>JPA</a>
+      </li><li>
+        <a href='/blog.github.io/tags/junit5/' style='font-size:1em'>junit5</a>
+      </li><li>
+        <a href='/blog.github.io/tags/orm/' style='font-size:1em'>ORM</a>
+      </li><li>
+        <a href='/blog.github.io/tags/rest/' style='font-size:1em'>REST</a>
+      </li><li>
+        <a href='/blog.github.io/tags/review/' style='font-size:1em'>review</a>
+      </li><li>
+        <a href='/blog.github.io/tags/series/' style='font-size:1.103448275862069em'>series</a>
+      </li><li>
+        <a href='/blog.github.io/tags/slack/' style='font-size:1em'>Slack</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring/' style='font-size:1em'>Spring</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring-boot/' style='font-size:1.0689655172413792em'>spring-boot</a>
+      </li><li>
+        <a href='/blog.github.io/tags/start/' style='font-size:1em'>start</a>
+      </li><li>
+        <a href='/blog.github.io/tags/test/' style='font-size:1.0344827586206897em'>test</a>
+      </li><li>
+        <a href='/blog.github.io/tags/til/' style='font-size:2em'>TIL</a>
+      </li><li>
+        <a href='/blog.github.io/tags/web/' style='font-size:1em'>web</a>
+      </li><li>
+        <a href='/blog.github.io/tags/webhooks/' style='font-size:1em'>WebHooks</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label=''>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'></a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'></span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/blog.github.io/about-me/'>About Me</a>
+      </li><li class='item'>
+        <a href='/blog.github.io/documents/'>Document</a>
+      </li><li class='item'>
+        <a href='/blog.github.io/til/'>TIL</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>Spring JPA 1편: Build UP!!</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>sango.h</p><p class='desc site-desc'>sango.h는 snagoh와 c언어의 stdio.h의 합성어이다.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='kr' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Spring JPA 1편: Build UP!!</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'> </span>
+  <time class='entry-date' datetime='2020-06-08T22:00:00&#43;09:00'>2020-06-08</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <h2 id="관계형-db-와-java">관계형 DB 와 Java</h2>
+<p><img src="/blog.github.io/img/documents/java/jdbc.png" alt="JDBC"> <br>
+관계형 DB 와 Java를 연결하는 기본은 <code>JDBC</code>이다.
+JDBC를 기반으로 여러 방식들이 제시되었다.</p>
+<h4 id="jdbc">JDBC</h4>
+<p>JDBC는 <code>Java Data Base Connectivity</code>으로 JDK 1.1을 기준으로 Java의 표준(<code>java.sql.*</code>)이 되었다.<br>
+Java 표준으로 정해졌기 떄문에 사용하려는 DBMS 진영에서 JDBC 드라이버(API를 구현한 라이브러리)를 제공하면 어떤 DBMS든 쉽게 사용할 수 있을 줄 알았다.    <br>
+하지만 DBMS와 연결하는 API만 표준으로 제공할뿐 실질적은 Query는 직접 작성해야겠다.</p>
+<ul>
+<li><a href="https://www.tutorialspoint.com/jdbc/jdbc-sample-code.htm">예제</a></li>
+</ul>
+<h4 id="mybatis-sql-mapping">Mybatis: SQL Mapping</h4>
+<p>JDBC를 그냥 사용하니 코드와 SQL이 같이 있어서 불편해.. 
+반복되는 SQL도 너무 많은데? DB Connection 관리하기도 너무 힘들어서&hellip;
+Mybatis가 나왔다. 
+XML형식으로 쿼리를 작성하고 코드상에서는 작성해놓은 쿼리에 파라미터만 채워서 DB로 전송한다.<br>
+JDBC를 직접 사용할때보다 Connection Pool, 코드와 쿼리의 분리문제는 해결하였다&hellip; 
+<strong>하지만 Query를 작성하는 번거로움과 기능을 실행해봐야지만 Query를 검증할 수 있는 문제, 반복적인 코드, 밴더에 종속, 스키마 변경시 다량의 코드 수정등 해결되지 않는 문제가 있었다</strong></p>
+<h4 id="jpahttpssuhwandev20190224jpa-vs-hibernate-vs-spring-data-jpa"><a href="https://suhwan.dev/2019/02/24/jpa-vs-hibernate-vs-spring-data-jpa/">JPA</a></h4>
+<p>JPA는 <code>Java Persistence API</code>의 약자로 <strong>Java ORM을 정의하는 인터페이스 표준</strong> 으로 JPA는 JDBC와 동일하게 인터페이스의 <strong>구현체</strong> 가 필요하다. 
+주로 사용하는 구현체로 <code>Hibernate</code>를 사용한다.</p>
+<p>당장은 그렇구나 하고 넘어가고 <a href="https://suhwan.dev/2019/02/24/jpa-vs-hibernate-vs-spring-data-jpa/">JPA, Hibernate, Spring Dawta JPA</a>을 설명한 글이 있는데 읽어보길 추천한다.</p>
+<h2 id="orm-object-relation-mapping">ORM Object-Relation Mapping</h2>
+<p>ORM은 <code>애플리케이션의 클래스와 SQL 데이터베이스의 테이블 사이의 맵핑 정보를 기술한 메타데이터를 사용하여, 자바 애플리케이션의 객체를 SQL 데이터베이스의 테이블에 자동으로 (또 깨끗하게) 영속화 해주는 기술입니다</code>라고 정의하고 있다.</p>
+<h4 id="중요">중요!</h4>
+<ul>
+<li>맵핑 정보를 기술한 메타데이터</li>
+<li>자동으로 (또 깨끗하게) 영속화</li>
+</ul>
+<h6 id="omr-장점">OMR 장점</h6>
+<ul>
+<li>(SQL 작성 안함) 생산성</li>
+<li>유지보수 (코드의 간결, SQL 관리가 됨)</li>
+<li>성능 (Connection Pool, 필요할때만 호출)</li>
+<li>밴더 독립성 (어떤 DB든 JDBC 드라이버만 있으면 사용 가능)</li>
+</ul>
+<p>이렇게 좋아보이는 ORM도 학습비용이라는 단점이 존재하긴 한다.</p>
+<ul>
+<li>SQL도 잘알..</li>
+<li>하이버 네이트도 잘알..</li>
+</ul>
+<h3 id="해결하려는-문제">해결하려는 문제</h3>
+<p>객체와 릴레이션을 Mapping하려고 하니.. OOP와 SQL이라는 두개의 패러다임의 다음과 같은 간격이 존재한다.</p>
+<h4 id="밀도granularity-문제">밀도(Granularity) 문제</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Object</th>
+<th align="left">Relation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">다양한 크기 다양한 방법의 표현 가능</td>
+<td align="left">테이블</td>
+</tr>
+<tr>
+<td align="left">커스텀 하기 쉽다</td>
+<td align="left">기본 데이터 타입</td>
+</tr>
+</tbody>
+</table>
+<h4 id="서브타입subtype-문제">서브타입(Subtype) 문제</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Object</th>
+<th align="left">Relation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">상속이 가능</td>
+<td align="left">상속? 그게 뭐죠</td>
+</tr>
+<tr>
+<td align="left">(다형성)</td>
+<td align="left">(다형성을 표현할 방법이 없음)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="식별자identity-문제">식별자(Identity) 문제</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Object</th>
+<th align="left">Relation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">래퍼런스 동일성 비교(==)</td>
+<td align="left">주키 (primary key)</td>
+</tr>
+<tr>
+<td align="left">인스턴스 동일성 비교 (equals())</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="관계association-문제">관계(Association) 문제</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Object</th>
+<th align="left">Relation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">객체 레퍼런스로 관계 표현</td>
+<td align="left">외래키(foreign key)로 관계 표현</td>
+</tr>
+<tr>
+<td align="left">'방향'이라는 개념이 존재</td>
+<td align="left">&lsquo;방향'이라는 개념이 없음 Join으로 걍 묶음</td>
+</tr>
+<tr>
+<td align="left">다대다 관계 가능</td>
+<td align="left">다대다 관계가 불가능하다 굳이 하려면 &lsquo;조인테이블&rsquo; 혹은 &lsquo;링크 테이블'을 이용해야한다.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="데이터-네비게이션navigation-문제">데이터 네비게이션(Navigation) 문제</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Object</th>
+<th align="left">Relation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">레퍼런스를 이용해서 다른 객체로 이동 가능</td>
+<td align="left">가능은 하지만 매우 비효율적</td>
+</tr>
+<tr>
+<td align="left">콜렉션으로 순회할 수 있음 (List[])</td>
+<td align="left">데이터베이스에 요청을 적게 할 수록 성능이 좋음 하지만 너무 많이 가져오려고 해도 Lazy Loading 문제</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>tags: </span><a class='tag' href='/blog.github.io/tags/java/'>java</a>, <a class='tag' href='/blog.github.io/tags/jdbc/'>JDBC</a>, <a class='tag' href='/blog.github.io/tags/jpa/'>JPA</a>, <a class='tag' href='/blog.github.io/tags/orm/'>ORM</a>, <a class='tag' href='/blog.github.io/tags/spring-boot/'>spring-boot</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/blog.github.io/documents/java/java-assert/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ </span>
+        <span class='screen-reader-text'>: </span>Java에서 Assert 제대로 쓰기</a>
+    </div></div>
+</nav>
+
+
+<section id='comments' class='comments'>
+  <div class='container sep-before'>
+    <div class='comments-area'><script src='https://utteranc.es/client.js'
+  repo='Yeh35/blog.github.io' issue-term='https://github.com/Yeh35/blog.github.io/test'
+  crossorigin='anonymous' async>
+</script>
+</div>
+  </div>
+</section>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label=''>
+    <ul><li>
+        <a href='https://github.com/Yeh35' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:jaws0910@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019-2020 Snag Oh Yeh </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/blog.github.io/assets/js/"</script>
+
+<script src='/blog.github.io/assets/js/main.c3bcf2df.js'></script><script src='/blog.github.io/js/custom.js'></script>
+
+</body>
+
+</html>
+

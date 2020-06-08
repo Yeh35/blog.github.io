@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>assert on sango.h</title>
+    <link>https://yeh35.github.io/blog.github.io/tags/assert/</link>
+    <description>Recent content in assert on sango.h</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 07 Jun 2020 21:24:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://yeh35.github.io/blog.github.io/tags/assert/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java에서 Assert 제대로 쓰기</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/java/java-assert/</link>
+      <pubDate>Sun, 07 Jun 2020 21:24:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/java/java-assert/</guid>
+      <description>Assert Assert는 개발/테스트 단계에서 파라미터가 제대로 넘어왔는지 계산이 제대로 됬는지 혹은 특정 메소드가 작동하는 한계상황(Null이 들어오면 작동안함)을 정하는 용도로 사용한다.
+Java에서 Assert Java에서는 JDK 1.4부터 assert라는 예약어 를 지원했다.
+assert [Boolean] // 참이면 Pass, 거짓이면 AssertionError실행옵션 세팅 java default 실행에서는 assert가 모두 제외된다. 실행시 -ea 옵션을 줘야지만 작동하니 개발/테스트 일때는 설정해놓기
+java -eaIntellij에서는 기본 JVM 옵션이 -ea이다. (그래도 혹시 모르니 확인하기..) (assert-intllij-setting)[/blog.github.io/img/documents/java/assert-intllij-setting.png]
+Assert를 어떻게 써야할까? Assert는 아무데나 덕지덕지 붙여도 상관이 없지만, 꼭 넣으면 좋은 곳들이 있다.</description>
+    </item>
+    
+  </channel>
+</rss>

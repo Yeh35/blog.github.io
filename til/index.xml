@@ -5,10 +5,20 @@
     <link>https://yeh35.github.io/blog.github.io/til/</link>
     <description>Recent content in TIL (Today I Learned) on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 06 Jun 2020 23:15:22 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2020 23:15:22 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 06 07 (토)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-07/</link>
+      <pubDate>Sun, 07 Jun 2020 23:15:22 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-07/</guid>
+      <description>오늘 한 일 Spring Domain Diartory 구조 cheese10yun님의 참고하여 나만의 Default 구조가 완성되었다. 차이점은 Error 코드 관리하는 부분에서 Cheese님은 Groble로 모았다면 나는 Domain별로 분리하였다. 그리고 cheese10님은 Maven이였다면 나는 Gradle로 하였다. github 소스 주소
+체크 리스트    할일 여부     24시(오후 12시) 취침 X   7시 기상 X   아침식사 (시리얼도 인정) O   아침 영어 (30분 이상, 단어 정리 혹은 문법 강의) X   점심 헬스 (저녁은 노인정) X   강좌 수강 X   영단어 (Anki: 신규 50, 복습) X     내일부터 체크리스트를 수정해야곘다.</description>
+    </item>
     
     <item>
       <title>TIL 2020 06 06 (토)</title>

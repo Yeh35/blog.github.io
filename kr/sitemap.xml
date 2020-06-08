@@ -8,17 +8,37 @@
   
   <url>
     <loc>https://yeh35.github.io/blog.github.io/documents/</loc>
-    <lastmod>2020-06-05T20:15:22+09:00</lastmod>
+    <lastmod>2020-06-08T22:00:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://yeh35.github.io/blog.github.io/til/</loc>
-    <lastmod>2020-06-06T23:15:22+09:00</lastmod>
+    <lastmod>2020-06-07T23:15:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/tags/java/</loc>
+    <lastmod>2020-06-08T22:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/tags/jdbc/</loc>
+    <lastmod>2020-06-08T22:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/tags/jpa/</loc>
+    <lastmod>2020-06-08T22:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/tags/orm/</loc>
+    <lastmod>2020-06-08T22:00:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://yeh35.github.io/blog.github.io/</loc>
-    <lastmod>2020-06-06T23:15:22+09:00</lastmod>
+    <lastmod>2020-06-08T22:00:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -32,8 +52,23 @@
   </url>
   
   <url>
+    <loc>https://yeh35.github.io/blog.github.io/tags/spring/</loc>
+    <lastmod>2020-06-08T22:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/documents/spring/spring-jpa-core/</loc>
+    <lastmod>2020-06-08T22:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/tags/spring-boot/</loc>
+    <lastmod>2020-06-08T22:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yeh35.github.io/blog.github.io/tags/</loc>
-    <lastmod>2020-06-06T23:15:22+09:00</lastmod>
+    <lastmod>2020-06-08T22:00:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -48,7 +83,27 @@
   
   <url>
     <loc>https://yeh35.github.io/blog.github.io/tags/til/</loc>
-    <lastmod>2020-06-06T23:15:22+09:00</lastmod>
+    <lastmod>2020-06-07T23:15:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/til/til-2020-06-07/</loc>
+    <lastmod>2020-06-07T23:15:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/tags/assert/</loc>
+    <lastmod>2020-06-07T21:24:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/documents/java/java-assert/</loc>
+    <lastmod>2020-06-07T21:24:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/tags/test/</loc>
+    <lastmod>2020-06-07T21:24:00+09:00</lastmod>
   </url>
   
   <url>
@@ -67,17 +122,7 @@
   </url>
   
   <url>
-    <loc>https://yeh35.github.io/blog.github.io/tags/spring/</loc>
-    <lastmod>2020-06-05T20:15:22+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://yeh35.github.io/blog.github.io/documents/spring/spring-boot-directory/</loc>
-    <lastmod>2020-06-05T20:15:22+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yeh35.github.io/blog.github.io/tags/spring-boot/</loc>
     <lastmod>2020-06-05T20:15:22+09:00</lastmod>
   </url>
   
@@ -89,11 +134,6 @@
   <url>
     <loc>https://yeh35.github.io/blog.github.io/til/til-2020-06-03/</loc>
     <lastmod>2020-06-03T23:15:22+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yeh35.github.io/blog.github.io/tags/java/</loc>
-    <lastmod>2020-06-03T20:15:00+09:00</lastmod>
   </url>
   
   <url>
@@ -113,11 +153,6 @@
   
   <url>
     <loc>https://yeh35.github.io/blog.github.io/documents/java/junit5/</loc>
-    <lastmod>2020-06-02T21:24:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yeh35.github.io/blog.github.io/tags/test/</loc>
     <lastmod>2020-06-02T21:24:00+09:00</lastmod>
   </url>
   
