@@ -2,28 +2,24 @@
 <html lang='kr'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='오늘 한 일 Docker docker 기본 명령어에 대해서 정리하였다.
-기본 명령어는 알고 있다고 생각했는데 정리하고 보니 모르고 넘어간 내용들이 많았다.ㅠㅠ
-Spring JPA 백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분인데 9시간 정도 된다. 하루에 3시간씩 3일안에 끝내는 것을 목표로 하고 있다. (목요일까지는 끝내는 것으로&hellip;)
-시간 관리 주말에 더 많은 집중을 해야하는데 집중이 안된다 루틴이 필요하다&hellip;
-평일 루틴 계획 7시 기상 씻고 아침 식사 영어공부 8시 출근 점심시간 헬스 간편 도시락.. (안되면 셀러드 구입)'>
+<meta name='description' content='오늘 한 일 JPA JPA 대한 글을 작성하기 시작했다.
+회사에서 Spring Project DEMO 발표 수요일날 이때까지 개인적으로 공부한 내용들을 바탕으로 이사님 앞에서 발표하기로 했다.
+ Spring boot Spring boot Data JPA Domain 주도 개발 Gradle Docker 등등&hellip;  체크 리스트    할일 여부     24시(오후 12시) 취침 X   7시 기상 X   아침식사 (시리얼도 인정) O   점심 헬스 (저녁은 노인정) X   강좌 수강 O   영단어 (Anki: 신규 50, 복습) X     내일부터 체크리스트를 수정해야곘다.'>
 <meta name='theme-color' content='#ffcd00'>
 <meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
 
-<meta property='og:title' content='TIL 2020 05 24 (일) • sango.h'>
-<meta property='og:description' content='오늘 한 일 Docker docker 기본 명령어에 대해서 정리하였다.
-기본 명령어는 알고 있다고 생각했는데 정리하고 보니 모르고 넘어간 내용들이 많았다.ㅠㅠ
-Spring JPA 백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분인데 9시간 정도 된다. 하루에 3시간씩 3일안에 끝내는 것을 목표로 하고 있다. (목요일까지는 끝내는 것으로&hellip;)
-시간 관리 주말에 더 많은 집중을 해야하는데 집중이 안된다 루틴이 필요하다&hellip;
-평일 루틴 계획 7시 기상 씻고 아침 식사 영어공부 8시 출근 점심시간 헬스 간편 도시락.. (안되면 셀러드 구입)'>
-<meta property='og:url' content='https://yeh35.github.io/blog.github.io/til/til-2020-05-24/'>
+<meta property='og:title' content='TIL 2020 06 08 (월) • sango.h'>
+<meta property='og:description' content='오늘 한 일 JPA JPA 대한 글을 작성하기 시작했다.
+회사에서 Spring Project DEMO 발표 수요일날 이때까지 개인적으로 공부한 내용들을 바탕으로 이사님 앞에서 발표하기로 했다.
+ Spring boot Spring boot Data JPA Domain 주도 개발 Gradle Docker 등등&hellip;  체크 리스트    할일 여부     24시(오후 12시) 취침 X   7시 기상 X   아침식사 (시리얼도 인정) O   점심 헬스 (저녁은 노인정) X   강좌 수강 O   영단어 (Anki: 신규 50, 복습) X     내일부터 체크리스트를 수정해야곘다.'>
+<meta property='og:url' content='https://yeh35.github.io/blog.github.io/til/til-2020-06-08/'>
 <meta property='og:site_name' content='sango.h'>
-<meta property='og:type' content='article'><meta property='article:section' content='TIL'><meta property='article:tag' content='TIL'><meta property='article:published_time' content='2020-05-24T23:15:22&#43;09:00'/><meta property='article:modified_time' content='2020-05-24T23:15:22&#43;09:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='TIL'><meta property='article:tag' content='TIL'><meta property='article:published_time' content='2020-06-08T23:15:22&#43;09:00'/><meta property='article:modified_time' content='2020-06-08T23:15:22&#43;09:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.66.0" />
 
-  <title>TIL 2020 05 24 (일) • sango.h</title>
-  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/til/til-2020-05-24/'>
+  <title>TIL 2020 06 08 (월) • sango.h</title>
+  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/til/til-2020-06-08/'>
   
   
   <link rel='icon' href='/blog.github.io/favicon.ico'>
@@ -177,7 +173,7 @@ Spring JPA 백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분�
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/til/'>TIL</a></li><li><span>TIL 2020 05 24 (일)</span></li></ol>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/til/'>TIL</a></li><li><span>TIL 2020 06 08 (월)</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -196,7 +192,7 @@ Spring JPA 백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분�
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>TIL 2020 05 24 (일)</h1>
+      <h1 class='title'>TIL 2020 06 08 (월)</h1>
       
 
     </div>
@@ -210,7 +206,7 @@ Spring JPA 백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분�
   
 </svg>
 <span class='screen-reader-text'> </span>
-  <time class='entry-date' datetime='2020-05-24T23:15:22&#43;09:00'>2020-05-24</time>
+  <time class='entry-date' datetime='2020-06-08T23:15:22&#43;09:00'>2020-06-08</time>
 </span>
 
   
@@ -236,27 +232,18 @@ Spring JPA 백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분�
 
   <div class='container entry-content'>
   <h2 id="오늘-한-일">오늘 한 일</h2>
-<h3 id="docker">Docker</h3>
-<p>docker 기본 명령어에 대해서 정리하였다.<br>
-기본 명령어는 알고 있다고 생각했는데 정리하고 보니 모르고 넘어간 내용들이 많았다.ㅠㅠ</p>
-<h3 id="spring-jpa">Spring JPA</h3>
-<p>백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분인데 9시간 정도 된다.
-하루에 3시간씩 3일안에 끝내는 것을 목표로 하고 있다.
-(목요일까지는 끝내는 것으로&hellip;)</p>
-<h3 id="시간-관리">시간 관리</h3>
-<p>주말에 더 많은 집중을 해야하는데 집중이 안된다
-루틴이 필요하다&hellip;</p>
-<h4 id="평일-루틴-계획">평일 루틴 계획</h4>
-<p>7시 기상 씻고 아침 식사 영어공부 
-8시 출근
-점심시간 헬스
-간편 도시락.. (안되면 셀러드 구입)</p>
-<h3 id="영어">영어</h3>
+<h3 id="jpa">JPA</h3>
+<p>JPA 대한 글을 작성하기 시작했다.</p>
+<h3 id="회사에서-spring-project-demo-발표">회사에서 Spring Project DEMO 발표</h3>
+<p>수요일날 이때까지 개인적으로 공부한 내용들을 바탕으로 이사님 앞에서 발표하기로 했다.</p>
 <ul>
-<li><a href="https://gall.dcinside.com/board/view/?id=toeic&amp;no=1212369">토익 갤러리 노베이스 공부법?</a></li>
-<li><a href="https://www.youtube.com/watch?v=_y1tg1RCqNc">youtube 김정호 3시간만에 끝내는 영어 문법 총정리</a></li>
+<li>Spring boot</li>
+<li>Spring boot Data JPA</li>
+<li>Domain 주도 개발</li>
+<li>Gradle</li>
+<li>Docker 등등&hellip;</li>
 </ul>
-<h3 id="체크-리스트-내일부터-작성">체크 리스트 (내일부터 작성)</h3>
+<h3 id="체크-리스트">체크 리스트</h3>
 <table>
 <thead>
 <tr>
@@ -267,34 +254,33 @@ Spring JPA 백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분�
 <tbody>
 <tr>
 <td align="left">24시(오후 12시) 취침</td>
-<td></td>
+<td align="center">X</td>
 </tr>
 <tr>
 <td align="left">7시 기상</td>
-<td></td>
+<td align="center">X</td>
 </tr>
 <tr>
 <td align="left">아침식사 (시리얼도 인정)</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">아침 영어 (30분 이상, 단어 정리 혹은 문법 강의)</td>
-<td></td>
+<td align="center">O</td>
 </tr>
 <tr>
 <td align="left">점심 헬스 (저녁은 노인정)</td>
-<td></td>
+<td align="center">X</td>
 </tr>
 <tr>
-<td align="left">JPA 강좌 수강</td>
-<td></td>
+<td align="left">강좌 수강</td>
+<td align="center">O</td>
 </tr>
 <tr>
 <td align="left">영단어 (Anki: 신규 50, 복습)</td>
-<td></td>
+<td align="center">X</td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li>내일부터 체크리스트를 수정해야곘다.. 포기할것들은 포기하고 새롭게 작성해야지..</li>
+</ul>
 
 </div>
 
@@ -316,7 +302,7 @@ Spring JPA 백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분�
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/blog.github.io/til/til-2020-05-23/'>
+      <a href='/blog.github.io/til/til-2020-06-07/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -324,17 +310,7 @@ Spring JPA 백기선님의 Spring JPA를 다시 듣기 시작했다. 총 562분�
   
 </svg>
  </span>
-        <span class='screen-reader-text'>: </span>TIL 2020 05 23 (토)</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/blog.github.io/til/til-2020-05-25/'>
-        <span class='screen-reader-text'>: </span>TIL 2020 05 25 (월)<span aria-hidden='true'> <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader-text'>: </span>TIL 2020 06 07 (일)</a>
     </div></div>
 </nav>
 
