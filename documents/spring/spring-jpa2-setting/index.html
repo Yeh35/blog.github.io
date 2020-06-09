@@ -2,34 +2,28 @@
 <html lang='kr'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='해당 글은 의식의 흐름대로 작성 이 되어있다.
-시작은&hellip; 친구에게 AWS를 물어보니 숙제로 답이 왔다&hellip;
-숙제 시작..
-일단 저게 다 뭐야.. Amazon Route 53 클라우드 Domain Name System (DNS) 웹 서비스라고 하네요
-DNS서버가 Domain을 IP 주소로 변경해주는 것은 알고 있는데&hellip;
-그럼 DNS 서버는 어떻게 작동하지&hellip;? 모든 단말(PC)은 DNS 서버의 IP 주소가 설정되어 있다. (되어있어야 한다)
-Window 같은 경우 콘솔에 ipconfig /all 명령을 입력하면 다음과 같이 DNS 서버를 알 수 있다.
-...DNS 서버.'>
+<meta name='description' content='사실 세팅은 누가 해놓은 걸 보는게 가장 빠르다.. 제가 해놓은 것이 있는데 참조하며 다음 사항들을 살며보면 될거 같다.
+gradle.build  Spring Boot Verion 2.* (아니면 Spring framework Version 5.*) Spring Boot JPA 의존성 확인 compile(&#39;org.springframework.boot:spring-boot-starter-data-jpa&#39;)  Application.yml h2 DB로 되어 있는데 각 JDBC를 안다면 각 DB에 맞게 세팅할 수 있을 것이다.
+  JDBC 설정 확인
+datasource:url:jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSEusername:rootpassword:driver-class-name:org.h2.Driver  개발시 쿼리 보려면
+spring:jpa:database:h2properties.hibernate.dialect:org.hibernate.dialect.H2Dialecthibernate:ddl-auto:createshow-sql:trueproperties:hibernate:format_sql:trueuse_sql_comments:true  '>
 <meta name='theme-color' content='#ffcd00'>
 <meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
 
-<meta property='og:title' content='AWS API 서버 띄우기 까지 - 1 • sango.h'>
-<meta property='og:description' content='해당 글은 의식의 흐름대로 작성 이 되어있다.
-시작은&hellip; 친구에게 AWS를 물어보니 숙제로 답이 왔다&hellip;
-숙제 시작..
-일단 저게 다 뭐야.. Amazon Route 53 클라우드 Domain Name System (DNS) 웹 서비스라고 하네요
-DNS서버가 Domain을 IP 주소로 변경해주는 것은 알고 있는데&hellip;
-그럼 DNS 서버는 어떻게 작동하지&hellip;? 모든 단말(PC)은 DNS 서버의 IP 주소가 설정되어 있다. (되어있어야 한다)
-Window 같은 경우 콘솔에 ipconfig /all 명령을 입력하면 다음과 같이 DNS 서버를 알 수 있다.
-...DNS 서버.'>
-<meta property='og:url' content='https://yeh35.github.io/blog.github.io/documents/infra/aws/aws-study-start-1/'>
+<meta property='og:title' content='Spring JPA 2편: Setting!! • sango.h'>
+<meta property='og:description' content='사실 세팅은 누가 해놓은 걸 보는게 가장 빠르다.. 제가 해놓은 것이 있는데 참조하며 다음 사항들을 살며보면 될거 같다.
+gradle.build  Spring Boot Verion 2.* (아니면 Spring framework Version 5.*) Spring Boot JPA 의존성 확인 compile(&#39;org.springframework.boot:spring-boot-starter-data-jpa&#39;)  Application.yml h2 DB로 되어 있는데 각 JDBC를 안다면 각 DB에 맞게 세팅할 수 있을 것이다.
+  JDBC 설정 확인
+datasource:url:jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSEusername:rootpassword:driver-class-name:org.h2.Driver  개발시 쿼리 보려면
+spring:jpa:database:h2properties.hibernate.dialect:org.hibernate.dialect.H2Dialecthibernate:ddl-auto:createshow-sql:trueproperties:hibernate:format_sql:trueuse_sql_comments:true  '>
+<meta property='og:url' content='https://yeh35.github.io/blog.github.io/documents/spring/spring-jpa2-setting/'>
 <meta property='og:site_name' content='sango.h'>
-<meta property='og:type' content='article'><meta property='article:section' content='documents'><meta property='article:tag' content='AWS'><meta property='article:tag' content='infra'><meta property='article:published_time' content='2020-05-30T01:00:00&#43;09:00'/><meta property='article:modified_time' content='2020-05-30T01:00:00&#43;09:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='documents'><meta property='article:tag' content='Spring Boot'><meta property='article:tag' content='JPA'><meta property='article:tag' content='ORM'><meta property='article:tag' content='JDBC'><meta property='article:tag' content='JAVA'><meta property='article:published_time' content='2020-06-09T00:27:00&#43;09:00'/><meta property='article:modified_time' content='2020-06-09T00:27:00&#43;09:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.66.0" />
 
-  <title>AWS API 서버 띄우기 까지 - 1 • sango.h</title>
-  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/documents/infra/aws/aws-study-start-1/'>
+  <title>Spring JPA 2편: Setting!! • sango.h</title>
+  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/documents/spring/spring-jpa2-setting/'>
   
   
   <link rel='icon' href='/blog.github.io/favicon.ico'>
@@ -183,7 +177,7 @@ Window 같은 경우 콘솔에 ipconfig /all 명령을 입력하면 다음과 �
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>AWS API 서버 띄우기 까지 - 1</span></li></ol>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>Spring JPA 2편: Setting!!</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -202,7 +196,7 @@ Window 같은 경우 콘솔에 ipconfig /all 명령을 입력하면 다음과 �
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>AWS API 서버 띄우기 까지 - 1</h1>
+      <h1 class='title'>Spring JPA 2편: Setting!!</h1>
       
 
     </div>
@@ -216,7 +210,7 @@ Window 같은 경우 콘솔에 ipconfig /all 명령을 입력하면 다음과 �
   
 </svg>
 <span class='screen-reader-text'> </span>
-  <time class='entry-date' datetime='2020-05-30T01:00:00&#43;09:00'>2020-05-30</time>
+  <time class='entry-date' datetime='2020-06-09T00:27:00&#43;09:00'>2020-06-09</time>
 </span>
 
   
@@ -241,90 +235,42 @@ Window 같은 경우 콘솔에 ipconfig /all 명령을 입력하면 다음과 �
   
 
   <div class='container entry-content'>
-  <p>해당 글은 <strong>의식의 흐름대로 작성</strong> 이 되어있다.</p>
-<h2 id="시작은">시작은&hellip;</h2>
-<p>친구에게 AWS를 물어보니 숙제로 답이 왔다&hellip;</p>
-<p><img src="/blog.github.io/img/documents/infra/aws/kakao-ej.png" alt="카카오톡"><br>
-숙제 시작..</p>
-<h2 id="일단-저게-다-뭐야">일단 저게 다 뭐야..</h2>
-<h3 id="amazon-route-53httpsawsamazoncomkoroute53"><a href="https://aws.amazon.com/ko/route53/">Amazon Route 53</a></h3>
-<p><code>클라우드 Domain Name System (DNS) 웹 서비스</code>라고 하네요<br>
-DNS서버가 Domain을 IP 주소로 변경해주는 것은 알고 있는데&hellip;</p>
-<h3 id="그럼-dns-서버는-어떻게-작동하지httpswwwnetmaniascomkopostblog5353dnsdns-basic-operation"><a href="https://www.netmanias.com/ko/post/blog/5353/dns/dns-basic-operation">그럼 DNS 서버는 어떻게 작동하지&hellip;?</a></h3>
-<p>모든 단말(PC)은 DNS 서버의 IP 주소가 설정되어 있다. (되어있어야 한다)<br>
-Window 같은 경우 콘솔에 <code>ipconfig /all</code> 명령을 입력하면 다음과 같이 DNS 서버를 알 수 있다.</p>
-<pre><code>...
-DNS 서버. . . . . . . . . . : 61.41.153.2
-                              1.214.68.2
-...
-</code></pre><p>보통 2개를 가지고 있으며 첫번째 DNS가 죽으면 두번째 DNS에게 물어보기 위해서이다.
-제의 경우 용산구에 있는 LG U+ 의 DNS이다. <br>
-(IP 주소가지고 <a href="https://xn--c79as89aj0e29b77z.xn--3e0b707e/">여기서</a> 검색하면 알 수 있다)</p>
-<p>DNS 서버 IP가 없으면 <code>DHCP 프로토콜</code>을 통해 DNS 서버 IP를 DHCP Option 6을 통해 받을 수 있다.</p>
-<h5 id="dhcp-프로토콜은-뭐지httpswwwnetmaniascomkopostblog5348dhcp-ip-allocation-network-protocolunderstanding-the-basic-operations-of-dhcp"><a href="https://www.netmanias.com/ko/post/blog/5348/dhcp-ip-allocation-network-protocol/understanding-the-basic-operations-of-dhcp"><code>DHCP 프로토콜</code>은 뭐지..</a></h5>
-<p>RFC 2131 표준에 정의되어 있으며, 통상 <strong>동적 IP 주소를 할당해 주는 프로토콜</strong> 이다.<br>
-DHCP IP 할당은 <strong>&lsquo;임대&rsquo;</strong> 라는 개념으로 <strong>임대기간(IP Lease Time)</strong> 을 명시하여 <br>
-그 동안만 단말기는 IP 주소를 사용한다.</p>
-<p>IP를 더 쓰고 싶다면 임대기간 연장(IP Address Renewal)을 DHCP 서버에 요청하고<br>
-다 사용했으면 IP 주소 반납 절차(IP Address Release)를 수행한다.</p>
-<h6 id="4가지-절차">4가지 절차</h6>
-<ol>
-<li>DHCP Discover (단말기 -&gt; DHCP 서버) <br>
-단말기에서 브로드캐스트 메시지로 DHCP 서버를 찾는다 (DHCP 서버가 있다면 응답)</li>
-<li>DHCP Offer (DHCP 서버 -&gt; 단말기) <br>
-브로드캐스트 메시지로 DHCP 서버의 존재와 단말에 할당할 IP 주소 정보,<br>
-그외의 <strong>&ldquo;네트워크 정보&rdquo;</strong> 를 함께 보낸다.</li>
-<li>DHCP Request (단말 -&gt; DHCP 서버) <br>
-받은 메시지로 DHCP 서버를 선택하고 서버에 &ldquo;사용할 <strong>네트워크 정보</strong> &ldquo;를 요청한다.</li>
-<li>DHCP Ack (DHCP 서버 -&gt; 단말) <br>
-DHCP 서버가 단말에게 <strong>&ldquo;네트워크 정보&rdquo;</strong> 를 전달한다.</li>
-</ol>
-<p>여기서 말하는 &ldquo;네트워크 정보&quot;의 값은 다음과 같다.</p>
+  <p>사실 세팅은 누가 해놓은 걸 보는게 가장 빠르다..
+<a href="https://github.com/Yeh35/intellij-springboot-setting">제가 해놓은 것</a>이 있는데 참조하며 다음 사항들을 살며보면 될거 같다.</p>
+<h3 id="gradlebuild">gradle.build</h3>
 <ul>
-<li>Client MAC: 단말의 MAC 주소</li>
-<li>Your IP: 단말에 할당(임대)할 IP 주소</li>
-<li>Subnet Mask (Option 1)</li>
-<li>Router (Option 3): 단말의 Default Gateway IP 주소</li>
-<li><strong>DNS (Option 6): DNS 서버 IP 주소</strong></li>
-<li>IP Lease Time (Option 51): 단말이 본 IP 주소를 사용(임대)할 수 있는 기간</li>
-<li>DHCP Server Identifier (Option 54): 본 메시지(DHCP Ack)를 보낸 DHCP 서버의 주소</li>
+<li>Spring Boot Verion 2.*
+(아니면 Spring framework Version 5.*)</li>
+<li>Spring Boot JPA 의존성 확인
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">compile</span><span class="o">(</span><span class="s1">&#39;org.springframework.boot:spring-boot-starter-data-jpa&#39;</span><span class="o">)</span>
+</code></pre></div></li>
 </ul>
-<h5 id="본격적으로-dns의-진행과정을-보기전-용어정리">본격적으로 DNS의 진행과정을 보기전 용어정리</h5>
+<h3 id="applicationyml">Application.yml</h3>
+<p>h2 DB로 되어 있는데 각 JDBC를 안다면 각 DB에 맞게 세팅할 수 있을 것이다.</p>
 <ul>
-<li><a href="http://www.example.com/index.html">http://www.example.com/index.html</a>    <br>
--&gt; 이거는 &lsquo;URL'이라 부른다.</li>
-<li><a href="http://www.example.com">www.example.com</a> <br>
--&gt; 이거는 &lsquo;Host Name'이라 부른다.</li>
-<li>.com<br>
--&gt; 이거는 &lsquo;Top-level Domain Name'이라 부른다.</li>
-<li>.example.com<br>
--&gt; 이거는 &lsquo;Second-level Domain Name'이라 부른다.</li>
+<li>
+<p>JDBC 설정 확인</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">datasource<span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">url</span><span class="p">:</span><span class="w"> </span>jdbc<span class="p">:</span>h2<span class="p">:</span>mem<span class="p">:</span>testdb;DB_CLOSE_DELAY=-<span class="m">1</span>;DB_CLOSE_ON_EXIT=FALSE<span class="w">
+</span><span class="w">    </span><span class="k">username</span><span class="p">:</span><span class="w"> </span>root<span class="w">
+</span><span class="w">    </span>password<span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">driver-class-name</span><span class="p">:</span><span class="w"> </span>org.h2.Driver<span class="w">
+</span></code></pre></div></li>
+<li>
+<p>개발시 쿼리 보려면</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">spring<span class="p">:</span><span class="w">
+</span><span class="w"></span>jpa<span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">database</span><span class="p">:</span><span class="w"> </span>h2<span class="w">
+</span><span class="w">    </span><span class="k">properties.hibernate.dialect</span><span class="p">:</span><span class="w"> </span>org.hibernate.dialect.H2Dialect<span class="w">
+</span><span class="w">    </span>hibernate<span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">ddl-auto</span><span class="p">:</span><span class="w"> </span>create<span class="w">
+</span><span class="w">    </span><span class="k">show-sql</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span>properties<span class="p">:</span><span class="w">
+</span><span class="w">    </span>hibernate<span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="k">format_sql</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">        </span><span class="k">use_sql_comments</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></div></li>
 </ul>
-<h5 id="dns서버의-작동">DNS서버의 작동</h5>
-<p><img src="/blog.github.io/img/documents/infra/aws/DNS_Basic.gif" alt="DNS_Basic"></p>
-<ol>
-<li>브라우저에서 <a href="http://www.example.com">www.example.com</a> 접속 Local DNS(아까 위에서본 2개의 DNS 서버)로 Host Name의 IP 주소를 물어본다.</li>
-<li><strong>Local DNS</strong> 가 IP를 안다면 리턴하고 끄읏, <br>
-모른다면 <strong>DNS 메시지</strong> 를 통해 <strong>Root DNS 서버</strong> 에게 IP 주소를 물어본다.
-<ul>
-<li>참고로 <a href="https://ko.wikipedia.org/wiki/%EB%A3%A8%ED%8A%B8_%EB%84%A4%EC%9E%84_%EC%84%9C%EB%B2%84">Root DNS</a>는 인터넷의 최상위 도메인 시스템으로 전세계의 13개 있다.</li>
-</ul>
-</li>
-<li><strong>Root DNS</strong> 는 IP를 모름으로 다른 DNS 서버 IP를 알려준다. <br>
-Domain이 &lsquo;com'으로 끝나니 <strong>com 도메인을 관리하는 DNS 서버</strong> 를 알려준다.</li>
-<li><strong>DNS 메시지</strong> 를 통해 <strong>&lsquo;com DNS 서버&rsquo;</strong> 물어봐도 IP를 모름으로 <br>
-<strong>naver.com 도메인을 관리하는 DNS 서버</strong> 의 IP 주소를 알려준다.</li>
-<li><strong>DNS 메시지</strong> 를 통해 &lsquo;<strong>&lsquo;naver.com DNS 서버&rsquo;'</strong> 물어보면 <br>
-드디어 <strong>&ldquo;내가 알아&rdquo;</strong> 라는 답변과 함께 IP 주소를 응답받는다.</li>
-</ol>
-<p>Local DNS 서버가 IP를 찾는 이 과정을 <strong>Recursive Query</strong> 라고 부른다.</p>
-<h3 id="amazon-cloudfronthttpsawsamazoncomkocloudfront"><a href="https://aws.amazon.com/ko/cloudfront/">Amazon CloudFront</a></h3>
-<p>빠르고 고도로 안전하며 프로그래밍 가능한 <code>콘텐츠 전송 네트워크(CDN)</code>이며, 
-S3, EC2 같은 AWS 오리진을 사용하는 경우, 이러한 서비스와 CloudFront 간에 전송된 데이터에 대해서는 비용을 지불하지 않습니다.</p>
-<ul>
-<li><a href="https://www.coovil.net/why-cdn/">CDN의 필요성</a></li>
-</ul>
-<p>다음편을 이어서..</p>
 
 </div>
 
@@ -336,7 +282,7 @@ S3, EC2 같은 AWS 오리진을 사용하는 경우, 이러한 서비스와 Clou
   <line x1="7" y1="7" x2="7" y2="7"/>
   
 </svg>
-<span class='screen-reader-text'>tags: </span><a class='tag' href='/blog.github.io/tags/infra/'>infra</a>, <a class='tag' href='/blog.github.io/tags/aws/'>AWS</a></div>
+<span class='screen-reader-text'>tags: </span><a class='tag' href='/blog.github.io/tags/java/'>java</a>, <a class='tag' href='/blog.github.io/tags/jdbc/'>JDBC</a>, <a class='tag' href='/blog.github.io/tags/jpa/'>JPA</a>, <a class='tag' href='/blog.github.io/tags/orm/'>ORM</a>, <a class='tag' href='/blog.github.io/tags/spring-boot/'>spring-boot</a></div>
 
   </div>
 </footer>
@@ -346,7 +292,7 @@ S3, EC2 같은 AWS 오리진을 사용하는 경우, 이러한 서비스와 Clou
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/blog.github.io/documents/infra/docker/docker-container-image-dockerfile/'>
+      <a href='/blog.github.io/documents/spring/spring-jpa1-buildup/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -354,17 +300,7 @@ S3, EC2 같은 AWS 오리진을 사용하는 경우, 이러한 서비스와 Clou
   
 </svg>
  </span>
-        <span class='screen-reader-text'>: </span>Docker 컨테이너, Image, Dockerfile</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/blog.github.io/documents/infra/aws/aws-study-start-2/'>
-        <span class='screen-reader-text'>: </span>AWS API 서버 띄우기 까지 - 2<span aria-hidden='true'> <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader-text'>: </span>Spring JPA 1편: Build UP!!</a>
     </div></div>
 </nav>
 
