@@ -20,7 +20,7 @@
 gradle.build  Spring Boot Verion 2.* (아니면 Spring framework Version 5.*) Spring Boot JPA 의존성 확인 compile(&amp;#39;org.springframework.boot:spring-boot-starter-data-jpa&amp;#39;)  Application.yml h2 DB로 되어 있는데 각 JDBC를 안다면 각 DB에 맞게 세팅할 수 있을 것이다.
   JDBC 설정 확인
 datasource:url:jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSEusername:rootpassword:driver-class-name:org.h2.Driver  개발시 쿼리 보려면
-spring:jpa:database:h2properties.hibernate.dialect:org.hibernate.dialect.H2Dialecthibernate:ddl-auto:createshow-sql:trueproperties:hibernate:format_sql:trueuse_sql_comments:true  </description>
+spring:jpa:database:h2properties.hibernate.dialect:org.hibernate.dialect.H2Dialecthibernate:ddl-auto:createshow-sql:trueproperties:hibernate:format_sql:trueuse_sql_comments:true ddl-auto: 옵션은 DB 스키마 구조 DDL를 수정하는 옵션인데  개발 초기 단계 : create, update 테스트 서버 : update, validate 운영서버 : validate, none 으로 해야한다.</description>
     </item>
     
     <item>

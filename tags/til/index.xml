@@ -5,10 +5,30 @@
     <link>https://yeh35.github.io/blog.github.io/tags/til/</link>
     <description>Recent content in TIL on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 08 Jun 2020 23:15:22 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2020 23:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 06 09 (화)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-09/</link>
+      <pubDate>Tue, 09 Jun 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-09/</guid>
+      <description>오늘 한 일 회사에서 Spring Project DEMO 발표 발표 준비를 하느라&amp;hellip; 오랜만에 야근을 했더니 으&amp;hellip; 피곤하ㅏㄷ&amp;hellip; 자야지&amp;hellip;
+체크 리스트 체크리스트는 결국 빼기로 했다. 그래도 나름 성공적인 것은 12시에 침대로 가는 습관과 아침밥을 챙겨먹는 습관이 생겼다는 것이다.!! 오전시간에 업무상 집중도도 올라가고 생활리듬도 어느정도 맞춰지는거 같은 느낌이 든다.</description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 06 10 (수)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-10/</link>
+      <pubDate>Tue, 09 Jun 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-10/</guid>
+      <description>오늘 한 일 회사에서 Spring Project DEMO 발표 완전 망했다.ㅠㅠ 소스코드를 보여드리며 기존 프로젝트와 바꾸려는 프로젝트를 번가라가며 보려고 했었다. (제 생각에는 라이브코딩하듯 하려했지만)
+다음부터는 PPT를 이용하여 IDE를 실행시켜 보여주는 것이 아닌 필요한 부분만 추려야겠다는 것을 느꼈다.</description>
+    </item>
     
     <item>
       <title>TIL 2020 06 08 (월)</title>
