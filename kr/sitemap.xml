@@ -8,7 +8,7 @@
   
   <url>
     <loc>https://yeh35.github.io/blog.github.io/documents/</loc>
-    <lastmod>2020-06-09T00:27:00+09:00</lastmod>
+    <lastmod>2020-06-11T00:15:00+09:00</lastmod>
   </url>
   
   <url>
@@ -18,7 +18,7 @@
   
   <url>
     <loc>https://yeh35.github.io/blog.github.io/</loc>
-    <lastmod>2020-06-09T23:00:00+09:00</lastmod>
+    <lastmod>2020-06-11T00:15:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -33,7 +33,7 @@
   
   <url>
     <loc>https://yeh35.github.io/blog.github.io/tags/</loc>
-    <lastmod>2020-06-09T23:00:00+09:00</lastmod>
+    <lastmod>2020-06-11T00:15:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -44,6 +44,16 @@
                 hreflang="kr"
                 href="https://yeh35.github.io/blog.github.io/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/tags/%EA%B8%80%EC%93%B0%EA%B8%B0/</loc>
+    <lastmod>2020-06-11T00:15:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yeh35.github.io/blog.github.io/documents/%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B8%80%EC%93%B0%EA%B8%B0/</loc>
+    <lastmod>2020-06-11T00:15:00+09:00</lastmod>
   </url>
   
   <url>

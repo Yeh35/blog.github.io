@@ -5,7 +5,7 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 09 Jun 2020 23:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2020 00:15:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,21 @@
       <guid>https://yeh35.github.io/blog.github.io/about-me/</guid>
       <description>안녕하세요, 예상오입니다 현제 소프트원에서 패션 ERP를 유지보수 업무를 하고 있으며, 2018년 9월부터 2021년 7월까지 병역특례를 하고 있습니다.
 주로 백엔드 개발을 전문으로하며 최근에는 Spring, Gradle에 관심을 많습니다.</description>
+    </item>
+    
+    <item>
+      <title>기술블로그 글쓰기에 대해서</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B8%80%EC%93%B0%EA%B8%B0/</link>
+      <pubDate>Thu, 11 Jun 2020 00:15:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B8%80%EC%93%B0%EA%B8%B0/</guid>
+      <description>들어가기 지금까지 4주간 document기준으로 20개가 넘는 글을 썻다.
+이제 글쓰기라는 행위 자체에 대한 부담감이 많이 줄어들었다.
+그냥 쓰기에서 잘 쓰기 로 넘어가기 위해 고민들을 공유하려고 합니다. 비슷한 고민중이시라면 읽고 댓글&amp;hellip;. 써주시면 좋죠
+이 글은 블로그를 운영하면서 계속 업데이트 됩니다.
+0. 읽기 글쓰기 자체를 시작하기전 단계라서 0번에 넣었다.
+좋은 글을 쓰려면 가장 먼제 해야하는 것은 좋은 글을 읽는 것이다.
+사실 좋은 글을 찾아내는 것도 쉽지 쉽지 않고 읽기도 쓰기만큼 힘들다. 하지만 좋은 글을 많이 읽어야 좋은 글을 쓸 수 있다</description>
     </item>
     
     <item>
