@@ -2,28 +2,20 @@
 <html lang='kr'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='커리큘럼  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 Task 각자의 프로젝트로  이어서.. 전편에서 gradle의 아키텍쳐와 철학 그리고 Lifecycle(생명주기) 에 대해서 다뤘다.
-이번 편에서는 Task에 대해서 자세하게 다뤄보려고 한다.
-Task? 앞에서 task는 Gradle의 실행단위라고 하였는데 실행단위를 어떤 작업을 하는 약속된 하나의 객체라고 생각하면 된다.
-Gradle의 초기화 &gt; 구성 &gt; 실행 3단계에서 실행 단계에서 실질적으로 우리가 원하는 기능을 하는 것은 task다. (사실 모든건 task를 실행하기 위한 준비일 뿐이였다..)
-처음에 Console에서 gradle init 명령을 통해 프로젝트를 생성 했었을 것이다.'>
+<meta name='description' content='오늘 한 일 아크털깍기  멋진 블로그 발견! 아크털 깍기는 원래 목적을 잃고 완전히 관련없는 일을 하는 것을 뜻한다. 느낌은 아래와 비슷하다.   나무를 베기 위해 도끼를 구했다. 도끼날이 너무 무뎌 날을 갈기 위한 돌을 구하려 한다. 그런데 어떤 마을에 정말 좋은 돌이 있다는 이야기를 듣는다. 그 마을에 가기 위해 야크를 구한다. 야크 털이 너무 길어서 털을 깎기 시작한다.  물론 야크털 깍기는 안좋은 표현이 맞다. 회사에서 이짓을하면 짤ㄹ&hellip;. 하지만 분명 재미도 있고 분명 학습에 층면에서는 도움이 엄청된다.'>
 <meta name='theme-color' content='#ffcd00'>
 <meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
 
-<meta property='og:title' content='초보자를 위한 Gradle 안내서 3편: Task • sango.h'>
-<meta property='og:description' content='커리큘럼  Build툴?, Gradle은 무엇인가? Gradle 아키텍쳐 Task 각자의 프로젝트로  이어서.. 전편에서 gradle의 아키텍쳐와 철학 그리고 Lifecycle(생명주기) 에 대해서 다뤘다.
-이번 편에서는 Task에 대해서 자세하게 다뤄보려고 한다.
-Task? 앞에서 task는 Gradle의 실행단위라고 하였는데 실행단위를 어떤 작업을 하는 약속된 하나의 객체라고 생각하면 된다.
-Gradle의 초기화 &gt; 구성 &gt; 실행 3단계에서 실행 단계에서 실질적으로 우리가 원하는 기능을 하는 것은 task다. (사실 모든건 task를 실행하기 위한 준비일 뿐이였다..)
-처음에 Console에서 gradle init 명령을 통해 프로젝트를 생성 했었을 것이다.'>
-<meta property='og:url' content='https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start3/'>
+<meta property='og:title' content='TIL 2020 06 12 (목) • sango.h'>
+<meta property='og:description' content='오늘 한 일 아크털깍기  멋진 블로그 발견! 아크털 깍기는 원래 목적을 잃고 완전히 관련없는 일을 하는 것을 뜻한다. 느낌은 아래와 비슷하다.   나무를 베기 위해 도끼를 구했다. 도끼날이 너무 무뎌 날을 갈기 위한 돌을 구하려 한다. 그런데 어떤 마을에 정말 좋은 돌이 있다는 이야기를 듣는다. 그 마을에 가기 위해 야크를 구한다. 야크 털이 너무 길어서 털을 깎기 시작한다.  물론 야크털 깍기는 안좋은 표현이 맞다. 회사에서 이짓을하면 짤ㄹ&hellip;. 하지만 분명 재미도 있고 분명 학습에 층면에서는 도움이 엄청된다.'>
+<meta property='og:url' content='https://yeh35.github.io/blog.github.io/til/til-2020-06-12-copy/'>
 <meta property='og:site_name' content='sango.h'>
-<meta property='og:type' content='article'><meta property='article:section' content='documents'><meta property='article:tag' content='gradle'><meta property='article:tag' content='series'><meta property='article:tag' content='build'><meta property='article:tag' content='infra'><meta property='article:published_time' content='2020-05-23T12:40:00&#43;09:00'/><meta property='article:modified_time' content='2020-05-23T12:40:00&#43;09:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='TIL'><meta property='article:tag' content='TIL'><meta property='article:published_time' content='2020-06-12T23:00:00&#43;09:00'/><meta property='article:modified_time' content='2020-06-12T23:00:00&#43;09:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.66.0" />
 
-  <title>초보자를 위한 Gradle 안내서 3편: Task • sango.h</title>
-  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/documents/infra/gradle/gradle-start3/'>
+  <title>TIL 2020 06 12 (목) • sango.h</title>
+  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/til/til-2020-06-12-copy/'>
   
   
   <link rel='icon' href='/blog.github.io/favicon.ico'>
@@ -34,7 +26,7 @@ Gradle의 초기화 &gt; 구성 &gt; 실행 3단계에서 실행 단계에서 �
   
 
 </head>
-<body class='page type-documents has-sidebar'>
+<body class='page type-TIL has-sidebar'>
 
   <div class='site'><div id='sidebar' class='sidebar'>
   <a class='screen-reader-text' href='#main-menu'></a>
@@ -179,7 +171,7 @@ Gradle의 초기화 &gt; 구성 &gt; 실행 3단계에서 실행 단계에서 �
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>초보자를 위한 Gradle 안내서 3편: Task</span></li></ol>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/til/'>TIL</a></li><li><span>TIL 2020 06 12 (목)</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -198,7 +190,7 @@ Gradle의 초기화 &gt; 구성 &gt; 실행 3단계에서 실행 단계에서 �
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>초보자를 위한 Gradle 안내서 3편: Task</h1>
+      <h1 class='title'>TIL 2020 06 12 (목)</h1>
       
 
     </div>
@@ -212,7 +204,7 @@ Gradle의 초기화 &gt; 구성 &gt; 실행 3단계에서 실행 단계에서 �
   
 </svg>
 <span class='screen-reader-text'> </span>
-  <time class='entry-date' datetime='2020-05-23T12:40:00&#43;09:00'>2020-05-23</time>
+  <time class='entry-date' datetime='2020-06-12T23:00:00&#43;09:00'>2020-06-12</time>
 </span>
 
   
@@ -237,112 +229,24 @@ Gradle의 초기화 &gt; 구성 &gt; 실행 3단계에서 실행 단계에서 �
   
 
   <div class='container entry-content'>
-  <h2 id="커리큘럼">커리큘럼</h2>
+  <h1 id="오늘-한-일">오늘 한 일</h1>
+<h2 id="아크털깍기">아크털깍기</h2>
+<ul>
+<li><a href="https://parksb.github.io/article/32.html">멋진 블로그 발견!</a>
+아크털 깍기는 원래 목적을 잃고 완전히 관련없는 일을 하는 것을 뜻한다. <br>
+느낌은 아래와 비슷하다.</li>
+</ul>
 <ol>
-<li>Build툴?, Gradle은 무엇인가?</li>
-<li>Gradle 아키텍쳐</li>
-<li><strong>Task</strong></li>
-<li>각자의 프로젝트로</li>
+<li>나무를 베기 위해 도끼를 구했다.</li>
+<li>도끼날이 너무 무뎌 날을 갈기 위한 돌을 구하려 한다.</li>
+<li>그런데 어떤 마을에 정말 좋은 돌이 있다는 이야기를 듣는다.</li>
+<li>그 마을에 가기 위해 야크를 구한다.</li>
+<li>야크 털이 너무 길어서 털을 깎기 시작한다.</li>
 </ol>
-<h2 id="이어서">이어서..</h2>
-<p>전편에서 gradle의 <strong>아키텍쳐</strong>와 <strong>철학</strong> 그리고 <strong>Lifecycle(생명주기)</strong> 에 대해서 다뤘다.<br>
-이번 편에서는 <strong>Task</strong>에 대해서 자세하게 다뤄보려고 한다.</p>
-<h1 id="task">Task?</h1>
-<p>앞에서 task는 <code>Gradle의 실행단위</code>라고 하였는데 <br>
-<code>실행단위</code>를 어떤 작업을 하는 약속된 하나의 객체라고 생각하면 된다.</p>
-<p>Gradle의  <strong>초기화 &gt; 구성 &gt; 실행</strong> 3단계에서 <br>
-<strong>실행</strong> 단계에서 실질적으로 우리가 원하는 기능을 하는 것은 <code>task</code>다.  <br>
-(사실 모든건 <code>task</code>를 실행하기 위한 준비일 뿐이였다..)</p>
-<p>처음에 Console에서 <code>gradle init</code> 명령을 통해 프로젝트를 생성 했었을 것이다.
-<code>init</code>도 사실 하나의 <code>Task</code>이다.</p>
-<p>Console에 <code>gradle [task]</code> 명령을 통해 원하는 task를 실행할 수 있다.
-기본 제공하는 task 몇 개 더 소개드리겠다. (해보세용~)</p>
-<ul>
-<li>gradle tasks : 내장 task 리스트를 보여준다.</li>
-<li>gradle help &ndash;task (task명) : task명으로 작성한 task의 도움말 보여준다.</li>
-<li>gradle build : 빌드한다.</li>
-<li>gradle clean : 빌드 디렉토리를 삭제한다</li>
-</ul>
-<h2 id="예제-다시보기">예제 다시보기</h2>
-<p>아래의 예제를 이전글에서 봤을 것이다.
-예제를 보면 우리가 <strong>직접 Task를 정의</strong> 할 수 있다는 걸 알 수 있다.</p>
-<pre><code>// build.gradle file
-println &quot;Hello&quot;
-
-task testTask {
-    println &quot;testTask running&quot;
-
-    doLast {
-        println &quot;Task do Last&quot;
-    }
-    
-    doFirst {
-        println &quot;Task do First&quot;
-    }
-}
-
-println &quot;finish Configure&quot;
-</code></pre><pre><code>..\project&gt; gradle testTask
-
-&gt; Configure project :
-Hello
-testTask running
-finish Configure
-
-&gt; Task :testTask
-Task do First
-Task do Last
-
-BUILD SUCCESSFUL in 1s
-1 actionable task: 1 executed
-</code></pre><p><code>testTask running</code>은 <strong>구성</strong>단계에 출력되고 <br>
-<code>Task do Last</code>와 <code>Task do First</code>는 <strong>실행</strong> 단계에서 실행이 되었다.<br>
-이유를 알아보자면 <strong>Gradle의 생명주기</strong> 에 있다.</p>
-<h2 id="task의-생성">Task의 생성</h2>
-<p><code>task</code>는 <code>build.gradle</code>에 정의되고 <strong>구성</strong>단계에서 <a href="https://docs.gradle.org/current/dsl/org.gradle.api.tasks.TaskContainer.html"><code>TaskContainer</code></a>를 이용해 빈으로 생성된다고 했었다.</p>
-<p><strong>구성</strong>단계에서 <code>testTask running</code>가 출력이 되는 이유는  <br>
-<strong>구성</strong>단계에서 <code>testTask</code>를 읽어 Bean 생성때 실행하기 때문이다.</p>
-<h2 id="task의-동작">Task의 동작</h2>
-<p><strong>구성</strong> 단계에서 이미 Task를 실행하는데 그럼 <strong>실행</strong> 단계에서는 뭘하는 것일까?
-<strong>실행</strong> 단계에서 Task의 동작 방식은 <strong>일련의 <a href="https://docs.gradle.org/current/javadoc/org/gradle/api/Action.html">Action</a></strong> 을 <strong>순서대로</strong> 실행해줄 뿐이다.
-즉, Task는 일련의 Action객체로 구성되어 있다고 봐도 된다.</p>
-<p><a href="https://docs.gradle.org/current/dsl/org.gradle.api.Task.html#N18ED5">Task 공식문서</a>에 가면 더 다양한 Action을 볼 수 있다.</p>
-<h2 id="task-그래프">Task 그래프</h2>
-<p>어떤 작업을 할때 이 작업을 하기위해서 선행되야 하는 작업이 있을 수 있다 <br>
-Java에서 컴파일후에 Class 파일을 Target폴더로 옮겨준다던지 등등</p>
-<p>Task는 <strong>다른 Task에 종속이 될 수 있다</strong> 
-그리고 Task들간에 관계는 <strong><a href="https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%96%A5_%EB%B9%84%EC%88%9C%ED%99%98_%EA%B7%B8%EB%9E%98%ED%94%84">DAG(Directed acyclic graph)</a></strong> 로 작동한다</p>
-<p><img src="/blog.github.io/img/documents/infra/gradle/task-dag-examples.png" alt="그래프"></p>
-<h3 id="task-종속-테스크-지정">Task 종속 테스크 지정</h3>
-<pre><code>    // build.gradle
-    task taskX {
-        dependsOn 'taskY'
-        doFirst {
-            println 'taskX doFirst'
-        }
-
-        doLast {
-            println 'taskX doLast'
-        }
-    }
-    task taskY {
-        doLast {
-            println 'taskY'
-        }
-    }
-</code></pre><pre><code>    // 출력
-    &gt; gradle taskX //명령! 
-    &gt; Task :taskY
-    taskY
-
-    &gt; Task :taskX
-    taskX doFirst
-    taskX doLast
-</code></pre><h2 id="참고">참고</h2>
-<ul>
-<li>Task에 관한 <a href="https://docs.gradle.org/current/dsl/org.gradle.api.Task.html#org.gradle.api.Task">공식문서</a></li>
-<li>Task에 관한 <a href="https://araikuma.tistory.com/464">프로그램 개발 지식 공유 블로그</a></li>
-</ul>
+<p>물론 야크털 깍기는 안좋은 표현이 맞다. 회사에서 이짓을하면 짤ㄹ&hellip;. <br>
+하지만 분명 재미도 있고 분명 학습에 층면에서는 도움이 엄청된다.<br>
+그러기에 블로그에서만큼은 마음껏 아크털을 깍아볼 생각이다.<br>
+물론 아크털만 날리게 되는 것은 아닌지 걱정이 있지만&hellip; 그래도 뭐 상관없다.</p>
 
 </div>
 
@@ -354,7 +258,7 @@ Java에서 컴파일후에 Class 파일을 Target폴더로 옮겨준다던지 �
   <line x1="7" y1="7" x2="7" y2="7"/>
   
 </svg>
-<span class='screen-reader-text'>tags: </span><a class='tag' href='/blog.github.io/tags/infra/'>infra</a>, <a class='tag' href='/blog.github.io/tags/build/'>build</a>, <a class='tag' href='/blog.github.io/tags/gradle/'>gradle</a>, <a class='tag' href='/blog.github.io/tags/series/'>series</a></div>
+<span class='screen-reader-text'>tags: </span><a class='tag' href='/blog.github.io/tags/til/'>TIL</a></div>
 
   </div>
 </footer>
@@ -364,7 +268,7 @@ Java에서 컴파일후에 Class 파일을 Target폴더로 옮겨준다던지 �
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/blog.github.io/documents/infra/gradle/gradle-start2/'>
+      <a href='/blog.github.io/til/til-2020-06-12/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -372,17 +276,7 @@ Java에서 컴파일후에 Class 파일을 Target폴더로 옮겨준다던지 �
   
 </svg>
  </span>
-        <span class='screen-reader-text'>: </span>초보자를 위한 Gradle 안내서 2편: Gradle 아키텍쳐</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/blog.github.io/documents/infra/gradle/gradle-start4/'>
-        <span class='screen-reader-text'>: </span>초보자를 위한 Gradle 안내서 4편: 각자의 프로젝트로<span aria-hidden='true'> <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader-text'>: </span>TIL 2020 06 12 (목)</a>
     </div></div>
 </nav>
 
