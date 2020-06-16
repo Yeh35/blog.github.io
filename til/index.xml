@@ -5,10 +5,37 @@
     <link>https://yeh35.github.io/blog.github.io/til/</link>
     <description>Recent content in TIL (Today I Learned) on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 13 Jun 2020 23:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2020 23:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 06 16 (화)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-16/</link>
+      <pubDate>Tue, 16 Jun 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-16/</guid>
+      <description>오늘 한 일  Spring JpaRepostiry에 왜 @Repostiry 에노테이션을 안달아도 되는지 정리했다. (Spring Default Setting)[https://github.com/Yeh35/intellij-springboot-setting] 프로젝트에 QueryDsl 의존성을 추가하였다.  발견 (스프링 공식문서)[https://docs.spring.io/spring/docs/current/spring-framework-reference/]를 발견하였다. 시간 남는데로 읽으며 정리해야겠다.</description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 06 15 (월)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-15/</link>
+      <pubDate>Mon, 15 Jun 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-15/</guid>
+      <description>오늘 한 일 사랑니 치료&amp;hellip; 세브란스에서 했는데. 더럽게 이프다&amp;hellip; 진통제&amp;hellip; 하지만 병원에서 할일이 없어서 미루고 미루던 JPA 강좌를 다봤다.</description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 06 14 (일)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-14/</link>
+      <pubDate>Sun, 14 Jun 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-14/</guid>
+      <description>오늘 한 일 ㅇㅅㅇ&amp;hellip;</description>
+    </item>
     
     <item>
       <title>TIL 2020 06 13 (토)</title>
@@ -17,15 +44,6 @@
       
       <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-13/</guid>
       <description>오늘 한 일 놀았따아아! 전역한 친구랑 오랜만에 같이 놀았다.</description>
-    </item>
-    
-    <item>
-      <title>TIL 2020 06 14 (일)</title>
-      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-14/</link>
-      <pubDate>Sat, 13 Jun 2020 23:00:00 +0900</pubDate>
-      
-      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-14/</guid>
-      <description>오늘 한 일 사랑니 치료&amp;hellip; 세브란스에서 했는데. 더럽게 이프다&amp;hellip; 진통제&amp;hellip; 하지만 병원에서 할일이 없어서 미루고 미루던 JPA 강좌를 다봤다.</description>
     </item>
     
     <item>
