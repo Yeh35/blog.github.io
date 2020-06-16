@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Spring on sango.h</title>
+    <title>spring on sango.h</title>
     <link>https://yeh35.github.io/blog.github.io/tags/spring/</link>
-    <description>Recent content in Spring on sango.h</description>
+    <description>Recent content in spring on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 09 Jun 2020 00:27:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2020 22:23:50 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JpaRepository는 왜  @Repository 에노테이션을 안달아도 되는걸까?</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/spring/spring-jpa/spring-jpa-repository/</link>
+      <pubDate>Tue, 16 Jun 2020 22:23:50 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/spring/spring-jpa/spring-jpa-repository/</guid>
+      <description>들어가기 Spring JPA를 궁금했던 Intreface에 JpaRepository만 상속 받았는데 Bean으로 등록되는지 알아보려고 한다.
+본문 답은 의외로 간단했다&amp;hellip; JpaRepository의 구현체인 SimpleJpaRepository가 @Repository으로 등록이 되어있었다.. 그렇기에 JpaRepository만 interface에 상속받아도 Bean으로 등록될 수 있었다.
+이것만 보고 가기에는 너무 아쉽기에 JpaRepository의 기본 구현체를 변경하는 방법을 추가로 알아보면 Main Class @EnableJpaRepositories 에노테이션을 가지고 설정할 수 있다. </description>
+    </item>
     
     <item>
       <title>Spring Boot를 이용한 Slack Webhooks 사용하기</title>
