@@ -3,14 +3,14 @@
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='들어가기 Spring JPA를 궁금했던 Intreface에 JpaRepository만 상속 받았는데 Bean으로 등록되는지 알아보려고 한다.
-본문 답은 의외로 간단했다&hellip; JpaRepository의 구현체인 SimpleJpaRepository가 @Repository으로 등록이 되어있었다.. 그렇기에 JpaRepository만 interface에 상속받아도 Bean으로 등록될 수 있었다.
+본문 답은 의외로 간단했다&hellip; JpaRepository의 구현체인 SimpleJpaRepository가 @Repository으로 등록이 되어있었다.. \documents\java\spring\spring-jpa\JpaRepository-interface.png 그렇기에 JpaRepository만 interface에 상속받아도 Bean으로 등록될 수 있었다.
 이것만 보고 가기에는 너무 아쉽기에 JpaRepository의 기본 구현체를 변경하는 방법을 추가로 알아보면 Main Class @EnableJpaRepositories 에노테이션을 가지고 설정할 수 있다. '>
 <meta name='theme-color' content='#ffcd00'>
 <meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
 
 <meta property='og:title' content='JpaRepository는 왜  @Repository 에노테이션을 안달아도 되는걸까? • sango.h'>
 <meta property='og:description' content='들어가기 Spring JPA를 궁금했던 Intreface에 JpaRepository만 상속 받았는데 Bean으로 등록되는지 알아보려고 한다.
-본문 답은 의외로 간단했다&hellip; JpaRepository의 구현체인 SimpleJpaRepository가 @Repository으로 등록이 되어있었다.. 그렇기에 JpaRepository만 interface에 상속받아도 Bean으로 등록될 수 있었다.
+본문 답은 의외로 간단했다&hellip; JpaRepository의 구현체인 SimpleJpaRepository가 @Repository으로 등록이 되어있었다.. \documents\java\spring\spring-jpa\JpaRepository-interface.png 그렇기에 JpaRepository만 interface에 상속받아도 Bean으로 등록될 수 있었다.
 이것만 보고 가기에는 너무 아쉽기에 JpaRepository의 기본 구현체를 변경하는 방법을 추가로 알아보면 Main Class @EnableJpaRepositories 에노테이션을 가지고 설정할 수 있다. '>
 <meta property='og:url' content='https://yeh35.github.io/blog.github.io/documents/spring/spring-jpa/spring-jpa-repository/'>
 <meta property='og:site_name' content='sango.h'>
@@ -237,12 +237,13 @@
 <p>Spring JPA를 궁금했던 Intreface에 JpaRepository만 상속 받았는데 Bean으로 등록되는지 알아보려고 한다.</p>
 <h1 id="본문">본문</h1>
 <p>답은 의외로 간단했다&hellip;
-JpaRepository의 구현체인 SimpleJpaRepository가 @Repository으로 등록이 되어있었다..
-<img src="/blog.github.io/img/documents/spring/spring-jpa/JpaRepository-interface.png" alt="JpaRepository">
-<img src="/blog.github.io/img/documents/spring/spring-jpa/SimpleJpaRepository-class.png" alt="SimpleJpaRepository"></p>
+JpaRepository의 구현체인 SimpleJpaRepository가 @Repository으로 등록이 되어있었다.. <br>
+\documents\java\spring\spring-jpa\JpaRepository-interface.png
+<img src="/blog.github.io/img/documents/java/spring/spring-jpa/JpaRepository-interface.png" alt="JpaRepository"> <br>
+<img src="/blog.github.io/img/documents/java/spring/spring-jpa/SimpleJpaRepository-class.png" alt="SimpleJpaRepository"></p>
 <p>그렇기에 JpaRepository만 interface에 상속받아도 Bean으로 등록될 수 있었다.</p>
-<p>이것만 보고 가기에는 너무 아쉽기에 JpaRepository의 기본 구현체를 변경하는 방법을 추가로 알아보면 Main Class @EnableJpaRepositories 에노테이션을 가지고 설정할 수 있다.
-<img src="/blog.github.io/img/documents/spring/spring-jpa/JpaRepository-setting.png" alt="JpaRepository-setting"></p>
+<p>이것만 보고 가기에는 너무 아쉽기에 JpaRepository의 기본 구현체를 변경하는 방법을 추가로 알아보면 Main Class @EnableJpaRepositories 에노테이션을 가지고 설정할 수 있다. <br>
+<img src="/blog.github.io/img/documents/java/spring/spring-jpa/JpaRepository-setting.png" alt="JpaRepository-setting"></p>
 
 </div>
 

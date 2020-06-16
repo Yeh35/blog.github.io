@@ -27,7 +27,7 @@
       
       <guid>https://yeh35.github.io/blog.github.io/documents/spring/spring-jpa/spring-jpa-repository/</guid>
       <description>들어가기 Spring JPA를 궁금했던 Intreface에 JpaRepository만 상속 받았는데 Bean으로 등록되는지 알아보려고 한다.
-본문 답은 의외로 간단했다&amp;hellip; JpaRepository의 구현체인 SimpleJpaRepository가 @Repository으로 등록이 되어있었다.. 그렇기에 JpaRepository만 interface에 상속받아도 Bean으로 등록될 수 있었다.
+본문 답은 의외로 간단했다&amp;hellip; JpaRepository의 구현체인 SimpleJpaRepository가 @Repository으로 등록이 되어있었다.. \documents\java\spring\spring-jpa\JpaRepository-interface.png 그렇기에 JpaRepository만 interface에 상속받아도 Bean으로 등록될 수 있었다.
 이것만 보고 가기에는 너무 아쉽기에 JpaRepository의 기본 구현체를 변경하는 방법을 추가로 알아보면 Main Class @EnableJpaRepositories 에노테이션을 가지고 설정할 수 있다. </description>
     </item>
     
