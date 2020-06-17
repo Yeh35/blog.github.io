@@ -5,10 +5,22 @@
     <link>https://yeh35.github.io/blog.github.io/tags/til/</link>
     <description>Recent content in TIL on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Jun 2020 23:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2020 22:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 06 17 (수)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-17/</link>
+      <pubDate>Wed, 17 Jun 2020 22:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-17/</guid>
+      <description>오늘 한 일 스프링 프레임 워크 개요 version 5.2.7.RELEASE 을 기준으로 봄 Spring은 Java 엔터프라이즈 응용 프로그램을 쉽게 작성할 수 있다. Spring은 광범위한 애플리케이션 시나리오를 제공하며 대기업부터 개인 프로젝트까지 포함할 수 광범위하다.
+&amp;ldquo;Spring&amp;quot;의 의미 &amp;ldquo;Spring&amp;quot;이라는 용어는 &amp;lsquo;Spring Framework&amp;rsquo; 프로젝트 자체를 뜻하기도 하고 &amp;lsquo;Spring Framework&#39;를 이용해 개발한 Application 전체 프로젝트를 뜻하기도 합니다.
+Spring 모듈 Spring Framework는 모듈로 나뉜다. Core 모듈이 있고 개발하려는 Application에 따라 추가로 필요한 모듈을 선택할 수 있다.
+Spring Boot, Spring Security, Spring Data, Spring Cloud, Spring Batch와 같은 다양한 모듈이 있다.</description>
+    </item>
     
     <item>
       <title>TIL 2020 06 16 (화)</title>
