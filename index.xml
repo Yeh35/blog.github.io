@@ -5,7 +5,7 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Jun 2020 22:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 22:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,16 @@
       <guid>https://yeh35.github.io/blog.github.io/about-me/</guid>
       <description>안녕하세요, 예상오입니다 현제 소프트원에서 패션 ERP를 유지보수 업무를 하고 있으며, 2018년 9월부터 2021년 7월까지 병역특례를 하고 있습니다.
 주로 백엔드 개발을 전문으로하며 최근에는 Spring, Gradle에 관심을 많습니다.</description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 06 18 (목)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-18/</link>
+      <pubDate>Thu, 18 Jun 2020 22:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-18/</guid>
+      <description>오늘 한 일 Spring 공식문서는 시간나면 다시 보는걸로&amp;hellip; 너무 오래 걸리네
+ 인프런에 백기선님의 REST API 개발 강의를 듣기 시작했다. git을 마스터 프런치로 commit push만 해봤지 제대로 활용을 못하고 있었던거 같다. 누구나 쉽게 이해할 수 있는 GIT 입문을 통하든 Git에 대해서 제대로 알 필요가 있는거 같다.  </description>
     </item>
     
     <item>
