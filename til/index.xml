@@ -5,10 +5,24 @@
     <link>https://yeh35.github.io/blog.github.io/til/</link>
     <description>Recent content in TIL (Today I Learned) on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 18 Jun 2020 22:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 22:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 2020 06 21 (일)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-22/</link>
+      <pubDate>Sun, 21 Jun 2020 22:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-22/</guid>
+      <description>오늘 한 일 18일 이후 3일만에 쓴다.
+그동안 놀지만은 않았고&amp;hellip;
+ 인프런에 백기선님의 REST API 개발 강의를 듣고 (60%들음) 사이드 프로젝트 간략한 UI 디자인 회의  일요일은 하루종일 유제석이 나오는 예능을 보았다.
+뭔가 공부를 할 수록 지식의 공백이 더 늘어난다&amp;hellip;
+이정도면 되겠지 싶다가도 조금만 더 파면 끝이 없어보이는 터널에 빠져든다.
+그러면서도 기존에 공부한것을 제대로 복습하지 않으면 까먹게된다ㅠ 하흐.. </description>
+    </item>
     
     <item>
       <title>TIL 2020 06 18 (목)</title>
