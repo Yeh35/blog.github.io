@@ -5,7 +5,7 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 21 Jun 2020 22:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2020 22:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,9 +23,18 @@
     <item>
       <title>TIL 2020 06 21 (일)</title>
       <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-22/</link>
-      <pubDate>Sun, 21 Jun 2020 22:00:00 +0900</pubDate>
+      <pubDate>Mon, 22 Jun 2020 22:00:00 +0900</pubDate>
       
       <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-22/</guid>
+      <description>오늘 한 일 인프런에 백기선님의 REST API 개발 강의를 듣는데 Spring Boot Version 차이로 엄청 삽질을 하였다. ㅠㅠ</description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 06 21 (일)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-21/</link>
+      <pubDate>Sun, 21 Jun 2020 22:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-21/</guid>
       <description>오늘 한 일 18일 이후 3일만에 쓴다.
 그동안 놀지만은 않았고&amp;hellip;
  인프런에 백기선님의 REST API 개발 강의를 듣고 (60%들음) 사이드 프로젝트 간략한 UI 디자인 회의  일요일은 하루종일 유제석이 나오는 예능을 보았다.
