@@ -5,7 +5,7 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 22 Jun 2020 22:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2020 12:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,7 +21,18 @@
     </item>
     
     <item>
-      <title>TIL 2020 06 21 (일)</title>
+      <title>TIL 2020 06 23 (일)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-23/</link>
+      <pubDate>Wed, 24 Jun 2020 12:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-23/</guid>
+      <description>오늘 한 일 React Native React Native Window에서 환경 설정을 해봤다. 사이드 프로젝트에 Client를 React Native로 하기로 결정하였다. (공부할겸겸) 뭔가 Android 보다 초기 설정이 복잡하다..
+ https://dev-yakuza.github.io/ko/react-native/install-on-windows/#%EA%B0%9C%EC%9A%94  Window에 스크립트 보호가 있는지 처음알았다 위에 블로그를 따라서 설정을 하다보면 스크립트 보호가 뜰텐데 아래 링크를 따라하면 실행할 수 있다.
+ https://extbrain.tistory.com/118  </description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 06 22 (일)</title>
       <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-22/</link>
       <pubDate>Mon, 22 Jun 2020 22:00:00 +0900</pubDate>
       
