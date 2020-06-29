@@ -5,7 +5,7 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 24 Jun 2020 23:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2020 23:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,7 +21,16 @@
     </item>
     
     <item>
-      <title>TIL 2020 06 24 (일)</title>
+      <title>TIL 2020 06 25 (목)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-25/</link>
+      <pubDate>Thu, 25 Jun 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-25/</guid>
+      <description>오늘 한 일 스프링 기반 REST API 개발 퇴근하고 백기선님의 스프링 기반 REST API 조금 듣다가 9시 일찍 잠들었다.</description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 06 24 (수)</title>
       <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-24/</link>
       <pubDate>Wed, 24 Jun 2020 23:00:00 +0900</pubDate>
       
@@ -32,7 +41,7 @@ React Native 리엑트 강의를 찾았다. 클론 코딩이라는 곳인데.. �
     </item>
     
     <item>
-      <title>TIL 2020 06 23 (일)</title>
+      <title>TIL 2020 06 23 (화)</title>
       <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-23/</link>
       <pubDate>Wed, 24 Jun 2020 12:00:00 +0900</pubDate>
       
@@ -43,7 +52,7 @@ React Native 리엑트 강의를 찾았다. 클론 코딩이라는 곳인데.. �
     </item>
     
     <item>
-      <title>TIL 2020 06 22 (일)</title>
+      <title>TIL 2020 06 22 (월)</title>
       <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-22/</link>
       <pubDate>Mon, 22 Jun 2020 22:00:00 +0900</pubDate>
       
