@@ -5,7 +5,7 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 25 Jun 2020 23:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2020 23:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,26 @@
       <guid>https://yeh35.github.io/blog.github.io/about-me/</guid>
       <description>안녕하세요, 예상오입니다 현제 소프트원에서 패션 ERP를 유지보수 업무를 하고 있으며, 2018년 9월부터 2021년 7월까지 병역특례를 하고 있습니다.
 주로 백엔드 개발을 전문으로하며 최근에는 Spring, Gradle에 관심을 많습니다.</description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 06/30 ~ 07/01 </title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-30~/</link>
+      <pubDate>Tue, 30 Jun 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-30~/</guid>
+      <description>오늘 한 일 맥잘알이 되기 위해&amp;hellip; 맥주의 정석책을 삿다. ㅎㅎ 7월 1일까지 일정이 있어서 TIL을 따로 못올릴거 같아서 포함하였다.
+교보에서 RxJava 리액티브 프로그래밍책을 잠깐 봤는데 리액티브 프로그래밍이라는 것을 처음 들어봤다.
+시간이 된다면 사서 읽어보고 싶다.</description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 06 26 ~ 29</title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-26~29/</link>
+      <pubDate>Mon, 29 Jun 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-26~29/</guid>
+      <description>오늘 한 일 React  https://nomadcoders.co/react-native-fundamentals https://nomadcoders.co/react-fundamentals 두개의 강으를 모두 완강하였다. 대충 React에 대한 감을 잡을 수 있었다.  정리한 내용은 https://github.com/Yeh35/strudy-react 깃허브에 올려놨다. 앞으로 React 관련한 내용을 학습하게 될 경우 위의 레포지토리에 올릴 것이다.</description>
     </item>
     
     <item>
