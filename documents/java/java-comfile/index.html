@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang='kr'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='들어가기 C를 배울때는 C 언어자체가 하드위어와 가까워서 코드가 전처리 -&gt; 컴파일러 -&gt; 어셈블리어 -&gt; 링킹과정을 거쳐서 실행되는 것을 꼼꼼하게 살펴보고 생각하며 코딩했지만 Java를 코드만 작성하고 넘어오면서 &lsquo;알아서 실행되네&#39;의 마음가짐 을 가졌었다 그리고 시중에 Java책을 봤을때도 자세하게 다루지 않고 넘어갔기에 중요하지 않다고 생각했다.
+하지만 누가 Java공부를 한다고하면 (if, for, 변수선언 같은) 기초문법 다음으로 꼭 Java의 컴파일 그리고 실행 과정을 꼭 보라고 말할것이다.
+그래야, 나중 Spring, Lombok 같은 프레임워크를 공부할때 프레임워크가 해주는 마법같은 일이 마법이 아니라는 걸 알아차릴 수 가 있다.'>
+<meta name='theme-color' content='#ffcd00'>
+<meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
+
+<meta property='og:title' content='Java 컴파일부터 실행까지 • sango.h'>
+<meta property='og:description' content='들어가기 C를 배울때는 C 언어자체가 하드위어와 가까워서 코드가 전처리 -&gt; 컴파일러 -&gt; 어셈블리어 -&gt; 링킹과정을 거쳐서 실행되는 것을 꼼꼼하게 살펴보고 생각하며 코딩했지만 Java를 코드만 작성하고 넘어오면서 &lsquo;알아서 실행되네&#39;의 마음가짐 을 가졌었다 그리고 시중에 Java책을 봤을때도 자세하게 다루지 않고 넘어갔기에 중요하지 않다고 생각했다.
+하지만 누가 Java공부를 한다고하면 (if, for, 변수선언 같은) 기초문법 다음으로 꼭 Java의 컴파일 그리고 실행 과정을 꼭 보라고 말할것이다.
+그래야, 나중 Spring, Lombok 같은 프레임워크를 공부할때 프레임워크가 해주는 마법같은 일이 마법이 아니라는 걸 알아차릴 수 가 있다.'>
+<meta property='og:url' content='https://yeh35.github.io/blog.github.io/documents/java/java-comfile/'>
+<meta property='og:site_name' content='sango.h'>
+<meta property='og:type' content='article'><meta property='article:section' content='documents'><meta property='article:tag' content='java'><meta property='article:published_time' content='2020-07-19T13:24:00&#43;09:00'/><meta property='article:modified_time' content='2020-07-19T13:24:00&#43;09:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.66.0" />
+
+  <title>Java 컴파일부터 실행까지 • sango.h</title>
+  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/documents/java/java-comfile/'>
+  
+  
+  <link rel='icon' href='/blog.github.io/favicon.ico'>
+<link rel='stylesheet' href='/blog.github.io/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/blog.github.io/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-documents has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'></a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/blog.github.io/'>
+        <img src='https://avatars2.githubusercontent.com/u/46643699?s=460&amp;u=374c79ade497bda3a230e7ccc8693af69b94e766&amp;v=4'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/blog.github.io/'>
+      sango.h
+      </a>
+    </h2>
+    <div class='desc'>
+    백엔드 개발에 관심이 많습니다.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label=''>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/blog.github.io/documents/'>Document</a></li><li class='item'>
+  <a href='/blog.github.io/til/'>TIL</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'></h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/blog.github.io/tags/api/' style='font-size:1em'>API</a>
+      </li><li>
+        <a href='/blog.github.io/tags/assert/' style='font-size:1em'>assert</a>
+      </li><li>
+        <a href='/blog.github.io/tags/aws/' style='font-size:1.0204081632653061em'>AWS</a>
+      </li><li>
+        <a href='/blog.github.io/tags/blog/' style='font-size:1em'>blog</a>
+      </li><li>
+        <a href='/blog.github.io/tags/book/' style='font-size:1em'>book</a>
+      </li><li>
+        <a href='/blog.github.io/tags/build/' style='font-size:1.0816326530612246em'>build</a>
+      </li><li>
+        <a href='/blog.github.io/tags/directory/' style='font-size:1em'>Directory</a>
+      </li><li>
+        <a href='/blog.github.io/tags/docker/' style='font-size:1.0408163265306123em'>docker</a>
+      </li><li>
+        <a href='/blog.github.io/tags/english/' style='font-size:1.0204081632653061em'>english</a>
+      </li><li>
+        <a href='/blog.github.io/tags/gradle/' style='font-size:1.0816326530612246em'>gradle</a>
+      </li><li>
+        <a href='/blog.github.io/tags/groovy/' style='font-size:1em'>groovy</a>
+      </li><li>
+        <a href='/blog.github.io/tags/http/' style='font-size:1em'>HTTP</a>
+      </li><li>
+        <a href='/blog.github.io/tags/hugo/' style='font-size:1em'>hugo</a>
+      </li><li>
+        <a href='/blog.github.io/tags/infra/' style='font-size:1.163265306122449em'>infra</a>
+      </li><li>
+        <a href='/blog.github.io/tags/java/' style='font-size:1.1224489795918366em'>java</a>
+      </li><li>
+        <a href='/blog.github.io/tags/jdbc/' style='font-size:1.0204081632653061em'>JDBC</a>
+      </li><li>
+        <a href='/blog.github.io/tags/jpa/' style='font-size:1.0408163265306123em'>jpa</a>
+      </li><li>
+        <a href='/blog.github.io/tags/junit5/' style='font-size:1em'>junit5</a>
+      </li><li>
+        <a href='/blog.github.io/tags/orm/' style='font-size:1.0204081632653061em'>ORM</a>
+      </li><li>
+        <a href='/blog.github.io/tags/rest/' style='font-size:1em'>REST</a>
+      </li><li>
+        <a href='/blog.github.io/tags/review/' style='font-size:1em'>review</a>
+      </li><li>
+        <a href='/blog.github.io/tags/series/' style='font-size:1.0612244897959184em'>series</a>
+      </li><li>
+        <a href='/blog.github.io/tags/slack/' style='font-size:1em'>Slack</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring/' style='font-size:1.0204081632653061em'>spring</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring-boot/' style='font-size:1.0612244897959184em'>spring-boot</a>
+      </li><li>
+        <a href='/blog.github.io/tags/start/' style='font-size:1em'>start</a>
+      </li><li>
+        <a href='/blog.github.io/tags/test/' style='font-size:1.0204081632653061em'>test</a>
+      </li><li>
+        <a href='/blog.github.io/tags/til/' style='font-size:2em'>TIL</a>
+      </li><li>
+        <a href='/blog.github.io/tags/web/' style='font-size:1em'>web</a>
+      </li><li>
+        <a href='/blog.github.io/tags/webhooks/' style='font-size:1em'>WebHooks</a>
+      </li><li>
+        <a href='/blog.github.io/tags/%EA%B8%80%EC%93%B0%EA%B8%B0/' style='font-size:1em'>글쓰기</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label=''>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'></a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'></span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/blog.github.io/about-me/'>About Me</a>
+      </li><li class='item'>
+        <a href='/blog.github.io/documents/'>Document</a>
+      </li><li class='item'>
+        <a href='/blog.github.io/til/'>TIL</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>Java 컴파일부터 실행까지</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>sango.h</p><p class='desc site-desc'>sango.h는 snagoh와 c언어의 stdio.h의 합성어이다.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='kr' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Java 컴파일부터 실행까지</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'> </span>
+  <time class='entry-date' datetime='2020-07-19T13:24:00&#43;09:00'>2020-07-19</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <h1 id="들어가기">들어가기</h1>
+<p>C를 배울때는 C 언어자체가 하드위어와 가까워서 코드가 
+<code>전처리 -&gt; 컴파일러 -&gt; 어셈블리어 -&gt; 링킹과정</code>을 거쳐서 실행되는 것을 꼼꼼하게 살펴보고 생각하며 코딩했지만 
+Java를 코드만 작성하고 넘어오면서 <strong>&lsquo;알아서 실행되네'의 마음가짐</strong> 을 가졌었다     <br>
+그리고 시중에 Java책을 봤을때도 자세하게 다루지 않고 넘어갔기에 중요하지 않다고 생각했다.</p>
+<p>하지만 누가 Java공부를 한다고하면 (if, for, 변수선언 같은) 기초문법 다음으로 꼭 Java의 컴파일 그리고 실행 과정을 꼭 보라고 말할것이다.</p>
+<p>그래야, 나중 Spring, Lombok 같은 프레임워크를 공부할때 프레임워크가 해주는 마법같은 일이 마법이 아니라는 걸 알아차릴 수 가 있다.    <br>
+(&lsquo;알아서 해주던데'라는 마음가짐은 나뻐요!!)</p>
+<p>큰틀에서 Java 플랫폼 구조와 JDK, JRE, JVM을 볼 것이다.<br>
+<strong>긴글이 될거 같은데 마음 단단히 먹고 긴호흡으로 읽어주셨으면 좋겠다.</strong></p>
+<h1 id="사전-지식">사전 지식</h1>
+<p>C를 조금 해봤고 Java문법을 잘 알고 코딩하는 것 자체에 충분히 익숙하다면 보는데 문제는 없을거 같다. <br>
+충분히 익숙하다는 것은 <a href="https://www.acmicpc.net/problem/2448">별찍기</a> 정도는 작성할 수 있다고 가정하겠다.</p>
+<pre><code>                       *                        
+                      * *                       
+                     *****                      
+                    *     *                     
+                   * *   * *                    
+                  ***** *****                   
+                 *           *                  
+                * *         * *                 
+               *****       *****                
+              *     *     *     *               
+             * *   * *   * *   * *              
+            ***** ***** ***** *****             
+           *                       *            
+          * *                     * *           
+         *****                   *****          
+        *     *                 *     *         
+       * *   * *               * *   * *        
+      **** *****             ***** *****       
+     *           *           *           *      
+    * *         * *         * *         * *     
+   *****       *****       *****       *****    
+  *     *     *     *     *     *     *     *   
+ * *   * *   * *   * *   * *   * *   * *   * *  
+***** ***** ***** ***** ***** ***** ***** *****
+</code></pre><h1 id="java-플랫폼-구조">Java 플랫폼 구조</h1>
+<p>처음에는 Java 플랫폼에 대해서 큰 시각으로 보며 들어는 봤지만 정확하게 뭐라고 말하기 힘들었던 SE, EE, JDK, JVM에 대해서 보며 각각의 관계를 살펴볼 것이다.</p>
+<p>Java 플랫폼은 <strong>Java Application 실행되는 특정 환경</strong> 을 뜻한다. <br>
+우리의 소스코드가 하드웨어에 반영되기 위해서는 하드웨어를 추상화 해줄 API가 필요하다. 
+그런 API의 모음이라고 봐도 무방하다.</p>
+<p>Java SE, Java EE, Java ME, Java FX 어디서 들어는 봤을 것이다. <br>
+이것들은 전부 Java 플랫폼들의 이름인데 여러가지로 나뉜 이유는 하드웨어 마다 다른 제약사항들 때문에 동일한 API를 제공하기 불가능하기 때문에 각 상황에 맞는 Java를 제공하기위해 나눠졌다.</p>
+<p>제사한 정보는 <a href="https://docs.oracle.com/javaee/6/firstcup/doc/gkhoy.html#gcrlb">공식문서: Java EE와 Java SE의 차이점</a>에 있지만 굳이 찾아가서 보는 수고스러움은 안해도 된다. 
+(어쩌피 대부분 SE 아님 EE를 쓴다)</p>
+<p>각 플렛폼에 대해서 간략하게 요약하면 다음과 같다.</p>
+<ul>
+<li>Java SE : <br>
+Standard Edition으로 대부분의 API가 여기에 포함된다. 모르겠다 싶으면 이거 쓰면 된다.</li>
+<li>Java EE : <br>
+Enterprise Edition인데 Java SE를 기반으로 서버측 개발을 위한 플랫폼이다.</li>
+<li>Java ME : <br>
+Micro Edition, 제안된 자원을 가진 휴데폰, 셋탑박스 (임베디드) 등을 지원하기 위한 플랫폼이다.</li>
+<li>Java FX : <br>
+Java SE의 표준 GUI 라이브러리인 스윙을 대체하기 위해 고안되었다는데 안써봐서 모르겠다.</li>
+</ul>
+<p>각 Java 플랫폼에 대해 간략하게 알아봤다. <br>
+그 다음으로 자꾸 헷갈리는 JDK, JRE, JVM에 대해 알아보자</p>
+<h2 id="jdk-jre-jvmhttpshowtodoinjavacomjavabasicsjdk-jre-jvm"><a href="https://howtodoinjava.com/java/basics/jdk-jre-jvm/">JDK, JRE, JVM</a></h2>
+<p><code>JDK</code>, <code>JRE</code>, <code>JVM</code>는 각각의 뭔지, 차이에 대해서 설명할 수 있다면 해당 챕터는 넘어가도 된다.</p>
+<p>다음 이미지는 Java SE Version 8의 아키텍쳐이다. 
+<img src="/blog.github.io/img/documents/java/javaSE8.png" alt="javaSE8"></p>
+<p>아키텍쳐를 양쪽에 범위를 선택한 것을 보면 대충 어떤식으로 구분하는지 알 수 있을 것이다.</p>
+<ul>
+<li>
+<p>JDK(Java Development Kit):  <br>
+자바 프로그램 <strong>개발</strong> 에 필요한 구성 요소로 <em>JRE + 개발에 필요한 툴</em> 로 되어있다.   <br>
+툴 몇개를 설명하면</p>
+<ul>
+<li>javac: &lsquo;.java&rsquo; 소스를 &lsquo;.class&rsquo; 코드로 변환하는 컴파일러</li>
+<li>javap: &lsquo;.class'를 &lsquo;.java'로 변환하는 컴파일러  <br>
+(외부 라이브러리 디버깅에 주로 쓰인다)</li>
+</ul>
+</li>
+<li>
+<p>JRE(Java Runtime Environment):     <br>
+자바 프로그램 <strong>실행</strong> 에 필요한 구성 요소로 <em>JVM + 라이브러리</em> 로 되어있다.
+JVM과 핵심 라이브러리 및 자바 런타임 환경에서 사용하는 프로퍼티 세팅, 리소스파일을 포함한다.
+<em>JAVA Version 11부터는 JRE는 따로 배포하지 않는거 같다</em></p>
+</li>
+<li>
+<p>JVM(Java Virtual Machine):  <br>
+자바 가상 머신으로 자바가 OS 상관없이 잘 작동하도록 도와주는 JAVA의 핵심 철학(Write once, run everywhere)의 구현체라고 할 수 있다.      <br>
+역할은 <strong>자바 바이트 코드(.Class)를 OS에 특화된 코드로 변환 및 실행을 담당</strong> 한다.
+바이트 코드를 변환하는 <code>인터프리터</code>와 <code>JIT 컴파일러</code>가 담당한다.</p>
+<ul>
+<li>
+<p><a href="https://namu.wiki/w/%EC%9D%B8%ED%84%B0%ED%94%84%EB%A6%AC%ED%84%B0">인터프리터</a> : 코드를 한 줄씩 읽어 내려가며 실행하는 프로그램으로 당연히 한 줄씩 읽고 실행하기에 최적화나 실행 측면에서 느리다.<br>
+(C가 더 빠른 여러 이유중 하나)</p>
+</li>
+<li>
+<p><a href="https://aboullaite.me/understanding-jit-compiler-just-in-time-compiler/">JIT 컴파일러</a> : Just In Time의 약자로 <em>인터프리터의 성능을 향상 시키기 위해 도입</em> 이 되었다. 인터프리터가 반복된 코드를 해석한다면 JIT가 해당 코드를 캐싱한 뒤 인터프리터가 JIT의 캐싱을 재사용 하도록 하여 성능을 향상시킨다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>JDK, JRE, JVM는 전체적인 구역을 뜻하는 것이고 Java SE, EE, ME FX는 제공해주는 라이브러리(API)를 뜻한다.</p>
+<h2 id="jdk-유료">JDK 유료?!</h2>
+<p>Java가 JDK 11로 넘어오면서 Oracle JDK가 상용버전에서 유료가 되었다.<br>
+하지만 그럼에도 <a href="https://openjdk.java.net/"><code>openJDK</code></a>를 검색하면 상용버전에서도 무료로 사용할 수 있는 JDK를 얻을 수 있다.</p>
+<h2 id="kotlin">Kotlin</h2>
+<p>위에서 JVM은 .Class 파일을 OS별 네이티브 코드로 변경해준다고 했다.  <br>
+즉 굳이 Java가 아니라도 .Class파일로 변경해주는 컴파일러만 있으면 다른 언어로 코딩해도 된다.  <br>
+(Kotlin, Grovvy, &hellip;.)</p>
+<h2 id="중간-정리">중간 정리</h2>
+<p>Java 플랫폼, Java 아키텍쳐 그외에 짜잘한 Java에 대한 이슈를 살펴봤다. <br>
+다음으로는 나올 내용은 .java File 부터 실행까지의 내용이 나올 것이다.  <br>
+위에 나오는 용어들이 익숙하지 않는다면 읽기가 힘들 수도 있다.</p>
+<h1 id="java-file-부터-실행까지">.java File 부터 실행까지</h1>
+<p>JVM에 대해서 읽었으면 Java가 두번 컴파일(하나는 사실 인터프리터지만)된다는 것을 알것이다. <br>
+그래서 크게 두가지로 나눠서 보려고 한다.</p>
+<ul>
+<li>Java Compile(.java to .class)</li>
+<li>JVM (.class to running)</li>
+</ul>
+<p><code>.java File 부터 실행까지</code>를 이쁘게 그려봤다.   <br>
+<img src="/blog.github.io/img/documents/java/java-compile-and-running.png" alt="java-compile-and-running">
+댓글에 &ldquo;ㄹㅇㅋㅋ&quot;만 치세요!</p>
+<h2 id="java-compilejava-to-class">Java Compile(.java to .class)</h2>
+<p><img src="/blog.github.io/img/documents/java/java-compile.png" alt="java-compile">   <br>
+메모장 코딩을 해보신 분이라면 cmd에 <code>javac</code>라는 라고 써봤을 것이다.  <br>
+<code>javac</code>는 Java Compile로 .java 파일을 .class로 변환 시킨다.</p>
+<h2 id="jvm-class-to-running">JVM (.class to running)</h2>
+<p><img src="/blog.github.io/img/documents/java/java-running.png" alt="java-running"></p>
+<h3 id="class-loader">Class Loader</h3>
+<p>다음 3가지로 나뉜다.</p>
+<ul>
+<li>
+<p>로딩 :
+.class 에서 바이트코드를 읽고 메모리에 저장시킨다.</p>
+</li>
+<li>
+<p>링크 :
+3가지 엑션을 하는데</p>
+<ul>
+<li>
+<p>증명(verification) : 로더로 읽은 .Class 파일이 포맷형식은 지키고 있는지, 유효한 컴파일러에 의해 생성되었는지 체크한다.</p>
+</li>
+<li>
+<p>준비(preparation) : <br>
+모든 정적 변수에 대해 메모리가 할당되고 기본 값이 지정된다.</p>
+</li>
+<li>
+<p>해결(resolution) : <br>
+모든 심볼 메모리 참조가 메소드 영역의 참조로 바뀝니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>초기화
+static 변수값이 초기화되고 정적 블록이 실행된다.</p>
+</li>
+</ul>
+<p>더 자세한 내용을 알고 싶다면 <a href="https://homoefficio.github.io/2018/10/13/Java-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%A1%9C%EB%8D%94-%ED%9B%91%EC%96%B4%EB%B3%B4%EA%B8%B0/">HomeEfficio님의 Java 클래스로더 훑어보기</a>를 읽어보는 걸 추천한다.</p>
+<h3 id="메모리">메모리</h3>
+<p>메모리 구성을 잘 알아야 나중에 디버깅할때 왜 Null Excption이 발생하는지 CG가 어떤식으로 제거해주는지 알 수 있다.
+<strong>메모리구조는 외워야 합니다</strong></p>
+<ul>
+<li>
+<p>Method 영역:<br>
+클래스 로더의 로딩때 .class 파일을 읽고 그 내용에 따라 적절히 만든 바이너리 데이터가 저장된다.
+클래스 수준의 정보(인터페이스, 클래스 이름, 부모 클래스, 메소드, 변수)</p>
+</li>
+<li>
+<p>Heap 영역 :  <br>
+객체를 저장하며 공유 자원이다.
+주로 <code>new</code> 키워드를 해서 객체를 생성하면 Heap 메모리에 저장된다. <br>
+포인터를 안다면 이해가 될것이다.
+CG에 의해서 메모리 관리가 된다.</p>
+</li>
+<li>
+<p>PC registers 영역 : <br>
+쓰레드 마다 쓰레드 내 현재 실행할 스택 프레임을 가리키는 포인터를 저장한다.
+각 쓰레드마다 별도의 PC registers를 가지고 있다.</p>
+</li>
+<li>
+<p>Stack 영역  : <br>
+쓰레드 별로 스택을 만들고 공유자원은 아니다.</p>
+</li>
+<li>
+<p>Native Memory Stack 영역  : 
+네이티브 메소드 정보를 저장</p>
+</li>
+</ul>
+<h3 id="실행-엔젠">실행 엔젠</h3>
+<p>위에서 이미 설명했음으로 자세한 내용은 Pass..</p>
+<ul>
+<li>인터프리터</li>
+<li>JIT</li>
+<li>GC</li>
+</ul>
+<h3 id="자바-네이티브-인터페이스-jni">자바 네이티브 인터페이스 (JNI)</h3>
+<p>Java API 소스를 본적이 있다면 <code>native</code>키워드를 봤을 것이다. <br>
+<code>native</code>키워드를 이용해서 C, C++ 어셈블리로 작성된 함수를 제공한다.</p>
+<h3 id="네이티브-메소드-라이브러리">네이티브 메소드 라이브러리</h3>
+<p>C, C++로 작성 된 라이브러리</p>
+<h1 id="마치며">마치며</h1>
+<p>글을 다 읽고 다음 질문들에 대해서 답할 수 있으면 충분히 이해했다고 봐도 된다.</p>
+<ul>
+<li>Java는 한줄한줄 컴파일되고 실행되는걸까요?</li>
+<li>new 한 객체는 어느 메모리에 저장될까요?</li>
+<li>싱글톤이 static 보다 애플리케이션 실행속도가 빠를까요?</li>
+</ul>
+<h1 id="참고">참고</h1>
+<ul>
+<li><a href="https://www.inflearn.com/course/the-java-code-manipulation/dashboard">백기선님의 더 자바, 코드를 조작하는 다양한 방법</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/">ORACLE 문서</a></li>
+<li><a href="https://nyebo.net/2016/01/just-java-summary/">nyebolog JAVA 기본 개념 정리</a></li>
+<li><a href="https://homoefficio.github.io/2019/01/31/Back-to-the-Essence-Java-%EC%BB%B4%ED%8C%8C%EC%9D%BC%EC%97%90%EC%84%9C-%EC%8B%A4%ED%96%89%EA%B9%8C%EC%A7%80-1/">HomeEfficio님의  Java 컴파일에서 실행까지</a></li>
+</ul>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>tags: </span><a class='tag' href='/blog.github.io/tags/java/'>java</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/blog.github.io/documents/spring/spring-jpa/spring-jpa-repository/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ </span>
+        <span class='screen-reader-text'>: </span>JpaRepository는 왜  @Repository 에노테이션을 안달아도 되는걸까?</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/blog.github.io/documents/java/java-refraction/'>
+        <span class='screen-reader-text'>: </span>Java 리플렉션: 프레임워크의 기본<span aria-hidden='true'> <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+<section id='comments' class='comments'>
+  <div class='container sep-before'>
+    <div class='comments-area'><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yeh35-blog-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  </div>
+</section>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label=''>
+    <ul><li>
+        <a href='https://github.com/Yeh35' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:jaws0910@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019-2020 Snag Oh Yeh </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/blog.github.io/assets/js/"</script>
+
+<script src='/blog.github.io/assets/js/main.c3bcf2df.js'></script><script src='/blog.github.io/js/custom.js'></script>
+
+</body>
+
+</html>
+

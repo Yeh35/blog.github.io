@@ -5,10 +5,31 @@
     <link>https://yeh35.github.io/blog.github.io/tags/java/</link>
     <description>Recent content in java on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 09 Jun 2020 00:27:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2020 13:24:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java 리플렉션: 프레임워크의 기본</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/java/java-refraction/</link>
+      <pubDate>Sun, 19 Jul 2020 13:24:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/java/java-refraction/</guid>
+      <description>Quiz 이 퀴즈에 답을 할 수 있다면 이글을 안읽어도 된다.!
+ object.getClass()가 뭘 리턴하나요? Class 객체가 메모리 구조에서 어디에 저장되나요? 다음 TestInterface 인터페이스를 구현할 수 있나요? public class TestClass {private String s1;private String s2;private int i1;void action() {print}}public Interface TestInterface {// 문자열 속성 개수 int countStringField(Object class);// object에 &amp;#39;action`이라는 이름이 들어간 메소드 실행 void doAction(Object class);}  What is Refraction Refraction은 영문 사전에서는 &amp;lsquo;투명&amp;rsquo;, &amp;lsquo;반사&#39;을 뜻한다.</description>
+    </item>
+    
+    <item>
+      <title>Java 컴파일부터 실행까지</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/java/java-comfile/</link>
+      <pubDate>Sun, 19 Jul 2020 13:24:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/java/java-comfile/</guid>
+      <description>들어가기 C를 배울때는 C 언어자체가 하드위어와 가까워서 코드가 전처리 -&amp;gt; 컴파일러 -&amp;gt; 어셈블리어 -&amp;gt; 링킹과정을 거쳐서 실행되는 것을 꼼꼼하게 살펴보고 생각하며 코딩했지만 Java를 코드만 작성하고 넘어오면서 &amp;lsquo;알아서 실행되네&#39;의 마음가짐 을 가졌었다 그리고 시중에 Java책을 봤을때도 자세하게 다루지 않고 넘어갔기에 중요하지 않다고 생각했다.
+하지만 누가 Java공부를 한다고하면 (if, for, 변수선언 같은) 기초문법 다음으로 꼭 Java의 컴파일 그리고 실행 과정을 꼭 보라고 말할것이다.
+그래야, 나중 Spring, Lombok 같은 프레임워크를 공부할때 프레임워크가 해주는 마법같은 일이 마법이 아니라는 걸 알아차릴 수 가 있다.</description>
+    </item>
     
     <item>
       <title>Spring JPA 2편: Setting!!</title>

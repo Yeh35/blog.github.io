@@ -5,17 +5,41 @@
     <link>https://yeh35.github.io/blog.github.io/tags/til/</link>
     <description>Recent content in TIL on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 30 Jun 2020 23:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2020 23:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/til/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>React Native 기초(공식문서 가이드 보기)</title>
+      <link>https://yeh35.github.io/blog.github.io/til/reactnative/react-native-%EA%B8%B0%EC%B4%88%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%B3%B4%EA%B8%B0/</link>
+      <pubDate>Thu, 09 Jul 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/reactnative/react-native-%EA%B8%B0%EC%B4%88%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%B3%B4%EA%B8%B0/</guid>
+      <description>React React Native 환경설정
+ 프로젝트 생성 : react-native init [프로젝트명] Android 실행 : npm run android  공식문서를 보면서 정리한 내용 일단 공식문서
+React Native React Native는 React와 비슷하지만 web component 대신 native component를 사용한다.
+왜 항상 import React from &#39;react&#39;;이걸 해야할까? JSX를 사용하려면 React를 가져와야 한다는데 왜그러지.
+props 받는 방법 import React from &amp;#39;react&amp;#39;;import { Text, View, StyleSheet } from &amp;#39;react-native&amp;#39;;const styles = StyleSheet.create({center: {alignItems: &amp;#39;center&amp;#39;}})const Greeting = (props) =&amp;gt; {return (&amp;lt;View style={styles.</description>
+    </item>
+    
+    <item>
+      <title>TIL 2020 07/01 ~ 07/07 </title>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-07-01~07-07/</link>
+      <pubDate>Tue, 07 Jul 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-07-01~07-07/</guid>
+      <description>오늘 한 일 교보에서 RxJava 리액티브 프로그래밍책을 삿다. Spring MVC, Spring security 강의도 삿다.
+사이드 프로젝트의 서버단은 어느정도 된거 같다.
+잡답 TIL이 날짜를 기록하며 적는 거였지만 어느순간 그게 의미가 없는거 같아서 날짜보다 기술단위로으로 정리를 하려고 한다.</description>
+    </item>
+    
+    <item>
       <title>TIL 2020 06/30 ~ 07/01 </title>
-      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-30~/</link>
+      <link>https://yeh35.github.io/blog.github.io/til/til-2020-06-30~07-01/</link>
       <pubDate>Tue, 30 Jun 2020 23:00:00 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-30~/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/til/til-2020-06-30~07-01/</guid>
       <description>오늘 한 일 맥잘알이 되기 위해&amp;hellip; 맥주의 정석책을 삿다. ㅎㅎ 7월 1일까지 일정이 있어서 TIL을 따로 못올릴거 같아서 포함하였다.
 교보에서 RxJava 리액티브 프로그래밍책을 잠깐 봤는데 리액티브 프로그래밍이라는 것을 처음 들어봤다.
 시간이 된다면 사서 읽어보고 싶다.</description>

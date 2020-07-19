@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang='kr'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Quiz 이 퀴즈에 답을 할 수 있다면 이글을 안읽어도 된다.!
+ object.getClass()가 뭘 리턴하나요? Class 객체가 메모리 구조에서 어디에 저장되나요? 다음 TestInterface 인터페이스를 구현할 수 있나요? public class TestClass {private String s1;private String s2;private int i1;void action() {print}}public Interface TestInterface {// 문자열 속성 개수 int countStringField(Object class);// object에 &#39;action`이라는 이름이 들어간 메소드 실행 void doAction(Object class);}  What is Refraction Refraction은 영문 사전에서는 &lsquo;투명&rsquo;, &lsquo;반사&#39;을 뜻한다.'>
+<meta name='theme-color' content='#ffcd00'>
+<meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
+
+<meta property='og:title' content='Java 리플렉션: 프레임워크의 기본 • sango.h'>
+<meta property='og:description' content='Quiz 이 퀴즈에 답을 할 수 있다면 이글을 안읽어도 된다.!
+ object.getClass()가 뭘 리턴하나요? Class 객체가 메모리 구조에서 어디에 저장되나요? 다음 TestInterface 인터페이스를 구현할 수 있나요? public class TestClass {private String s1;private String s2;private int i1;void action() {print}}public Interface TestInterface {// 문자열 속성 개수 int countStringField(Object class);// object에 &#39;action`이라는 이름이 들어간 메소드 실행 void doAction(Object class);}  What is Refraction Refraction은 영문 사전에서는 &lsquo;투명&rsquo;, &lsquo;반사&#39;을 뜻한다.'>
+<meta property='og:url' content='https://yeh35.github.io/blog.github.io/documents/java/java-refraction/'>
+<meta property='og:site_name' content='sango.h'>
+<meta property='og:type' content='article'><meta property='article:section' content='documents'><meta property='article:tag' content='java'><meta property='article:published_time' content='2020-07-19T13:24:00&#43;09:00'/><meta property='article:modified_time' content='2020-07-19T13:24:00&#43;09:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.66.0" />
+
+  <title>Java 리플렉션: 프레임워크의 기본 • sango.h</title>
+  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/documents/java/java-refraction/'>
+  
+  
+  <link rel='icon' href='/blog.github.io/favicon.ico'>
+<link rel='stylesheet' href='/blog.github.io/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/blog.github.io/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-documents has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'></a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/blog.github.io/'>
+        <img src='https://avatars2.githubusercontent.com/u/46643699?s=460&amp;u=374c79ade497bda3a230e7ccc8693af69b94e766&amp;v=4'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/blog.github.io/'>
+      sango.h
+      </a>
+    </h2>
+    <div class='desc'>
+    백엔드 개발에 관심이 많습니다.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label=''>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/blog.github.io/documents/'>Document</a></li><li class='item'>
+  <a href='/blog.github.io/til/'>TIL</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'></h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/blog.github.io/tags/api/' style='font-size:1em'>API</a>
+      </li><li>
+        <a href='/blog.github.io/tags/assert/' style='font-size:1em'>assert</a>
+      </li><li>
+        <a href='/blog.github.io/tags/aws/' style='font-size:1.0204081632653061em'>AWS</a>
+      </li><li>
+        <a href='/blog.github.io/tags/blog/' style='font-size:1em'>blog</a>
+      </li><li>
+        <a href='/blog.github.io/tags/book/' style='font-size:1em'>book</a>
+      </li><li>
+        <a href='/blog.github.io/tags/build/' style='font-size:1.0816326530612246em'>build</a>
+      </li><li>
+        <a href='/blog.github.io/tags/directory/' style='font-size:1em'>Directory</a>
+      </li><li>
+        <a href='/blog.github.io/tags/docker/' style='font-size:1.0408163265306123em'>docker</a>
+      </li><li>
+        <a href='/blog.github.io/tags/english/' style='font-size:1.0204081632653061em'>english</a>
+      </li><li>
+        <a href='/blog.github.io/tags/gradle/' style='font-size:1.0816326530612246em'>gradle</a>
+      </li><li>
+        <a href='/blog.github.io/tags/groovy/' style='font-size:1em'>groovy</a>
+      </li><li>
+        <a href='/blog.github.io/tags/http/' style='font-size:1em'>HTTP</a>
+      </li><li>
+        <a href='/blog.github.io/tags/hugo/' style='font-size:1em'>hugo</a>
+      </li><li>
+        <a href='/blog.github.io/tags/infra/' style='font-size:1.163265306122449em'>infra</a>
+      </li><li>
+        <a href='/blog.github.io/tags/java/' style='font-size:1.1224489795918366em'>java</a>
+      </li><li>
+        <a href='/blog.github.io/tags/jdbc/' style='font-size:1.0204081632653061em'>JDBC</a>
+      </li><li>
+        <a href='/blog.github.io/tags/jpa/' style='font-size:1.0408163265306123em'>jpa</a>
+      </li><li>
+        <a href='/blog.github.io/tags/junit5/' style='font-size:1em'>junit5</a>
+      </li><li>
+        <a href='/blog.github.io/tags/orm/' style='font-size:1.0204081632653061em'>ORM</a>
+      </li><li>
+        <a href='/blog.github.io/tags/rest/' style='font-size:1em'>REST</a>
+      </li><li>
+        <a href='/blog.github.io/tags/review/' style='font-size:1em'>review</a>
+      </li><li>
+        <a href='/blog.github.io/tags/series/' style='font-size:1.0612244897959184em'>series</a>
+      </li><li>
+        <a href='/blog.github.io/tags/slack/' style='font-size:1em'>Slack</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring/' style='font-size:1.0204081632653061em'>spring</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring-boot/' style='font-size:1.0612244897959184em'>spring-boot</a>
+      </li><li>
+        <a href='/blog.github.io/tags/start/' style='font-size:1em'>start</a>
+      </li><li>
+        <a href='/blog.github.io/tags/test/' style='font-size:1.0204081632653061em'>test</a>
+      </li><li>
+        <a href='/blog.github.io/tags/til/' style='font-size:2em'>TIL</a>
+      </li><li>
+        <a href='/blog.github.io/tags/web/' style='font-size:1em'>web</a>
+      </li><li>
+        <a href='/blog.github.io/tags/webhooks/' style='font-size:1em'>WebHooks</a>
+      </li><li>
+        <a href='/blog.github.io/tags/%EA%B8%80%EC%93%B0%EA%B8%B0/' style='font-size:1em'>글쓰기</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label=''>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'></a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'></span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/blog.github.io/about-me/'>About Me</a>
+      </li><li class='item'>
+        <a href='/blog.github.io/documents/'>Document</a>
+      </li><li class='item'>
+        <a href='/blog.github.io/til/'>TIL</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>Java 리플렉션: 프레임워크의 기본</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>sango.h</p><p class='desc site-desc'>sango.h는 snagoh와 c언어의 stdio.h의 합성어이다.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='kr' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Java 리플렉션: 프레임워크의 기본</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'> </span>
+  <time class='entry-date' datetime='2020-07-19T13:24:00&#43;09:00'>2020-07-19</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <h1 id="quiz">Quiz</h1>
+<p>이 퀴즈에 답을 할 수 있다면 이글을 안읽어도 된다.!</p>
+<ol>
+<li><code>object.getClass()</code>가 뭘 리턴하나요?</li>
+<li>Class 객체가 메모리 구조에서 어디에 저장되나요?</li>
+<li>다음 <code>TestInterface</code> 인터페이스를 구현할 수 있나요?
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestClass</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">s1</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">s2</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">i1</span><span class="o">;</span>
+       
+    <span class="kt">void</span> <span class="nf">action</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">print</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="n">Interface</span> <span class="n">TestInterface</span> <span class="o">{</span>
+
+    <span class="c1">// 문자열 속성 개수
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="nf">countStringField</span><span class="o">(</span><span class="n">Object</span> <span class="n">class</span><span class="o">);</span>
+
+    <span class="c1">// object에 &#39;action`이라는 이름이 들어간 메소드 실행
+</span><span class="c1"></span>    <span class="kt">void</span> <span class="nf">doAction</span><span class="o">(</span><span class="n">Object</span> <span class="n">class</span><span class="o">);</span>
+<span class="o">}</span>
+   
+</code></pre></div></li>
+</ol>
+<h1 id="what-is-refraction">What is Refraction</h1>
+<p>Refraction은 영문 사전에서는 &lsquo;투명&rsquo;, &lsquo;반사'을 뜻한다.
+<code>Java에서 Refraction은 응용 프로그램의 런타임의 동작을 검사하고 수정할 수 있는 기능을 제공한다.</code> 
+이렇게 말하면 처음보는 사람은 &lsquo;그래서 어쩌라는거지'라는 생각을 가질 수 있다.</p>
+<p>예시로 Spring에서 Converter(Object Mapper)를 써보셨다면 이해가 잘되실 것이다.</p>
+<p>Spring Container이 뭐지 하시는 분들은 <code>@Component</code>, <code>@Service</code>, <code>@Controller</code>같은 어노테이션이 있는 Class를 인스턴스화 시켜서 Bean으로 등록해주고 <code>@Autowired</code>를 사용해서 Bean을 꺼내 쓰는 것을 말한다.
+BeanFactory(Spring Container) 구현하기 위해서는 Refraction이라는 것이 필요하다.
+왜냐하면 어노테이션을 읽어 Bean 등록도 꺼내주는 것도 해줄 수 있기 때문이다.</p>
+<p>그외에도 Refraction은 여러곳에서 쓰인다.</p>
+<ul>
+<li>JUnit – reflection을 이용하여 @Test 어노테이션이 붙은 메소드를 찾아 실행한다.</li>
+<li>Spring – 의존성 주입,  Dependency Injection</li>
+<li>Hibernate - Entity Mapping, 메소드명으로 쿼리 자동 생성 등등
+&hellip;</li>
+</ul>
+<p>Reflaction은 컴파일 단계가 아니라 런타임 단계에서 객체를 읽어 인스턴스화하고, 메소드 호출 필드값을 
+즉, Reflaction을 런타임시 마법같은 일을 알아낼 수 있다.</p>
+<p><strong>내용이 큰만큼 긴호흡으로 천천히 읽어주셨으면 좋겠다</strong></p>
+<h1 id="refraction-크게-보기">Refraction 크게 보기</h1>
+<p>Java에서 Refraction은 매우 파워풀한 개념이다.<br>
+일반적인 프로그래밍에서는 거의 사용하지 않지만 J2EE 프레임 워크 중추적인 역할을 한다.</p>
+<p>그외에도 <code>JUnit</code>, <code>Spring</code>, <code>Tomcat</code>, <code>Hibernate</code>등 수 없이 많은 프레임워크에서 사용한다.</p>
+<h2 id="refaction도-단점이-없는-것은-아니다">Refaction도 단점이 없는 것은 아니다.</h2>
+<p>일반적으로 Interface와 Class에 바로 엑세스 할 수 있는 일반적인 프로그래밍에서는 안사용하는게 맞다.</p>
+<ul>
+<li>성능 저하 : 
+리플렉션을 사용하게되면 클래스를 클래스를 그냥 사용하는 것 이외에도 클래스의 위치를 찾기위해 경로를 스캔 및 클래스 해석등의 추가적인 작업들이 있어 성능이 저하된다.</li>
+<li>보안 문제 : 
+접근제한자 &lsquo;private&rsquo; 같ㅌ이 외부에서 값을 접근 못하게 했지만 리플렉션은 그걸 무시하고 접근할 수 있기에 애플리케이션이 비정상적으로 동작하게 할 위험이 있습니다.</li>
+<li>유지보수 문제
+리플렉션 코드를 이해하고 디버깅하기가 어렵다.<br>
+코드가 컴파일과정중에 문제를 찾을 수 없기에 런타임중 버그가 발생할 확률이 올라간다.</li>
+</ul>
+<h1 id="refaction-메모리-구조로-보기">Refaction 메모리 구조로 보기</h1>
+<p>Java는 모든 객체는 기본 유형 또는 참조형입니다. 
+(이말이 이해가 안된다면 사전지식이 부족할 수 있습니다. 두개의 차이를 알아보신후에 마저 읽어보세요)</p>
+<p>모든 참조형 객체는 <code>java.lang.Object</code>를 기본으로 상속받도록 되어있습니다.<br>
+class에 <code>extends Object</code>가 안되어 있는 생략해도 되기 떄문입니다.
+<code>Object</code>는 <code>getClass()</code>이라는 메소드를 가지고 있고 <code>getClass()</code>는 Return으로 
+<code>java.lang.Class</code> 객체를 리턴한다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Dobby</span> <span class="o">{</span> <span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">program</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Dobby</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getFields</span><span class="o">();</span>
+        
+        <span class="n">Dobby</span> <span class="n">dobby</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dobby</span><span class="o">();</span>
+        <span class="n">dobby</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getFields</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>짐작하겠지만, <code>java.lang.Class</code>가 모든 Refaction 작업의 시작점이 된다. <br>
+<code>java.lang.Class</code>가 뭐길레 Refaction의 시작점이라고 하는걸까?</p>
+<p>이전에 작성했던 <a href="">Java 생태계와 실행 제대로 알고 있나?</a>을 보셨거나, Java 실행과정을 잘 안다면 Method 메모리 영역을 알 것이다.<br>
+(모르겠다면 <a href="">Java 생태계와 실행 제대로 알고 있나?</a>를 보시길.. )</p>
+<p>Java는 실행될때 .class 파일들은 Class 로더에 의해서 Method 메모리에 Class 객체로 올라게가 된다. Class 객체에는 클래스 수준의 정보(인터페이스, 클래스 이름, 부모 클래스, 메소드, 변수, 등)가 들어있다.</p>
+<p>이제 우리는 Class 객체를 얻는방법 <code>.getClass</code>와 Class 객체에 어떤 정보가 들어있는지 안다. 그 정보들을 꺼내서 쓰는 방법만 알면 된다.!!</p>
+<h1 id="마무리">마무리!</h1>
+<p>Java에서 Reflaction이 어떻게 동작하는지 알아봤다.<br>
+API 사용하는 방법에 관한 부분은 웹 검색하면 널렸다.!!<br>
+그래도 깔끔하게 정리된 곳을 원한다면 <a href="https://www.journaldev.com/1789/java-reflection-example-tutorial">여기</a>를 들어가면 된다.
+영어로 되어있지만 위의 내용들을 이해했다면 소스코드만으로도 사용하는데 무리가 없다.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>tags: </span><a class='tag' href='/blog.github.io/tags/java/'>java</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/blog.github.io/documents/java/java-comfile/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ </span>
+        <span class='screen-reader-text'>: </span>Java 컴파일부터 실행까지</a>
+    </div></div>
+</nav>
+
+
+<section id='comments' class='comments'>
+  <div class='container sep-before'>
+    <div class='comments-area'><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yeh35-blog-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  </div>
+</section>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label=''>
+    <ul><li>
+        <a href='https://github.com/Yeh35' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:jaws0910@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019-2020 Snag Oh Yeh </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/blog.github.io/assets/js/"</script>
+
+<script src='/blog.github.io/assets/js/main.c3bcf2df.js'></script><script src='/blog.github.io/js/custom.js'></script>
+
+</body>
+
+</html>
+
