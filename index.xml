@@ -5,7 +5,7 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 19 Jul 2020 13:24:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2020 10:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,19 @@
       <guid>https://yeh35.github.io/blog.github.io/about-me/</guid>
       <description>안녕하세요, 예상오입니다 현제 소프트원에서 패션 ERP를 유지보수 업무를 하고 있으며, 2018년 9월부터 2021년 7월까지 병역특례를 하고 있습니다.
 주로 백엔드 개발을 전문으로하며 최근에는 Spring, Gradle에 관심을 많습니다.</description>
+    </item>
+    
+    <item>
+      <title>코딩 맛만보자 강의 노트</title>
+      <link>https://yeh35.github.io/blog.github.io/til/%E3%85%8B%E3%84%B7%EB%A7%9B%EB%A7%8C%EB%B3%B4%EC%9E%90/</link>
+      <pubDate>Sun, 26 Jul 2020 10:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/%E3%85%8B%E3%84%B7%EB%A7%9B%EB%A7%8C%EB%B3%B4%EC%9E%90/</guid>
+      <description>코딩 맛만보자 학습목표 코딩(컴퓨터)에대한 막연한 두려움을 없에고 아~ 대충 이런걸 하는구나 정도 알고 조금 손가락을 움직여 보는 것이 목표입니다.
+프로그래밍을 해야하는 이유 현실은 알고리즘으로 돈다. 알고리즘이라는 단어를 들었을때 어느정도 거부감이 있을 수 있다.
+알고리즘에 대한 정의는 문제를 해결하기 위한 절차나 방법.이다. 여기서 문제에 해당되는 것은 자율운전 부터 정말 사소하게 맛있게 라면 끓이기도 문제에 해당 된다.
+우리는 알고리즘을 다른말로 많이 쓰고 있었다. 요리에서는 요리법, 조리법 회사에서는 프로세스 평소에는 ~하는 방법
+(예시) 라면 끓이기 (예시) 수학문제 풀기 (사칙연산) 정답 : 1 (예시) 유클리드 호제법을 타일에 적용</description>
     </item>
     
     <item>
