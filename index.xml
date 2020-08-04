@@ -5,7 +5,7 @@
     <link>https://yeh35.github.io/blog.github.io/</link>
     <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 26 Jul 2020 10:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2020 23:10:06 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,17 @@
       <guid>https://yeh35.github.io/blog.github.io/about-me/</guid>
       <description>안녕하세요, 예상오입니다 현제 소프트원에서 패션 ERP를 유지보수 업무를 하고 있으며, 2018년 9월부터 2021년 7월까지 병역특례를 하고 있습니다.
 주로 백엔드 개발을 전문으로하며 최근에는 Spring, Gradle에 관심을 많습니다.</description>
+    </item>
+    
+    <item>
+      <title>Xamarin 기초</title>
+      <link>https://yeh35.github.io/blog.github.io/til/xamarin/xamarin-%EA%B8%B0%EC%B4%88/</link>
+      <pubDate>Tue, 04 Aug 2020 23:10:06 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/til/xamarin/xamarin-%EA%B8%B0%EC%B4%88/</guid>
+      <description>Ms 공식문서 Xamarin이란?을 보면서 정리한 내용이다.
+목적은? 자마린이 쓸만한지 확인하려고 한다. 주로 다음 같은 것을 기준을 가지고 검토할 거 같다.
+ 개발환경 디버그 버그 프로세스 배포 네이티브 처리  </description>
     </item>
     
     <item>
