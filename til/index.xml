@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TIL (Today I Learned) on sango.h</title>
+    <title>sango.h</title>
     <link>https://yeh35.github.io/blog.github.io/til/</link>
-    <description>Recent content in TIL (Today I Learned) on sango.h</description>
+    <description>Recent content on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 04 Aug 2020 23:10:06 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2020 10:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/til/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Xamarin 기초</title>
-      <link>https://yeh35.github.io/blog.github.io/til/xamarin/xamarin-%EA%B8%B0%EC%B4%88/</link>
-      <pubDate>Tue, 04 Aug 2020 23:10:06 +0900</pubDate>
-      
-      <guid>https://yeh35.github.io/blog.github.io/til/xamarin/xamarin-%EA%B8%B0%EC%B4%88/</guid>
-      <description>Ms 공식문서 Xamarin이란?을 보면서 정리한 내용이다.
-목적은? 자마린이 쓸만한지 확인하려고 한다. 주로 다음 같은 것을 기준을 가지고 검토할 거 같다.
- 개발환경 디버그 버그 프로세스 배포 네이티브 처리  </description>
-    </item>
     
     <item>
       <title>코딩 맛만보자 강의 노트</title>

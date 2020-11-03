@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android on sango.h</title>
+    <link>https://yeh35.github.io/blog.github.io/tags/android/</link>
+    <description>Recent content in android on sango.h</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 03 Nov 2020 21:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://yeh35.github.io/blog.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>양말 없는 도비 앱개발 후기</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/side_project/stop_it/</link>
+      <pubDate>Tue, 03 Nov 2020 21:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/side_project/stop_it/</guid>
+      <description>양말 없는 도비 후기 시험기간에 핸드폰을 너무 많이 하는 것 같아서 방지앱을 만들어봤다.
+물론 시중에 많은 앱들이 이미 있었지만 굳이 다른 사람에게 내 사용이력을 넘기고 싶지 않았다.
+컨셉은 스마트폰에서 자유롭지 못한 영혼에서 여자친구의 추천으로 자유롭지 못한 도비로 변경되었다. 하지만 헤리포터 스토리상 도비는 양말을 찾으면 자유가 될 수 있기 때문에 또비의 양말을 찾을 수 있도록 했다.
+총 제작기간 4일중 2일은 백그라운드에서 계속 작업하면서 보이지 않는 service를 만들어보려고 했지만 시스템이 자꾸 죽여서 할수가 없었다.</description>
+    </item>
+    
+  </channel>
+</rss>

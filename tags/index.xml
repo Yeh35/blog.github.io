@@ -5,26 +5,35 @@
     <link>https://yeh35.github.io/blog.github.io/tags/</link>
     <description>Recent content in Tags on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 04 Aug 2020 23:10:06 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2020 21:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>TIL</title>
-      <link>https://yeh35.github.io/blog.github.io/tags/til/</link>
-      <pubDate>Tue, 04 Aug 2020 23:10:06 +0900</pubDate>
+      <title>android</title>
+      <link>https://yeh35.github.io/blog.github.io/tags/android/</link>
+      <pubDate>Tue, 03 Nov 2020 21:00:00 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/tags/til/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/tags/android/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Xamarin</title>
-      <link>https://yeh35.github.io/blog.github.io/tags/xamarin/</link>
-      <pubDate>Tue, 04 Aug 2020 23:10:06 +0900</pubDate>
+      <title>생산성</title>
+      <link>https://yeh35.github.io/blog.github.io/tags/%EC%83%9D%EC%82%B0%EC%84%B1/</link>
+      <pubDate>Tue, 03 Nov 2020 21:00:00 +0900</pubDate>
       
-      <guid>https://yeh35.github.io/blog.github.io/tags/xamarin/</guid>
+      <guid>https://yeh35.github.io/blog.github.io/tags/%EC%83%9D%EC%82%B0%EC%84%B1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TIL</title>
+      <link>https://yeh35.github.io/blog.github.io/tags/til/</link>
+      <pubDate>Sun, 26 Jul 2020 10:00:00 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/tags/til/</guid>
       <description></description>
     </item>
     
