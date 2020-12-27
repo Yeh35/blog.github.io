@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang='kr'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='포큐(욕아님!) 개체지향 프로그래밍 및 설계 후기 들어가기 앞서.. 본격적인 후기 작성하기 앞서서 누가 후기를 찾아볼까?에 대해서 고민했었다.
+ 들으려는 사람 들은 사람 강좌를 만든 사람(?!)  그리고 경험상 후기를 읽을 때 하나의 후기뿐만아니라 여러 후기를 겸해서 읽게 될것이기에 많이 중복된 내용은 빼려고 노력했다. 마지막에 시험때 만들었던 문제 리스트도 있다. 들으려는 분은 이런걸 배우는지 확인하는 용도로, 다 들은 분은 복습하는 용도 정도 될거 같다.
+POCU2500가 궁금하다면 여기!를 클릭해주세요
+후기 포큐 아카데미의 수업은 정말 정말 잘 만들어졌다.'>
+<meta name='theme-color' content='#ffcd00'>
+<meta name="google-site-verification" content="m5phnpm4z3C-bApLVELFYLomqYrSOnblcuSgJk1YFoQ" />
+
+<meta property='og:title' content='포큐(욕아님!) 개체지향 프로그래밍 및 설계 후기 • sango.h'>
+<meta property='og:description' content='포큐(욕아님!) 개체지향 프로그래밍 및 설계 후기 들어가기 앞서.. 본격적인 후기 작성하기 앞서서 누가 후기를 찾아볼까?에 대해서 고민했었다.
+ 들으려는 사람 들은 사람 강좌를 만든 사람(?!)  그리고 경험상 후기를 읽을 때 하나의 후기뿐만아니라 여러 후기를 겸해서 읽게 될것이기에 많이 중복된 내용은 빼려고 노력했다. 마지막에 시험때 만들었던 문제 리스트도 있다. 들으려는 분은 이런걸 배우는지 확인하는 용도로, 다 들은 분은 복습하는 용도 정도 될거 같다.
+POCU2500가 궁금하다면 여기!를 클릭해주세요
+후기 포큐 아카데미의 수업은 정말 정말 잘 만들어졌다.'>
+<meta property='og:url' content='https://yeh35.github.io/blog.github.io/documents/pocu/comp2500/'>
+<meta property='og:site_name' content='sango.h'>
+<meta property='og:type' content='article'><meta property='article:section' content='documents'><meta property='article:published_time' content='2020-12-27T12:22:02&#43;09:00'/><meta property='article:modified_time' content='2020-12-27T12:22:02&#43;09:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.66.0" />
+
+  <title>포큐(욕아님!) 개체지향 프로그래밍 및 설계 후기 • sango.h</title>
+  <link rel='canonical' href='https://yeh35.github.io/blog.github.io/documents/pocu/comp2500/'>
+  
+  
+  <link rel='icon' href='/blog.github.io/favicon.ico'>
+<link rel='stylesheet' href='/blog.github.io/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/blog.github.io/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-documents has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'></a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/blog.github.io/'>
+        <img src='https://avatars2.githubusercontent.com/u/46643699?s=460&amp;u=374c79ade497bda3a230e7ccc8693af69b94e766&amp;v=4'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/blog.github.io/'>
+      sango.h
+      </a>
+    </h2>
+    <div class='desc'>
+    백엔드 개발에 관심이 많습니다.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label=''>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/blog.github.io/documents/'>Document</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'></h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/blog.github.io/tags/android/' style='font-size:1em'>android</a>
+      </li><li>
+        <a href='/blog.github.io/tags/api/' style='font-size:1em'>API</a>
+      </li><li>
+        <a href='/blog.github.io/tags/assert/' style='font-size:1em'>assert</a>
+      </li><li>
+        <a href='/blog.github.io/tags/aws/' style='font-size:1.02em'>AWS</a>
+      </li><li>
+        <a href='/blog.github.io/tags/blog/' style='font-size:1em'>blog</a>
+      </li><li>
+        <a href='/blog.github.io/tags/book/' style='font-size:1em'>book</a>
+      </li><li>
+        <a href='/blog.github.io/tags/build/' style='font-size:1.08em'>build</a>
+      </li><li>
+        <a href='/blog.github.io/tags/directory/' style='font-size:1em'>Directory</a>
+      </li><li>
+        <a href='/blog.github.io/tags/docker/' style='font-size:1.04em'>docker</a>
+      </li><li>
+        <a href='/blog.github.io/tags/english/' style='font-size:1.02em'>english</a>
+      </li><li>
+        <a href='/blog.github.io/tags/gradle/' style='font-size:1.08em'>gradle</a>
+      </li><li>
+        <a href='/blog.github.io/tags/groovy/' style='font-size:1em'>groovy</a>
+      </li><li>
+        <a href='/blog.github.io/tags/http/' style='font-size:1em'>HTTP</a>
+      </li><li>
+        <a href='/blog.github.io/tags/hugo/' style='font-size:1em'>hugo</a>
+      </li><li>
+        <a href='/blog.github.io/tags/infra/' style='font-size:1.16em'>infra</a>
+      </li><li>
+        <a href='/blog.github.io/tags/java/' style='font-size:1.12em'>java</a>
+      </li><li>
+        <a href='/blog.github.io/tags/jdbc/' style='font-size:1.02em'>JDBC</a>
+      </li><li>
+        <a href='/blog.github.io/tags/jpa/' style='font-size:1.04em'>jpa</a>
+      </li><li>
+        <a href='/blog.github.io/tags/junit5/' style='font-size:1em'>junit5</a>
+      </li><li>
+        <a href='/blog.github.io/tags/orm/' style='font-size:1.02em'>ORM</a>
+      </li><li>
+        <a href='/blog.github.io/tags/rest/' style='font-size:1em'>REST</a>
+      </li><li>
+        <a href='/blog.github.io/tags/review/' style='font-size:1em'>review</a>
+      </li><li>
+        <a href='/blog.github.io/tags/series/' style='font-size:1.06em'>series</a>
+      </li><li>
+        <a href='/blog.github.io/tags/slack/' style='font-size:1em'>Slack</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring/' style='font-size:1.02em'>spring</a>
+      </li><li>
+        <a href='/blog.github.io/tags/spring-boot/' style='font-size:1.06em'>spring-boot</a>
+      </li><li>
+        <a href='/blog.github.io/tags/start/' style='font-size:1em'>start</a>
+      </li><li>
+        <a href='/blog.github.io/tags/test/' style='font-size:1.02em'>test</a>
+      </li><li>
+        <a href='/blog.github.io/tags/til/' style='font-size:2em'>TIL</a>
+      </li><li>
+        <a href='/blog.github.io/tags/web/' style='font-size:1em'>web</a>
+      </li><li>
+        <a href='/blog.github.io/tags/webhooks/' style='font-size:1em'>WebHooks</a>
+      </li><li>
+        <a href='/blog.github.io/tags/%EA%B8%80%EC%93%B0%EA%B8%B0/' style='font-size:1em'>글쓰기</a>
+      </li><li>
+        <a href='/blog.github.io/tags/%EC%83%9D%EC%82%B0%EC%84%B1/' style='font-size:1em'>생산성</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label=''>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'></a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'></span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/blog.github.io/about-me/'>About Me</a>
+      </li><li class='item'>
+        <a href='/blog.github.io/documents/'>Document</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/blog.github.io/'>sango.h</a></li><li><a href='/blog.github.io/documents/'>Document</a></li><li><span>포큐(욕아님!) 개체지향 프로그래밍 및 설계 후기</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>sango.h</p><p class='desc site-desc'>sango.h는 sangoh와 c언어의 stdio.h의 합성어이다.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='kr' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>포큐(욕아님!) 개체지향 프로그래밍 및 설계 후기</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'> </span>
+  <time class='entry-date' datetime='2020-12-27T12:22:02&#43;09:00'>2020-12-27</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <h1 id="포큐욕아님-개체지향-프로그래밍-및-설계-후기">포큐(욕아님!) 개체지향 프로그래밍 및 설계 후기</h1>
+<h2 id="들어가기-앞서">들어가기 앞서..</h2>
+<p>본격적인 후기 작성하기 앞서서 누가 후기를 찾아볼까?에 대해서 고민했었다.</p>
+<ul>
+<li>들으려는 사람</li>
+<li>들은 사람</li>
+<li>강좌를 만든 사람(?!)</li>
+</ul>
+<p>그리고 경험상 후기를 읽을 때  하나의 후기뿐만아니라 여러 후기를 겸해서 읽게 될것이기에 많이 중복된 내용은 빼려고 노력했다.
+<strong>마지막에 시험때 만들었던 문제 리스트도 있다.</strong>
+들으려는 분은 이런걸 배우는지 확인하는 용도로, 다 들은 분은 복습하는 용도 정도 될거 같다.</p>
+<p>POCU2500가 궁금하다면 <a href="www.pocu.academy">여기!</a>를 클릭해주세요</p>
+<h2 id="후기">후기</h2>
+<p>포큐 아카데미의 수업은 정말 정말 잘 만들어졌다. 
+이런 이야기를 하기전 이미 나는 COMP2500까지 총 3편의 풀코스를 들었다.
+<img src="/blog.github.io/img/documents/pocu/comp2500/%EC%84%B1%EC%A0%81%ED%91%9C.png" alt="Pope"></p>
+<p>중간에 Fail은.. 회사일로 너무 바뻐 과제를 놓쳤기 때문이다.</p>
+<p>한개는 얼리버드로 할인 받았다고 해도 약 300만원을 결제했다는 것은 최소한 나의 한에서 수업의 만족도가 매우 매우 높다는 걸 증명하는 것이다. (<strong>내돈내산입니다.</strong>)</p>
+<p>수업 자체에 대해 길고 자세하게 적어봤자 대부분은 대충 읽을 것이기 때문에 한줄 요약을 하면 
+<strong>COMP2500는 주관성이 강한 개체지향 프로그래밍을 가장 객관적이게 알려주는 수업이다!</strong></p>
+<h2 id="문제-리스트">문제 리스트</h2>
+<p>대망의 문제 리스트이다. 천천히 읽어보고 얼마나 답할 수 있는지 측정해보면 좋을거 같다.</p>
+<h3 id="java-언어의-기본-문법">Java 언어의 기본 문법</h3>
+<ul>
+<li>Package 시스템을 사용하는 이유와 주의할점</li>
+<li>프로그램 시작시 명령어를 입력해보세요</li>
+<li>배포(jar)시 명령어를 입력해보세요 (manifest 파일 포함 빌드)</li>
+<li>Manifest 파일에 필수로 들어가야할 것은?</li>
+<li>기본으로 import 되는 패키지는?</li>
+<li>Java는 크로스 플랫폼인가? (최소 두가지 관점에서 예/아니요 설명)</li>
+<li>부호 없는 자료형 문제점</li>
+<li>Java에서 유일하게 부호가 없는 자료형은?</li>
+<li>문자열은 몇 비트? 그 이유는?</li>
+<li>&ldquo;A&rdquo; + &ldquo;B&rdquo; 혹은 문자열중 일부를 바꾸게 될 경우 내부적으로 어떻게 작동할까?</li>
+<li>Package 시스템의 한계는?      (3가지)</li>
+<li>모듈 시스템의 개념과 장점(4가지)</li>
+<li>module-info.java에 정의되는 내용은? (2가지)</li>
+</ul>
+<h3 id="개체지향-프로그래밍oop의-필요성">개체지향 프로그래밍(OOP)의 필요성</h3>
+<ul>
+<li>데이터를 관리하는 방법의 발전 순서는? (3단계)<br>
+데이터 -&gt; ? -&gt; ?</li>
+<li>배열 혹은 기본 자료형으로의 한계</li>
+<li>구조체의 한계</li>
+<li>OOP는 사람은 세상을 물체의 집합이라고 인지한다고 하는데 
+물체(object)의 특성은? (2가지)</li>
+<li>C에서 데이터와 함수를 묶는 꼼수는?</li>
+</ul>
+<h3 id="개체지향-프로그래밍">개체지향 프로그래밍</h3>
+<ul>
+<li>OOP는 매우 주관적이다. 주관성이 강한 분야에서 토론할때 피해야할 사람의 특징 5가지는?</li>
+</ul>
+<h3 id="oop의-4대-특성">OOP의 4대 특성</h3>
+<ul>
+<li>4대 특성을 말하고 각각 특성에 대해서 설명하시오.</li>
+</ul>
+<h3 id="클래스와-개체">클래스와 개체</h3>
+<ul>
+<li>클래스를 설명해보세요</li>
+</ul>
+<h3 id="참조형과-포인터">참조형과 포인터</h3>
+<ul>
+<li>Java에서 Stack 메모리에 쌓이는?</li>
+<li>Heal 메모리에 만들어지는 것은?</li>
+</ul>
+<h3 id="생성자">생성자</h3>
+<ul>
+<li>선조건 후조건을 들어서 생성자를 제대로 사용하는 법을 설명하시오</li>
+</ul>
+<h3 id="접근-제어자access-modifier">접근 제어자(access modifier)</h3>
+<ul>
+<li>접근 제어자를 사용해야 하는 이유는?</li>
+<li>패키지 접근 제어자가 유용한 경우 2가지는?</li>
+</ul>
+<h3 id="gettersetter-메서드">getter/setter 메서드</h3>
+<ul>
+<li>함수를 통한 데이터 접근의 객관적인 장점 3가지</li>
+<li>setter을 남발하게 될 경우 생기는 문제는?</li>
+</ul>
+<h3 id="캡슐화와-데이터-추상화">캡슐화와 데이터 추상화</h3>
+<ul>
+<li>캡슐화를 두문장으로 정리해보세요</li>
+<li>추상화를 한문장으로 정리해보세요</li>
+<li>추상화의 단점 2가지는?</li>
+</ul>
+<h3 id="유연성과-재사용성">유연성과 재사용성</h3>
+<ul>
+<li>유연성이 좋은 코드가 최고일까?
+(3가지 관점에서 설명해보세요!)</li>
+</ul>
+<h3 id="정적static-멤버-변수-및-메서드">정적(static) 멤버 변수 및 메서드</h3>
+<ul>
+<li>static을 사용했을 때 좋은 경우는?</li>
+<li>java에서 개체를 생성하지 못하게 막는 방법과 다른 언어에서 제대로된 방법은?</li>
+</ul>
+<h3 id="싱글턴">싱글턴</h3>
+<ul>
+<li>싱글턴 패턴이란?</li>
+<li>싱글턴은 하고 static이 못하는 것은?</li>
+<li>싱글턴의 생성 순서를 보장하는 방법 올바른 방법은?</li>
+<li>싱글턴 생성시 인자가 필요하다면? 어떻게 변형하는 방법은?</li>
+</ul>
+<h3 id="내포nested-클래스">내포(nested) 클래스</h3>
+<ul>
+<li>내포 클래스의 용도는?</li>
+<li>정적 내포 클래스와 비정적 내포 클래스의 차이점은?</li>
+<li>다음과 같은 비정적 내포 클래스(Reader)를 생성하려면? (코드로 작성)
+<img src="/blog.github.io/img/documents/pocu/comp2500/%EB%AC%B8%EC%A0%9C1.png" alt="내포1"></li>
+<li>다음 코드를 읽고 문제점을 찾으시오!
+<img src="/blog.github.io/img/documents/pocu/comp2500/%EB%AC%B8%EC%A0%9C2.png" alt="내포2"></li>
+</ul>
+<h3 id="상속">상속</h3>
+<ul>
+<li>OOP에서 상속이란? (한줄로 요약)</li>
+<li>상속에서 부모와 자식이 있을 때 어느 개체부터 초기화를 할까요?</li>
+<li>부모 생성자를 호출하는 방법은?</li>
+</ul>
+<h3 id="rttirun-time-type-identification-기능">RTTI(run time type identification) 기능</h3>
+<ul>
+<li>RTTI 기능이 무엇인가요?</li>
+<li>RTTI이 가능한 이유는 무엇인가요?</li>
+<li>instanceof연산자는 무엇이고 사용할때 주의할점은?</li>
+<li>RTTI 기능의 단점</li>
+</ul>
+<h3 id="object-클래스">Object 클래스</h3>
+<ul>
+<li>Object 클래스에 대해서 설명</li>
+</ul>
+<h3 id="다중-상속">다중 상속</h3>
+<ul>
+<li>Java에는 다중 상속이 존재할까요?</li>
+<li>다중 상속의 위험성은?</li>
+<li>다중 상속이 발생하는 이유는?</li>
+<li>Java에서 다중상속의 해결 방법은? (2가지)</li>
+</ul>
+<h3 id="a-oop-또는-상속이-어려운-이유-주의할점">(+a) OOP 또는 상속이 어려운 이유 (주의할점)</h3>
+<ul>
+<li>사람이 상속이 어려운 이유는?</li>
+<li>상속을 이해하는 두가지 관점?</li>
+</ul>
+<h3 id="재사용성의-중요성">재사용성의 중요성</h3>
+<ul>
+<li>프로그래밍에서의 의의 3가지와 각각의 중의할 점은?</li>
+<li>모델링 실력을 높이는 방법은?</li>
+</ul>
+<h3 id="상속-vs-컴포지션">상속 vs 컴포지션</h3>
+<ul>
+<li>둘중 선택시 4가지 기준은?</li>
+<li>상속이 유리한 경우는?</li>
+<li>컴포지션이 유리한 경우는?</li>
+</ul>
+<h3 id="깊은-상속의-문제는">깊은 상속의 문제는?</h3>
+<ul>
+<li>has-a와 is-a의 차이는?</li>
+</ul>
+<h3 id="다형성이란-한줄설명">다형성이란? (한줄설명)</h3>
+<ul>
+<li>오버라이딩이란?</li>
+<li>다형성의 장점</li>
+</ul>
+<h3 id="이른-늦은-바인딩">이른, 늦은 바인딩</h3>
+<ul>
+<li>이른 바인딩이란?</li>
+<li>늦은 바인딩이란?</li>
+<li>Java의 기본 동작은?</li>
+<li>Java에서 이른 바인딩 하는 방법은?</li>
+</ul>
+<h3 id="object-class">Object class</h3>
+<ul>
+<li>toString()는?</li>
+<li>equals()는? 주의할점은?</li>
+<li>hashcode()는? 사용되는 곳은?</li>
+</ul>
+<h3 id="추상-메서드클래스">추상 메서드/클래스</h3>
+<ul>
+<li>추상 메소드가 필요한 이유는?</li>
+<li>추상 클래스가 필요한 이유는?</li>
+<li>구체 클래스와의 차이점은?</li>
+</ul>
+<h3 id="인터페이스">인터페이스</h3>
+<ul>
+<li>인터페이스를 다른 말로는?</li>
+<li>인터페이스의 접근 제어자는?</li>
+<li>클래스는 다중상속이 안되고 인터페이스는 되는 이유는?</li>
+<li>하지만 다중 인터페이스라도 생길 수 있는 문제는?</li>
+<li>인터페이스의 핵심은?</li>
+</ul>
+<h3 id="어노테이션">어노테이션</h3>
+<ul>
+<li>Java 어노테이션이란?</li>
+</ul>
+<h3 id="objectclone">Object.clone()</h3>
+<ul>
+<li>올바른 사용 방법은?</li>
+</ul>
+<h3 id="의존성이란">의존성이란?</h3>
+<ul>
+<li>의존성에 대한 오해와 진실은?</li>
+</ul>
+<h3 id="결합도">결합도</h3>
+<ul>
+<li>결합도란?</li>
+<li>결합도가 높다는 판단 기준은?</li>
+<li>결합도를 낮추는 방법 2가지는?</li>
+</ul>
+<h3 id="구현-vs-인터페이스">구현 vs 인터페이스</h3>
+<ul>
+<li>구현 vs 인터페이스를 적절하게 사용하는 판단 기준은? (4가지)</li>
+<li>디커플링의 단점은? 3가지</li>
+<li>실용적인 인터페이스 사용 판단 기준은?</li>
+</ul>
+<h3 id="디자인-패턴">디자인 패턴</h3>
+<ul>
+<li>디자인 패턴 학습지 주의 사항은?</li>
+<li>팩토리 메서드는? (장점은?)</li>
+<li>빌더 패턴는? (장점은?)</li>
+<li>플루언트 인터페이스란?</li>
+<li>빌더 패턴이 잘 못 사용된 예 그리고 해결 방법은?</li>
+<li>래퍼 어뎁터 패턴은? (사용 이유는?)</li>
+<li>프록시 패턴은? )(장점 단점은? (3가지 경우를 이야기!))</li>
+<li>프록시 패턴 문제점 그리고 해결 방안?</li>
+<li>책임 연쇄?</li>
+<li>옵저버, 구독 발행?</li>
+<li>옵저버 패턴의 메모리 누수가 발생 위험은?</li>
+</ul>
+<h3 id="예외">예외</h3>
+<ul>
+<li>catch 블록 작성할때 주의 사항은?</li>
+<li>checked와 unchecked의 차이는?</li>
+<li>예외의 단점은?</li>
+<li>예외를 절대 XXX용으로 사용하면 안된다! XXX는?</li>
+<li>오류상황을 처리 방법 4가지는?</li>
+<li>상황별 예외 처리 방법은?
+<ul>
+<li>예측 + 수정 쉬운</li>
+<li>예측 + 수정 어려운</li>
+<li>예측 못함</li>
+</ul>
+</li>
+</ul>
+<h3 id="solid-정신-뜻과-비판">SOLID 정신? (뜻과 비판)</h3>
+<ul>
+<li>SRP 단일 책임</li>
+<li>OCP 개방 -폐쇄</li>
+<li>LSP 리스코프 치환</li>
+<li>ISP 인터페이스 분리</li>
+<li>DIP 의존 역전</li>
+</ul>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/blog.github.io/documents/side_project/stop_it/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ </span>
+        <span class='screen-reader-text'>: </span>양말 없는 도비 앱개발 후기</a>
+    </div></div>
+</nav>
+
+
+<section id='comments' class='comments'>
+  <div class='container sep-before'>
+    <div class='comments-area'><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yeh35-blog-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  </div>
+</section>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label=''>
+    <ul><li>
+        <a href='https://github.com/Yeh35' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:jaws0910@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'></span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019-2020 Sang Oh Yeh </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/blog.github.io/assets/js/"</script>
+
+<script src='/blog.github.io/assets/js/main.c3bcf2df.js'></script><script src='/blog.github.io/js/custom.js'></script>
+
+</body>
+
+</html>
+

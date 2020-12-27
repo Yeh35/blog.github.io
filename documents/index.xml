@@ -5,10 +5,22 @@
     <link>https://yeh35.github.io/blog.github.io/documents/</link>
     <description>Recent content in Document on sango.h</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 03 Nov 2020 21:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 27 Dec 2020 12:22:02 +0900</lastBuildDate>
     
 	<atom:link href="https://yeh35.github.io/blog.github.io/documents/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>포큐(욕아님!) 개체지향 프로그래밍 및 설계 후기</title>
+      <link>https://yeh35.github.io/blog.github.io/documents/pocu/comp2500/</link>
+      <pubDate>Sun, 27 Dec 2020 12:22:02 +0900</pubDate>
+      
+      <guid>https://yeh35.github.io/blog.github.io/documents/pocu/comp2500/</guid>
+      <description>포큐(욕아님!) 개체지향 프로그래밍 및 설계 후기 들어가기 앞서.. 본격적인 후기 작성하기 앞서서 누가 후기를 찾아볼까?에 대해서 고민했었다.
+ 들으려는 사람 들은 사람 강좌를 만든 사람(?!)  그리고 경험상 후기를 읽을 때 하나의 후기뿐만아니라 여러 후기를 겸해서 읽게 될것이기에 많이 중복된 내용은 빼려고 노력했다. 마지막에 시험때 만들었던 문제 리스트도 있다. 들으려는 분은 이런걸 배우는지 확인하는 용도로, 다 들은 분은 복습하는 용도 정도 될거 같다.
+POCU2500가 궁금하다면 여기!를 클릭해주세요
+후기 포큐 아카데미의 수업은 정말 정말 잘 만들어졌다.</description>
+    </item>
     
     <item>
       <title>양말 없는 도비 앱개발 후기</title>
